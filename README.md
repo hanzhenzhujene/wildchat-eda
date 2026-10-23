@@ -33,6 +33,7 @@ These findings describe this released corpus. They do not estimate all AI use or
 | To understand… | Read / open |
 | --- | --- |
 | What one record contains | [Methods and units](docs/METHODS.md#units) · [Original question/response examples ↗](https://wildchat-research-atlas-jenny.landenini.chatgpt.site/atlas.html#cases) |
+| Individual records in the original sample | [Group the 20,000 rows by metadata ↗](https://wildchat-research-atlas-jenny.landenini.chatgpt.site/#distributions?chart=records) (33 have published original text; those excerpts are selected illustrations). |
 | Languages, models, dates, lengths and turns | [Interactive distributions ↗](https://wildchat-research-atlas-jenny.landenini.chatgpt.site/#distributions) · [Figure catalog](docs/FIGURES.md) |
 | Topic versus task | [Select a label and read its original exchange ↗](https://wildchat-research-atlas-jenny.landenini.chatgpt.site/#distributions?chart=domain) · [Label provenance](docs/METHODS.md#topic-and-task) |
 | Sampling differences and AI-label limits | [Overlay a sample with the full release ↗](https://wildchat-research-atlas-jenny.landenini.chatgpt.site/#distributions?chart=language&scope=original&compare=1) · [Data scopes](docs/METHODS.md#analysis-scopes) |

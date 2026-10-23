@@ -4,6 +4,7 @@ import assert from 'node:assert/strict';
 import {withHubReturn,readHubReturn,validHubReturn,hubReturnHref,hubReturnLabel} from '../website/hub-navigation.js';
 const fragments=[
  'overview','content',
+ 'distributions?chart=records&group=year&color=turn_bucket&filter=3&withText=1&record=255498',
  'distributions?chart=domain&label=religion_and_philosophy&all=1',
  'distributions?chart=language&scope=original&compare=1',
  'linkage?view=span&selection=dates3span30',
@@ -19,8 +20,9 @@ for(const fragment of fragments){
 for(const invalid of ['https://evil.test/','//evil.test/','javascript:alert(1)','not-a-page','overview\n',null])assert.equal(validHubReturn(invalid),null);
 assert.equal(hubReturnHref('https://evil.test/'),'./#overview');
 assert.equal(withHubReturn('https://example.test/data',fragments[1]),'https://example.test/data');
-assert.equal(hubReturnLabel(fragments[2]),'topic chart');
-assert.equal(hubReturnLabel(fragments[3]),'language chart');
+assert.equal(hubReturnLabel(fragments[3]),'topic chart');
+assert.equal(hubReturnLabel(fragments[4]),'language chart');
+assert.equal(hubReturnLabel(fragments[2]),'record grid');
 const source=fs.readFileSync(new URL('../website/hub.js',import.meta.url),'utf8');
 const topics=JSON.parse(fs.readFileSync(new URL('../website/data/microsoft_topics.json',import.meta.url)));
 const readRoute=source.split('\n').find(line=>line.startsWith('function readRoute()'));
@@ -42,4 +44,6 @@ location.hash='#distributions?chart=intent&label=text_generation';vm.runInContex
 assert.equal(state.scope,'census');assert.equal(state.compare,false);
 location.hash='#content?dimension=packaging_counts';vm.runInContext('readRoute()',context);assert.equal(state.content,'packaging_counts');
 location.hash='#content';vm.runInContext('readRoute()',context);assert.equal(state.content,'relational_mode_counts');
+location.hash='#distributions?chart=records&group=year&color=turn_bucket&filter=3&withText=1&record=255498';vm.runInContext('readRoute()',context);assert.equal(state.distribution,'records');assert.equal(state.canvas.group,'year');assert.equal(state.canvas.color,'turn_bucket');assert.equal(state.canvas.filter,'3');assert.equal(state.canvas.withText,true);assert.equal(state.canvas.selected,255498);vm.runInContext('writeDistributionState()',context);assert.equal(location.hash,'#distributions?chart=records&group=year&color=turn_bucket&filter=3&withText=1&record=255498');
+location.hash='#distributions';vm.runInContext('readRoute()',context);assert.equal(state.distribution,'records');assert.equal(state.canvas.withText,false);assert.equal(state.canvas.filter,'');
 console.log('Hub navigation: safe return links, scope round-trips and lower-ranked selected labels pass.');

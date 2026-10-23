@@ -17,6 +17,6 @@ export function hubReturnHref(fragment){return './#'+(validHubReturn(fragment)||
 export function hubReturnLabel(fragment){
  const value=validHubReturn(fragment);if(!value)return 'EDA hub';
  const [page,query='']=value.split('?'),p=new URLSearchParams(query);
- if(page==='distributions')return ({domain:'topic chart',intent:'task chart',language:'language chart',model_family:'model chart',turn_bucket:'turn-count chart',month:'date chart',length:'length chart',sampling:'sample comparison'})[p.get('chart')]||'distributions';
+ if(page==='distributions')return ({records:'record grid',domain:'topic chart',intent:'task chart',language:'language chart',model_family:'model chart',turn_bucket:'turn-count chart',month:'date chart',length:'length chart',sampling:'sample comparison'})[p.get('chart')]||'distributions';
  return ({overview:'EDA overview',content:'request categories',linkage:'cross-conversation counts',figures:'chart library',datasets:'dataset comparison',sources:'hub methods'})[page];
 }

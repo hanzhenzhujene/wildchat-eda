@@ -27,12 +27,12 @@
       "sha256": "875edda879529adba83894481a218c42ef5ef9ec32d0cbb25dbe37a6fc329306"
     },
     "Makefile": {
-      "bytes": 1714,
-      "sha256": "5089777701a7977a51fda28408c9c5f9581d13e80fd6527433bf1e17a0bec5e0"
+      "bytes": 1792,
+      "sha256": "00fa6da2393342f7ab4cdf5773ad4b2877696be12fcdd7850102d073ceb0a873"
     },
     "README.md": {
-      "bytes": 6743,
-      "sha256": "931e80d595cc7c4cd48489ec2059a2d13bcb21b885f5113fb9dcbb816540ef69"
+      "bytes": 7000,
+      "sha256": "2ec19aa6afc4a4deb525b381322cd752e58e95db3aaffed7d6649318808f9354"
     },
     "analysis/config/relational_v2/calibration_plan.json": {
       "bytes": 1062,
@@ -303,8 +303,8 @@
       "sha256": "a2ab0f0f9294835d9b9ddee67649ee912196dc6370113984b3fa6647d3755159"
     },
     "scripts/check_hub_navigation.mjs": {
-      "bytes": 3344,
-      "sha256": "298f45a7128c109a2739d8793d2e7cc4a96733e2bcd32542987d97c3a122c00f"
+      "bytes": 4264,
+      "sha256": "d02a4e0dd54f889e81aad9f4dc1e0ef1e11e1a60c92c3ff2a70807af1e3e3dda"
     },
     "scripts/check_linkage_interactions.mjs": {
       "bytes": 1202,
@@ -314,6 +314,10 @@
       "bytes": 5941,
       "sha256": "c2ad863f9e4373ed94962b37dab7c0f73fb5784c864683a4b59ca359c394efbf"
     },
+    "scripts/check_overview_canvas.mjs": {
+      "bytes": 3465,
+      "sha256": "4a8e3bf134df25eb6fda8fcb66665594407906ec9b108b87b36b616fc16890cf"
+    },
     "scripts/check_personal_review.mjs": {
       "bytes": 5080,
       "sha256": "c66aef86cc508f8c07f47b44b0a3ed0d0de2523e9b548a2c41c18976f2bc8384"
@@ -321,6 +325,10 @@
     "scripts/check_public_hub.mjs": {
       "bytes": 3733,
       "sha256": "b691e7e699dc6e767038b8d468271a078af128e760fc5838692729ab8af726ce"
+    },
+    "scripts/check_record_canvas.mjs": {
+      "bytes": 4778,
+      "sha256": "662e5cd1ccdbd4aa8222fdfee6539fdfa367d08be186ddb18373b6afc5317643"
     },
     "scripts/check_relational_ui.mjs": {
       "bytes": 10374,
@@ -790,25 +798,29 @@
       "bytes": 13362,
       "sha256": "14bd52a9e3a95d477b75eb81fb1278e3156a7a3be0b6cf0befe9f2ced7d634b0"
     },
+    "website/hub-canvas.css": {
+      "bytes": 24474,
+      "sha256": "8f05228bab623ed1037a659d5befd7efaa63cf0dc21a603f21e1b8d4519f35b8"
+    },
     "website/hub-navigation.js": {
-      "bytes": 1550,
-      "sha256": "18f087f7dffc063dfdef46c4bb08c87153b5af7b99ca48917e788ab7df315379"
+      "bytes": 1572,
+      "sha256": "2ce7d092aea293bb93e3a73da24affeebf97a5c00af8c300033fc50e4ce2462a"
     },
     "website/hub.css": {
       "bytes": 26555,
       "sha256": "2a66c605f54e59dde3dcc40d4ce8b9f5c4a60de5f888e0fdb20c75bc332c0d8c"
     },
     "website/hub.js": {
-      "bytes": 47675,
-      "sha256": "224abf7a4a2a9453078238c32aefdc65f62d60902bc5e9ed327aa14a3e0e532b"
+      "bytes": 44243,
+      "sha256": "78b8d1aeb0b7a03720678e8c1ddb315bd9b6ebb635c73622964a3f918233bd91"
     },
     "website/icon.svg": {
       "bytes": 230,
       "sha256": "60f3cd1ef430f5f3e29cf70c75bd7f7f452e708f86d105eb4f7a121855bd1b42"
     },
     "website/index.html": {
-      "bytes": 2635,
-      "sha256": "3141574a46cf0c3b763a484ab3148fa98390aa6dd50864687989e01c62370358"
+      "bytes": 2691,
+      "sha256": "f620a7a6aadb0b7aee758a8cb028e18a425fb931b303e6b6ad110bf01167a009"
     },
     "website/jump.css": {
       "bytes": 2912,
@@ -838,6 +850,10 @@
       "bytes": 1715,
       "sha256": "d72feb709ffe20e975a095e22dc4e13fd65486092bc8a31afde5c3b141392d6a"
     },
+    "website/overview-canvas.js": {
+      "bytes": 11469,
+      "sha256": "9914f1ee8e8ede8487385cb1bfd3a1fe7c1fc138414cc8f5993537d302efbefb"
+    },
     "website/overview-paths.css": {
       "bytes": 5676,
       "sha256": "d431566f6faf99d810c34764016f275ded21ec867afbfae69651bd2fc0b04323"
@@ -853,6 +869,10 @@
     "website/reader.css": {
       "bytes": 28741,
       "sha256": "a2f32b14700b55157059c8d135402b08a30e9ffb797e9bc22192324dd68ac5a0"
+    },
+    "website/record-canvas.js": {
+      "bytes": 23392,
+      "sha256": "39d213845540b66bfcdca3d5f6e1cb60d81a366bf2c2767555d19e098e37f24b"
     },
     "website/relational-v2.css": {
       "bytes": 9035,
