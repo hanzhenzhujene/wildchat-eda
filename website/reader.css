@@ -415,3 +415,12 @@ button:hover .chart-row-arrow, button:focus-visible .chart-row-arrow { opacity: 
 .case-fit-link { display: inline-block; margin-top: 12px; font-size: 14px; font-weight: 600; }
 
 @media(max-width:700px){.view-controls>span{white-space:normal;min-width:0}}
+
+/* Keep the explicit hub return readable on phones. */
+@media(max-width:700px){
+ .app-heading{height:auto;min-height:50px;flex-wrap:wrap;gap:8px;padding:10px 0}
+ .app-wordmark{flex-shrink:0}
+ .app-links{flex:1 0 100%;width:100%;justify-content:space-between;gap:10px;min-width:0}
+ .app-links .public-hub-link{white-space:nowrap;line-height:1.4}
+ .app-links>a[href$=".pdf"]{display:none}
+}

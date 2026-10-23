@@ -48,12 +48,12 @@ function messageHTML(title, content, messageIndex, role) {
  *
  * bind is idempotent for the same container and returns a cleanup function.
  */
-export function createChartDetailController({topics, fetchImpl = globalThis.fetch?.bind(globalThis), dataBase = 'data/', atlasBase = 'atlas.html'} = {}) {
+export function createChartDetailController({topics, fetchImpl = globalThis.fetch?.bind(globalThis), dataBase = 'data/', atlasBase = 'atlas.html', linkResolver = href => href} = {}) {
   if (!topics) throw new TypeError('Saved topic/task metadata is required.');
   const records = new Map(), requests = new Map(), errors = new Map(), bindings = new WeakMap();
   let selected = null;
   const path = name => `${dataBase.replace(/\/?$/, '/')}${name}`;
-  const atlasURL = s => `${atlasBase}#explorer?snapshot=1&view=${s.kind === 'domain' ? 'topic' : 'task'}&label=${encodeURIComponent(s.labelId)}`;
+  const atlasURL = s => linkResolver(`${atlasBase}#explorer?snapshot=1&view=${s.kind === 'domain' ? 'topic' : 'task'}&label=${encodeURIComponent(s.labelId)}`);
   async function readSource(name) {
     if (requests.has(name)) return requests.get(name);
     const pending = (async () => {
