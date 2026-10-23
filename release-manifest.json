@@ -27,8 +27,8 @@
       "sha256": "875edda879529adba83894481a218c42ef5ef9ec32d0cbb25dbe37a6fc329306"
     },
     "Makefile": {
-      "bytes": 1792,
-      "sha256": "00fa6da2393342f7ab4cdf5773ad4b2877696be12fcdd7850102d073ceb0a873"
+      "bytes": 1870,
+      "sha256": "62d076771582eba679181be78350171f2160e1a139bf8520002a3a2f78bc85c2"
     },
     "README.md": {
       "bytes": 7000,
@@ -302,9 +302,17 @@
       "bytes": 3948,
       "sha256": "a2ab0f0f9294835d9b9ddee67649ee912196dc6370113984b3fa6647d3755159"
     },
+    "scripts/check_content_canvas.mjs": {
+      "bytes": 6059,
+      "sha256": "15d13658ffb8891d4024b4618dcf0faa0d97cc3b94e36aac2f3a42f579184487"
+    },
     "scripts/check_hub_navigation.mjs": {
-      "bytes": 4264,
-      "sha256": "d02a4e0dd54f889e81aad9f4dc1e0ef1e11e1a60c92c3ff2a70807af1e3e3dda"
+      "bytes": 4722,
+      "sha256": "4d33a8c66ee04b781f3ccec20d0198f30f5696c18a6f215aa2131c649ccae199"
+    },
+    "scripts/check_linkage_canvas.mjs": {
+      "bytes": 5727,
+      "sha256": "636b03843563572e38b632bb81e4512a438cefaf6d8beeb9a29bfe164c48ace8"
     },
     "scripts/check_linkage_interactions.mjs": {
       "bytes": 1202,
@@ -533,6 +541,10 @@
     "website/charts.js": {
       "bytes": 8352,
       "sha256": "54166647dbfe1f3df90ccac9849f4d2c87e23ffa609b89bdf93d37f1f627a99f"
+    },
+    "website/content-canvas.js": {
+      "bytes": 22691,
+      "sha256": "9dbb2968ef3345ab804511603ed6c54c95335198d5645485950cc45cc6a3d39c"
     },
     "website/dashboard-charts.js": {
       "bytes": 10311,
@@ -806,21 +818,25 @@
       "bytes": 1572,
       "sha256": "2ce7d092aea293bb93e3a73da24affeebf97a5c00af8c300033fc50e4ce2462a"
     },
+    "website/hub-sections.css": {
+      "bytes": 27322,
+      "sha256": "dda5fca25fdef99a8ddb9e8d7ef9f9e17054ea000f032175bd99b74fb5083cd1"
+    },
     "website/hub.css": {
       "bytes": 26555,
       "sha256": "2a66c605f54e59dde3dcc40d4ce8b9f5c4a60de5f888e0fdb20c75bc332c0d8c"
     },
     "website/hub.js": {
-      "bytes": 44243,
-      "sha256": "78b8d1aeb0b7a03720678e8c1ddb315bd9b6ebb635c73622964a3f918233bd91"
+      "bytes": 41545,
+      "sha256": "e82d047a6204b81f216793b6688f66da84bf4bbcf930fa5e7e5eb784cce6f6a5"
     },
     "website/icon.svg": {
       "bytes": 230,
       "sha256": "60f3cd1ef430f5f3e29cf70c75bd7f7f452e708f86d105eb4f7a121855bd1b42"
     },
     "website/index.html": {
-      "bytes": 2691,
-      "sha256": "f620a7a6aadb0b7aee758a8cb028e18a425fb931b303e6b6ad110bf01167a009"
+      "bytes": 2761,
+      "sha256": "e29c0f9822f60286b8bd9ed353646b4789fd78d273b107f2c810ecbf9b522451"
     },
     "website/jump.css": {
       "bytes": 2912,
@@ -829,6 +845,10 @@
     "website/jump.js": {
       "bytes": 3045,
       "sha256": "d7abfcaf5e8e2fa11132ecf02be52d784fa788e7573098757b8abd786d84db4c"
+    },
+    "website/linkage-canvas.js": {
+      "bytes": 17124,
+      "sha256": "0096d48778f19a9dcbc7eb9cfa65ddc6328f4fa892ce84cc7710843862c64c22"
     },
     "website/linkage-interactive.js": {
       "bytes": 8525,
@@ -851,8 +871,8 @@
       "sha256": "d72feb709ffe20e975a095e22dc4e13fd65486092bc8a31afde5c3b141392d6a"
     },
     "website/overview-canvas.js": {
-      "bytes": 11469,
-      "sha256": "9914f1ee8e8ede8487385cb1bfd3a1fe7c1fc138414cc8f5993537d302efbefb"
+      "bytes": 11522,
+      "sha256": "d8f718d6efad46621c3cfe1ae8788e6e91fb4af00dfe42e092a9ef849ded6e0f"
     },
     "website/overview-paths.css": {
       "bytes": 5676,
