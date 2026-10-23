@@ -413,3 +413,5 @@ button:hover .chart-row-arrow, button:focus-visible .chart-row-arrow { opacity: 
 
 /* Keep the research direction one click away from its source example. */
 .case-fit-link { display: inline-block; margin-top: 12px; font-size: 14px; font-weight: 600; }
+
+@media(max-width:700px){.view-controls>span{white-space:normal;min-width:0}}

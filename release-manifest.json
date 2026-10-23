@@ -20,7 +20,7 @@
     },
     "DATA_LICENSES.md": {
       "bytes": 1590,
-      "sha256": "5f11642c1aa8aa4d5aa2669877c264a0dd37efce18e8918b75d78f12e89cdc88"
+      "sha256": "4a448502af9b46427f34eca3931ed1644ad308df1452a4bd63fe832fcb4167a5"
     },
     "LICENSE": {
       "bytes": 1066,
@@ -483,8 +483,8 @@
       "sha256": "c85b0e44eea53485df89cdbf7ae7556bfec617e8337963d6d609ec89c06bfad8"
     },
     "website/atlas.html": {
-      "bytes": 4070,
-      "sha256": "bc6b0b87ce9802e3f9144edcd473f9f25aac8d7c09205ef4162edf8d0c05a338"
+      "bytes": 4176,
+      "sha256": "6489fcf8752c843fee6e667b6eedf6fa883e4ad0fc4e17300ed8c7e8a2989ed8"
     },
     "website/case-map.css": {
       "bytes": 5487,
@@ -767,20 +767,20 @@
       "sha256": "14bd52a9e3a95d477b75eb81fb1278e3156a7a3be0b6cf0befe9f2ced7d634b0"
     },
     "website/hub.css": {
-      "bytes": 19326,
-      "sha256": "98c08892751974cf7989ab4c7dfd1deabc66c791227823754d4e73ef54070633"
+      "bytes": 19798,
+      "sha256": "fca3b9372d79de7cbf274b7a1a730e865f2f4404b4ef6b13d163b8954ae8319e"
     },
     "website/hub.js": {
-      "bytes": 42709,
-      "sha256": "b103153d7170caa539d3190837bde731acbe070c26ceeb14c142f66233cdf761"
+      "bytes": 43302,
+      "sha256": "c33fc06b86cdae36b13af9045a50ceeeb6f04a7e4cc7a321c43f9f822e4cdd21"
     },
     "website/icon.svg": {
       "bytes": 230,
       "sha256": "60f3cd1ef430f5f3e29cf70c75bd7f7f452e708f86d105eb4f7a121855bd1b42"
     },
     "website/index.html": {
-      "bytes": 2460,
-      "sha256": "5008f8cb1ba801b05a9212c109d3d6f87912ba3b1b7e25acfc9cf2e51b781019"
+      "bytes": 2637,
+      "sha256": "3a3f74386b60d563588a4ebf6d0206d567a776b8a75755aaff1dfcc19409d1a7"
     },
     "website/jump.css": {
       "bytes": 2912,
@@ -819,8 +819,8 @@
       "sha256": "37122dbfdac6747e2b983d89bcfec7031dd6745592221d991dc7e3d6afce651d"
     },
     "website/reader.css": {
-      "bytes": 28273,
-      "sha256": "41e68ddc7dde1a6766cdb2ed1d53977d133a4a524ab3a7687a11466955f4f222"
+      "bytes": 28351,
+      "sha256": "da85f857db101be3a6218843362a612ff0cdb3473f82dddfaeb12bc7ec802be3"
     },
     "website/relational-v2.css": {
       "bytes": 9035,
