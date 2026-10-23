@@ -1,0 +1,319 @@
+{
+  "n": 2000,
+  "population_rows": 3199860,
+  "purpose_counts": {
+    "information_learning": 303,
+    "technical_problem": 223,
+    "text_work": 1039,
+    "personal_guidance": 20,
+    "social_chat": 258,
+    "creative_roleplay": 92,
+    "other_unclear": 65
+  },
+  "relational_mode_counts": {
+    "none": 1752,
+    "described_hypothetical": 58,
+    "personal_help": 31,
+    "unclear": 23,
+    "social_participation": 136
+  },
+  "packaging_counts": {
+    "direct_request": 1613,
+    "pasted_document": 201,
+    "embedded_history": 183,
+    "unclear": 3
+  },
+  "context_counts": {
+    "none": 1814,
+    "work_school": 31,
+    "mixed": 8,
+    "community": 86,
+    "friends": 20,
+    "family": 9,
+    "unclear": 23,
+    "partner": 9
+  },
+  "frame_counts": {
+    "general_or_none": 1048,
+    "supplied_material": 679,
+    "apparently_personal": 33,
+    "fiction_roleplay": 65,
+    "explicit_hypothetical": 10,
+    "unclear": 21,
+    "presented_social_exchange": 144
+  },
+  "benchmark_route_counts": {
+    "not_candidate": 1789,
+    "communication_draft": 32,
+    "scenario_seed": 15,
+    "uncertain": 24,
+    "social_response": 134,
+    "advice_response": 6
+  },
+  "confidence_counts": {
+    "high": 1904,
+    "low": 5,
+    "medium": 91
+  },
+  "primary_status_counts": {
+    "labeled": 1998,
+    "input_limit": 2
+  },
+  "source_language_counts": {
+    "English": 1081,
+    "Chinese": 161,
+    "Persian": 16,
+    "Romanian": 2,
+    "Vietnamese": 78,
+    "Russian": 225,
+    "Portuguese": 29,
+    "French": 117,
+    "Albanian": 2,
+    "Spanish": 37,
+    "Lithuanian": 1,
+    "German": 12,
+    "Arabic": 46,
+    "Ukrainian": 7,
+    "Italian": 8,
+    "Japanese": 9,
+    "Nolang": 3,
+    "Latin": 2,
+    "Estonian": 1,
+    "Malay": 1,
+    "Dutch": 1,
+    "Somali": 1,
+    "Kazakh": 1,
+    "Sotho": 4,
+    "Catalan": 1,
+    "Turkish": 6,
+    "Korean": 7,
+    "Hebrew": 1,
+    "Indonesian": 46,
+    "Esperanto": 2,
+    "Shona": 2,
+    "Polish": 2,
+    "Hungarian": 2,
+    "Latvian": 1,
+    "Maori": 4,
+    "Bokmal": 1,
+    "Tagalog": 7,
+    "Bulgarian": 1,
+    "Basque": 1,
+    "Serbian": 5,
+    "Macedonian": 1,
+    "Yoruba": 60,
+    "Nynorsk": 1,
+    "Icelandic": 1,
+    "Thai": 1,
+    "Hindi": 1,
+    "Finnish": 1
+  },
+  "interpersonal_n": 225,
+  "direct_candidate_n": 172,
+  "direct_candidate_distinct_hashes": 163,
+  "direct_candidate_context_counts": {
+    "work_school": 19,
+    "none": 43,
+    "community": 85,
+    "friends": 12,
+    "family": 5,
+    "partner": 7,
+    "unclear": 1
+  },
+  "direct_candidate_route_counts": {
+    "communication_draft": 32,
+    "social_response": 134,
+    "advice_response": 6
+  },
+  "direct_candidate_two_ai_agree_n": 16,
+  "scenario_seed_n": 15,
+  "earlier_relational_n": 21,
+  "earlier_only_clear_n": 5,
+  "human_validated_n": 0,
+  "agent_source_checks": {
+    "n": 34,
+    "selection": "Twenty-four deliberately selected candidate/uncertain records, including known calibration boundaries and four late-run advice flags; ten primary negatives selected across ten source-language labels from available completed labels. Not a probability sample of the full audit.",
+    "assessment_counts": {
+      "frame_or_route_error": 3,
+      "scope_boundary": 9,
+      "candidate_supported": 8,
+      "clear_error": 2,
+      "uncertainty_supported": 3,
+      "negative_supported": 7,
+      "possible_false_negative": 2
+    },
+    "status": "AI source checks only; not human validation, not a random accuracy estimate."
+  },
+  "secondary": {
+    "selected_n": 454,
+    "completed_n": 314,
+    "comparable_n": 314,
+    "status_counts": {
+      "labeled": 314,
+      "failed": 18,
+      "input_limit": 2,
+      "not_run_quota": 120
+    },
+    "rows_with_any_semantic_disagreement": 199,
+    "field_disagreement_counts": {
+      "purpose": 59,
+      "relational_mode": 64,
+      "packaging": 50,
+      "context": 66,
+      "help_type": 37,
+      "frame": 150,
+      "benchmark_route": 79
+    },
+    "earlier_request_disagreement_n": 12,
+    "scope": "All primary candidates/unclear/low-confidence/earlier-relational records, plus 200 seeded random clear negatives. Targeted diagnostic; not a population accuracy estimate.",
+    "random_negatives": {
+      "selected_n": 200,
+      "completed_n": 179,
+      "relational_disagreement_n": 3,
+      "new_direct_candidate_n": 0,
+      "limit": "Incomplete second-pass coverage is not a random subsample of the selected negatives; these are diagnostic counts, not an error-rate estimate."
+    }
+  },
+  "model_counts": {
+    "primary": {
+      "gpt-5.4-mini-2026-03-17": 1998,
+      "input_limit": 2
+    },
+    "secondary": {
+      "gpt-4.1-2025-04-14": 314,
+      "failed": 18,
+      "input_limit": 2,
+      "not_run_quota": 120
+    }
+  },
+  "sampling_intervals": {
+    "personal_help": {
+      "n": 31,
+      "denominator": 2000,
+      "share": 0.0155,
+      "interval95": [
+        0.01094215394721513,
+        0.021914306609243844
+      ]
+    },
+    "social_participation": {
+      "n": 136,
+      "denominator": 2000,
+      "share": 0.068,
+      "interval95": [
+        0.0577775785667327,
+        0.07987771753314403
+      ]
+    },
+    "described_hypothetical": {
+      "n": 58,
+      "denominator": 2000,
+      "share": 0.029,
+      "interval95": [
+        0.022502181113533352,
+        0.037302551439804474
+      ]
+    },
+    "none": {
+      "n": 1752,
+      "denominator": 2000,
+      "share": 0.876,
+      "interval95": [
+        0.8608357335704243,
+        0.8897235457500533
+      ]
+    },
+    "unclear": {
+      "n": 23,
+      "denominator": 2000,
+      "share": 0.0115,
+      "interval95": [
+        0.0076761853762698515,
+        0.01719560199592872
+      ]
+    }
+  },
+  "interval_limit": "Pointwise Wilson intervals with finite-population correction cover row sampling only, not AI label error. Rows are not unique people.",
+  "pilot_comparison": {
+    "old_n": 120,
+    "new_n": 2000,
+    "old_mode_counts": {
+      "none_or_unclear": 111,
+      "described_hypothetical": 7,
+      "social_participation": 2
+    },
+    "new_comparable_mode_counts": {
+      "personal_help": 31,
+      "social_participation": 136,
+      "described_hypothetical": 58,
+      "none_or_unclear": 1775
+    },
+    "changes": [
+      {
+        "mode": "personal_help",
+        "old_n": 0,
+        "new_n": 31,
+        "old_share": 0.0,
+        "new_share": 0.0155,
+        "difference_pp": 1.55
+      },
+      {
+        "mode": "social_participation",
+        "old_n": 2,
+        "new_n": 136,
+        "old_share": 0.016666666666666666,
+        "new_share": 0.068,
+        "difference_pp": 5.133333333333335
+      },
+      {
+        "mode": "described_hypothetical",
+        "old_n": 7,
+        "new_n": 58,
+        "old_share": 0.058333333333333334,
+        "new_share": 0.029,
+        "difference_pp": -2.933333333333333
+      },
+      {
+        "mode": "none_or_unclear",
+        "old_n": 111,
+        "new_n": 1775,
+        "old_share": 0.925,
+        "new_share": 0.8875,
+        "difference_pp": -3.750000000000009
+      }
+    ],
+    "limit": "Sampling frame, sample size and annotators differ. Differences cannot be attributed to sampling alone; do not pool the two audits."
+  },
+  "overlap_with_pilot_n": 0,
+  "distinct_conversation_hashes": 1927,
+  "complete_input_n": 1998,
+  "provenance": {
+    "sample_plan_sha256": "25c1bf45d8a6063551020aa973151dc84c70ff1a3e50205d06d721c5bf854b96",
+    "retrieval_manifest_sha256": "92485038981bb1a068f6f05f99f98199982f93c445891fdd59fd6c01b1458c8e",
+    "secondary_plan_sha256": "9740e280d613172c6a3d6a26c072a4e9617f993dcd7e5b242401a5001e8b408a",
+    "protocol_sha256": "52524f994d9df4f2348d3aed6d02b23549640dab4fab9c0948fbdbca26351fec",
+    "personal_review_sha256": "d7c4ab4a59d7adf6b3f4ec36206641965522e157ff299bf9fd4548e919660718"
+  },
+  "personal_review": {
+    "n": 31,
+    "counts": {
+      "routine": 14,
+      "conditional": 11,
+      "candidate": 5,
+      "other": 1
+    },
+    "human_validated_n": 0,
+    "by_request_type": {
+      "drafting": {
+        "routine": 14,
+        "conditional": 8,
+        "candidate": 3
+      },
+      "advice": {
+        "other": 1,
+        "candidate": 2,
+        "conditional": 3
+      }
+    }
+  }
+}

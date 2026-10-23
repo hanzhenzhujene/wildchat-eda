@@ -1,0 +1,165 @@
+{
+  "n": 120,
+  "unit": "Primary purpose of the final active user request in each record; earlier turns are context, embedded instructions/history are not automatically the current request.",
+  "selection": "Simple random sample without replacement from the existing 20,000-record block sample; no keyword or language filter.",
+  "seed": 20261019,
+  "status": "AI-assisted content audit; no human validation. Counts describe 120 reviewed final requests only.",
+  "purpose_counts": {
+    "technical_problem": 17,
+    "text_work": 58,
+    "creative_roleplay": 15,
+    "information_learning": 16,
+    "social_chat": 11,
+    "other_unclear": 3
+  },
+  "relational_mode_counts": {
+    "none_or_unclear": 111,
+    "described_hypothetical": 7,
+    "social_participation": 2
+  },
+  "packaging_counts": {
+    "direct_request": 66,
+    "pasted_document": 46,
+    "embedded_history": 8
+  },
+  "confidence_counts": {
+    "medium": 23,
+    "high": 95,
+    "low": 2
+  },
+  "purpose_definitions": {
+    "text_work": "Draft, summarize, translate or classify text.",
+    "technical_problem": "Solve a coding, math or data task.",
+    "information_learning": "Ask for facts or an explanation.",
+    "creative_roleplay": "Invent a story, scene or character.",
+    "social_chat": "Greet, banter or participate in an exchange.",
+    "personal_guidance": "Seek help with an apparently lived situation.",
+    "other_unclear": "The active task cannot be resolved."
+  },
+  "purpose_packaging_matrix": {
+    "rows": [
+      "text_work",
+      "technical_problem",
+      "information_learning",
+      "creative_roleplay",
+      "social_chat",
+      "personal_guidance",
+      "other_unclear"
+    ],
+    "columns": [
+      "direct_request",
+      "pasted_document",
+      "embedded_history",
+      "unclear"
+    ],
+    "counts": [
+      [
+        20,
+        35,
+        3,
+        0
+      ],
+      [
+        6,
+        10,
+        1,
+        0
+      ],
+      [
+        14,
+        1,
+        1,
+        0
+      ],
+      [
+        15,
+        0,
+        0,
+        0
+      ],
+      [
+        8,
+        0,
+        3,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        3,
+        0,
+        0,
+        0
+      ]
+    ]
+  },
+  "overlap_n": 20,
+  "initial_disagreements": [
+    {
+      "row_index": 1861520,
+      "fields": {
+        "packaging": {
+          "primary": "embedded_history",
+          "independent": "pasted_document"
+        }
+      }
+    },
+    {
+      "row_index": 1777382,
+      "fields": {
+        "packaging": {
+          "primary": "embedded_history",
+          "independent": "pasted_document"
+        }
+      }
+    },
+    {
+      "row_index": 1726800,
+      "fields": {
+        "relational_mode": {
+          "primary": "described_hypothetical",
+          "independent": "none_or_unclear"
+        },
+        "packaging": {
+          "primary": "embedded_history",
+          "independent": "pasted_document"
+        }
+      }
+    },
+    {
+      "row_index": 1259839,
+      "fields": {
+        "packaging": {
+          "primary": "embedded_history",
+          "independent": "direct_request"
+        }
+      }
+    },
+    {
+      "row_index": 152577,
+      "fields": {
+        "relational_mode": {
+          "primary": "described_hypothetical",
+          "independent": "none_or_unclear"
+        }
+      }
+    }
+  ],
+  "overlap_disagreement_counts": {
+    "purpose": 0,
+    "relational_mode": 2,
+    "packaging": 4
+  },
+  "adjudication_count": 21,
+  "provenance": {
+    "outputs/content_review_plan.json": "f6ccaa7ca1f1f995343d0055eb8656e32de222da0e9551fbe67c7cda18fe54bc",
+    "reviews/content_a.json": "79efec25cce23e2136a2d6f7f5718081bfc087e494a0400f1c33e29216ac446d",
+    "reviews/content_b.json": "d420fb6d269721205ca8c0bd8ca1a956fcc55951ac709b298be91f148cc73711",
+    "reviews/content_overlap.json": "5592af097363ee09544eda5e19a3e795ba5c74893ecc1e7f160f048139b09c44",
+    "reviews/content_adjudication.json": "95eccf4ff9dc675ae13a61191481d6d236adc9aaa80bc46101755a9b72b7eeb2"
+  }
+}

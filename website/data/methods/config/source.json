@@ -1,0 +1,12 @@
+{
+  "dataset": "allenai/WildChat-4.8M",
+  "config": "default",
+  "split": "train",
+  "revision": "c827c6df8fcf008219ffaffa4d1dd77491099367",
+  "num_rows": 3199860,
+  "sample_size": 20000,
+  "windows": 200,
+  "window_size": 100,
+  "seed": 20261017,
+  "retrieval_date": "2026-10-17"
+}

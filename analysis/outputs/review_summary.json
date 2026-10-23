@@ -1,0 +1,47 @@
+{
+  "review_type": "AI-assisted close reading. No human labels or validation.",
+  "candidate_review_n": 80,
+  "candidate_labels": {
+    "unrelated": 40,
+    "fiction_or_general": 37,
+    "personal_drafting": 2,
+    "unclear": 1
+  },
+  "negative_review_n": 40,
+  "negative_labels": {
+    "unrelated": 21,
+    "fiction_or_general": 19
+  },
+  "candidate_personal_n": 2,
+  "negative_personal_n": 0,
+  "candidate_formats": {
+    "embedded_group_history": 35,
+    "pasted_document": 29,
+    "native_chat": 8,
+    "embedded_other_history": 8
+  },
+  "negative_formats": {
+    "pasted_document": 20,
+    "native_chat": 15,
+    "embedded_other_history": 5
+  },
+  "personal_contexts": {
+    "work_school": 1,
+    "community": 1
+  },
+  "personal_followups": {
+    "clarification": 1,
+    "none": 1
+  },
+  "overlap_review_n": 20,
+  "initial_label_disagreement_n": 1,
+  "initial_disagreements": [
+    {
+      "row_index": 3139177,
+      "primary_label": "unrelated",
+      "second_label": "fiction_or_general"
+    }
+  ],
+  "adjudicated": true,
+  "scope": "Counts describe the seeded audit, not dataset prevalence, recall, or human-validated precision."
+}

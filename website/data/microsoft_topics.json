@@ -1,0 +1,836 @@
+{
+  "schema_version": 1,
+  "source": {
+    "name": "Adopt ≠ Adapt: released WildChat classifications",
+    "repo": "microsoft/adopt-adapt-wildchat",
+    "revision": "b4e77e44b62ba2ddd0f7b53667b218e345faba09",
+    "url": "https://github.com/microsoft/adopt-adapt-wildchat/tree/b4e77e44b62ba2ddd0f7b53667b218e345faba09",
+    "paper_url": "https://arxiv.org/abs/2605.29018v2",
+    "upstream_dataset": "allenai/WildChat-4.8M",
+    "upstream_revision": "c827c6df8fcf008219ffaffa4d1dd77491099367",
+    "authors_upstream_revision": null,
+    "matched_atlas_revision": "c827c6df8fcf008219ffaffa4d1dd77491099367",
+    "upstream_revision_note": "Microsoft names the public release but does not pin its Hugging Face revision. upstream_revision is the Atlas reference validated by this audit, not a revision declared by Microsoft.",
+    "upstream_url": "https://huggingface.co/datasets/allenai/WildChat-4.8M/tree/c827c6df8fcf008219ffaffa4d1dd77491099367",
+    "classifier_model": "gpt-4o-mini",
+    "classification_unit": "conversation",
+    "label_status": "AI labels; these released labels have not been human-checked here.",
+    "code_license": "MIT",
+    "original_conversation_license": "ODC-BY",
+    "label_license_note": "The repository releases these outputs publicly and carries an MIT software license. It does not separately declare a license specific to the annotation files.",
+    "validation_note": "The paper adapts English intent/domain prompts previously evaluated against human consensus (reported Cohen's kappa 0.57/0.70 with GPT-4). This does not establish accuracy of every released GPT-4o-mini label or its multilingual performance.",
+    "validation_url": "https://arxiv.org/html/2605.29018v2#S4.SS2",
+    "input_scope": "All stored user and assistant messages; each message of at least 5,000 characters retains its first 2,500 and last 2,500 characters."
+  },
+  "scope": {
+    "rows": 3199860,
+    "total_rows": 3199860,
+    "unit": "released conversation records",
+    "filters_applied": [],
+    "deduplication_applied": false,
+    "coverage": "All 86 public WildChat-4.8M source shards; row count/order checked against the pinned source census.",
+    "denominator": 3199860,
+    "weighting": "One vote per released record, not per user or per unique text.",
+    "classification": "One domain and one intent per record. Missing or invalid labels remain as unclassified.",
+    "date_min": "2023-04-09T00:03:20",
+    "date_max": "2025-07-31T23:56:04",
+    "labeled_domain_rows": 3196157,
+    "missing_domain_rows": 3703,
+    "labeled_intent_rows": 3195661,
+    "missing_intent_rows": 4199
+  },
+  "quality": {
+    "duplicate_keys": {
+      "key8": {
+        "duplicate_groups": 412,
+        "rows_in_duplicate_groups": 1076,
+        "extra_rows": 664,
+        "groups_with_conflicting_labels": 17
+      },
+      "key5": {
+        "duplicate_groups": 5090,
+        "rows_in_duplicate_groups": 15125,
+        "extra_rows": 10035,
+        "groups_with_conflicting_labels": 168
+      },
+      "content_hash": {
+        "duplicate_groups": 39306,
+        "rows_in_duplicate_groups": 370084,
+        "extra_rows": 330778,
+        "groups_with_conflicting_labels": 4199
+      }
+    },
+    "source_aligned_rows": 3199860,
+    "join_status": "Domain and intent full eight-field keys align in every shard. Each row matches pinned census hash/model/language/turn/date and row position.",
+    "validation_status": "The paper adapts previously validated English prompts. No human validation of these released domain/intent labels is recorded here; multilingual accuracy is not established.",
+    "missing_domain_values": {
+      "None": 3703
+    },
+    "missing_intent_values": {
+      "None": 4199
+    }
+  },
+  "caveats": [
+    "This public release already excludes toxicity-flagged content.",
+    "No additional IP, time, language, repetition or template filters were applied here.",
+    "This aggregation differs from the paper's filtered longitudinal study.",
+    "Repeated records, templated usage and prolific users contribute repeatedly.",
+    "Conversation_hash alone is not a unique record key."
+  ],
+  "domains": [
+    {
+      "id": "translation_and_language",
+      "label": "Translation and Language",
+      "definition": "The user's topical domain is related to the translation of words, phrases or sentences in different languages, or to the learning, study or practice of word meanings or the structure, function, evolution, or diversity of languages or linguistic features, rules or systems.",
+      "count": 364825,
+      "share_pct": 11.40128005600245
+    },
+    {
+      "id": "small_talk_and_chatbot",
+      "label": "Small Talk and Chatbot",
+      "definition": "The user's topical domain is related to general questions or answers about the AI agent or the user is engaging the AI agent in jokes or other casual interaction that is not about any of the topical domains. If the user is talking about any of the topical domains, even if it appears they are confused or joking, then the topical domain should be that domain and not 'Small talk and chatbot'.",
+      "count": 320980,
+      "share_pct": 10.031063859043833
+    },
+    {
+      "id": "programming_and_scripting",
+      "label": "Programming and Scripting",
+      "definition": "The user's topical domain is related to creating, modifying or debugging computer code, programs, websites, web applications or scripts using various languages, frameworks or tools.",
+      "count": 282916,
+      "share_pct": 8.841511816141956
+    },
+    {
+      "id": "gaming",
+      "label": "Gaming",
+      "definition": "The user's topical domain is related to the playing, designing or reviewing of video games.",
+      "count": 253246,
+      "share_pct": 7.914283749914059
+    },
+    {
+      "id": "creative_writing_and_editing",
+      "label": "Creative Writing and Editing",
+      "definition": "The user's topical domain is related to the creation, improvement or evaluation texts for creative or imaginative purposes or audiences, such as stories, poems, songs, etc., or to the genres, styles or themes of creative writing.",
+      "count": 251219,
+      "share_pct": 7.850937228503747
+    },
+    {
+      "id": "entertainment",
+      "label": "Entertainment",
+      "definition": "The user's topical domain is related to or is about entertainment media such as movies, tv shows, music, or books, or the celebrities in that media.",
+      "count": 194286,
+      "share_pct": 6.0717031370122445
+    },
+    {
+      "id": "business_and_finance",
+      "label": "Business and Finance",
+      "definition": "The user's topical domain is related to the operation, strategy or analysis of an organization or an industry, or to the study of the production, distribution or consumption of goods or services, or to the market, trade or currency issues, or to financial transaction, products, services or regulations.",
+      "count": 164335,
+      "share_pct": 5.135693436587851
+    },
+    {
+      "id": "health_and_medicine",
+      "label": "Health and Medicine",
+      "definition": "The user's topical domain is related to the diagnosis, treatment or prevention of diseases or disorders, or to the physical or mental well-being of humans or animals.",
+      "count": 129779,
+      "share_pct": 4.055771189989562
+    },
+    {
+      "id": "jobs_and_employment",
+      "label": "Jobs and Employment",
+      "definition": "The user's topical domain is related to researching, understanding, seeking, or interviewing for a job or employment, including resume writing.",
+      "count": 122222,
+      "share_pct": 3.819604607701587
+    },
+    {
+      "id": "education_and_learning",
+      "label": "Education and Learning",
+      "definition": "The user's topical domain is related to learning, teaching or studying various subjects or skills, or to the methods, tools or resources for education or learning, or to the educational institutions, programs or policies.",
+      "count": 107173,
+      "share_pct": 3.3493027819967125
+    },
+    {
+      "id": "food_and_drink",
+      "label": "Food and Drink",
+      "definition": "The user's topical domain is related to the preparation, storage or consumption of food or beverages, or to the recipes, ingredients, flavors or health benefits of food or beverages, or to the preferences, opinions or recommendations of food or beverages.",
+      "count": 102923,
+      "share_pct": 3.216484471195615
+    },
+    {
+      "id": "law_and_politics",
+      "label": "Law and Politics",
+      "definition": "The user's topical domain is related to the rules, regulations or principles that govern the conduct or relations of people or entities, or to the rights, responsibilities or remedies of legal subjects or cases, or to the opinions, issues or actions of political actors or institutions.",
+      "count": 91606,
+      "share_pct": 2.8628127480577277
+    },
+    {
+      "id": "computers_and_electronics",
+      "label": "Computers and Electronics",
+      "definition": "The user's topical domain is related to general questions, comments or discussion of computer and electronics, including technology products and services, and the internet.",
+      "count": 85676,
+      "share_pct": 2.6774921402811374
+    },
+    {
+      "id": "shopping_and_ecommerce",
+      "label": "Shopping and eCommerce",
+      "definition": "The user's topical domain is related to purchasing goods or services, including products, prices, discounts, reviews, or points.",
+      "count": 78358,
+      "share_pct": 2.448794634765271
+    },
+    {
+      "id": "history_and_culture",
+      "label": "History and Culture",
+      "definition": "The user's topical domain is related to the past or present events, people, places, customs, beliefs, values or arts of a group of people or a region, or to the appreciation, criticism or creation of historical or cultural works.",
+      "count": 73784,
+      "share_pct": 2.3058508809760427
+    },
+    {
+      "id": "mathematics_and_logic",
+      "label": "Mathematics and Logic",
+      "definition": "The user's topical domain is related to the application or solution of mathematical or logical problems or puzzles, such as arithmetic, algebra, geometry, calculus, etc., or to the concepts, theories or arguments of various branches of mathematics or logic.",
+      "count": 65408,
+      "share_pct": 2.044089428912515
+    },
+    {
+      "id": "machine_learning_and_ai",
+      "label": "Machine Learning and AI",
+      "definition": "The user's topical domain is related to applying or developing artificial intelligence or machine learning techniques or models using various methods, tools or software.",
+      "count": 62336,
+      "share_pct": 1.948085228728757
+    },
+    {
+      "id": "engineering_and_design",
+      "label": "Engineering and Design",
+      "definition": "The user's topical domain is related to the application of engineering principles or methods to various fields, such as civil, mechanical, electrical, chemical, etc., or to the design or creation of visual or auditory works.",
+      "count": 59901,
+      "share_pct": 1.8719881494815398
+    },
+    {
+      "id": "data_analysis_and_visualization",
+      "label": "Data Analysis and Visualization",
+      "definition": "The user's topical domain is related to collecting, analyzing, visualizing or presenting data using various methods, tools or software.",
+      "count": 56014,
+      "share_pct": 1.7505140849912184
+    },
+    {
+      "id": "home_and_auto",
+      "label": "Home and Auto",
+      "definition": "The user's topical domain is related to home and auto related projects, products, services, and repairs.",
+      "count": 55463,
+      "share_pct": 1.7332945816379466
+    },
+    {
+      "id": "other",
+      "label": "Other",
+      "definition": "the user's topical domain does not fit into any of the above specified topical domains. The topical domain should be 'Other' if and only if it absolutely does not fit into any of the other topical domains.",
+      "count": 40127,
+      "share_pct": 1.254023613533092
+    },
+    {
+      "id": "biology",
+      "label": "Biology",
+      "definition": "The user's topical domain is related to the study of the structure, function, evolution or diversity of living organisms.",
+      "count": 39030,
+      "share_pct": 1.2197408636627853
+    },
+    {
+      "id": "religion_and_philosophy",
+      "label": "Religion and Philosophy",
+      "definition": "The user's topical domain is related to the belief, worship or practice of a supernatural or divine power or entity, or to the personal or philosophical quest for meaning or purpose, or to the concepts, theories or arguments of various schools of thought.",
+      "count": 36651,
+      "share_pct": 1.145393860981418
+    },
+    {
+      "id": "physics_and_chemistry",
+      "label": "Physics and Chemistry",
+      "definition": "The user's topical domain is related to the study of the matter, energy, forces, reactions or interactions of the physical or chemical world, or to the concepts, theories or experiments of various branches of physics or chemistry.",
+      "count": 36614,
+      "share_pct": 1.1442375603932673
+    },
+    {
+      "id": "marketing_and_sales",
+      "label": "Marketing and Sales",
+      "definition": "The user's topical domain is related to promoting or selling products or services, or to creating, evaluating or improving advertisements or marketing strategies or campaigns, or to persuading or influencing potential customers or clients.",
+      "count": 29592,
+      "share_pct": 0.9247904595826067
+    },
+    {
+      "id": "fashion_and_beauty",
+      "label": "Fashion and Beauty",
+      "definition": "The user's topical domain is related to the style, appearance or attractiveness of clothing, accessories, cosmetics or hair, or to the trends, tips or advice of fashion or beauty, or to the fashion or beauty products, services or brands.",
+      "count": 27471,
+      "share_pct": 0.8585063096510472
+    },
+    {
+      "id": "sports_and_fitness",
+      "label": "Sports and Fitness",
+      "definition": "The user's topical domain is related to the physical activities, exercises or games that involve skill, strength or endurance, or to the equipment, rules or strategies of sports or fitness, or to the sports teams, players or events.",
+      "count": 25723,
+      "share_pct": 0.803878919702737
+    },
+    {
+      "id": "professional_writing_and_editing",
+      "label": "Professional Writing and Editing",
+      "definition": "The user's topical domain is related to the creation, improvement or evaluation of texts for academic purposes or audiences, such as essays, articles, theses, etc., or to the citation, referencing or plagiarism issues of academic writing.",
+      "count": 17159,
+      "share_pct": 0.5362422105967136
+    },
+    {
+      "id": "travel_and_tourism",
+      "label": "Travel and Tourism",
+      "definition": "The user's topical domain is related to the movement, exploration or discovery of different places or cultures, or to the transportation, accommodation or activities of travelers, or to the travel guides, tips or advice.",
+      "count": 11150,
+      "share_pct": 0.3484527448075853
+    },
+    {
+      "id": "adult",
+      "label": "Adult",
+      "definition": "The user's topical domain is related to searching for, consuming, or producing pornographic content.",
+      "count": 10190,
+      "share_pct": 0.3184514322501609
+    },
+    {
+      "id": "unclassified",
+      "label": "Unclassified",
+      "count": 3703,
+      "share_pct": 0.1157238129168151,
+      "definition": "No valid released classifier label; retained in the denominator."
+    }
+  ],
+  "intents": [
+    {
+      "id": "text_generation",
+      "label": "Text Generation",
+      "definition": "Conversations where the user asks the agent to either generate new content or modify existing content based on specified criteria or constraints. In the case of generating new content, the user's questions require some degree of creativity, novelty, or innovation from the agent. The agent's responses contain new or modified outputs that match the user's specifications.",
+      "count": 878166,
+      "share_pct": 27.443888170107442
+    },
+    {
+      "id": "information_lookup",
+      "label": "Information Lookup",
+      "definition": "Conversations where the user wants to find factual information or answers to specific questions. The agent's responses are typically direct, concise, and informative, providing the relevant information and/or links to the sources.",
+      "count": 802151,
+      "share_pct": 25.068315488802636
+    },
+    {
+      "id": "information_gathering",
+      "label": "Information Gathering",
+      "definition": "Conversations where the user wants to gather information that they can use to do their task. This could be asking the agent for recommendations, asking the agent to compare two or more objects, events, ideas, problems, or situations, etc.",
+      "count": 454165,
+      "share_pct": 14.193277205877758
+    },
+    {
+      "id": "open_ended_discovery",
+      "label": "Open-Ended Discovery",
+      "definition": "Conversations where the user wants to chat or play with the agent out of curiosity, boredom, or humor, or else explore broad ideas or areas of interest without a specific goal or information need in mind. The agent's responses are typically suggestive and engaging. The agent may also encourage further inquiry or action from the user to deepen their discovery experience.",
+      "count": 443725,
+      "share_pct": 13.867012931815767
+    },
+    {
+      "id": "translation_or_conversion",
+      "label": "Translation or Conversion",
+      "definition": "Conversations where the user wants to convert information from one form or representation to another, such as from one language to another, from one unit to another, from words to numbers or vice versa.",
+      "count": 305614,
+      "share_pct": 9.550855349921559
+    },
+    {
+      "id": "analysis",
+      "label": "Analysis",
+      "definition": "Conversations where the user asks analytical or conceptual questions about a complex topic or problem. The user's questions require some degree of reasoning, interpretation, argumentation, comparison, and/or data processing from the agent. The agent's responses are typically explanatory and detailed, and are based on evidence, logic, and facts.",
+      "count": 197968,
+      "share_pct": 6.186770671216865
+    },
+    {
+      "id": "summarization",
+      "label": "Summarization",
+      "definition": "Conversations where the user wants to get a brief statement that captures the main idea or theme of the given information.",
+      "count": 69022,
+      "share_pct": 2.1570318701443187
+    },
+    {
+      "id": "image_creation",
+      "label": "Image Creation",
+      "definition": "Conversations where the user asks the agent to either generate or modify an image based on specified criteria or constraints.",
+      "count": 31202,
+      "share_pct": 0.9751051608507872
+    },
+    {
+      "id": "web_site_navigation",
+      "label": "Website Navigation",
+      "definition": "Conversations where the user simply wants to go to a particular website or service. For example, \"facebook\" indicates the user wants to go to the Facebook page to logon, \"gmail\" indicates the user wants to go to Gmail to perform email related actions and \"google translate\" indicates the user wants to go to \"Google Translate\" page.",
+      "count": 13648,
+      "share_pct": 0.42651866019138335
+    },
+    {
+      "id": "unclassified",
+      "label": "Unclassified",
+      "count": 4199,
+      "share_pct": 0.13122449107148437,
+      "definition": "No valid released classifier label; retained in the denominator."
+    }
+  ],
+  "examples": [
+    {
+      "kind": "domain",
+      "id": "adult",
+      "row_index": 1092973,
+      "user_message_index": 0,
+      "reply_message_index": 1,
+      "title": "Adult",
+      "intent_id": "information_lookup",
+      "selection_review": "Neutral question about NSFW support; no graphic source wording.",
+      "selection_note": "Deliberately selected original exchange. Released AI label; recorded reply, not a reference answer."
+    },
+    {
+      "kind": "domain",
+      "id": "biology",
+      "row_index": 175423,
+      "user_message_index": 0,
+      "reply_message_index": 1,
+      "title": "Biology",
+      "intent_id": "information_lookup",
+      "selection_review": null,
+      "selection_note": "Deliberately selected original exchange. Released AI label; recorded reply, not a reference answer."
+    },
+    {
+      "kind": "domain",
+      "id": "business_and_finance",
+      "row_index": 677331,
+      "user_message_index": 0,
+      "reply_message_index": 1,
+      "title": "Business And Finance",
+      "intent_id": "information_lookup",
+      "selection_review": null,
+      "selection_note": "Deliberately selected original exchange. Released AI label; recorded reply, not a reference answer."
+    },
+    {
+      "kind": "domain",
+      "id": "computers_and_electronics",
+      "row_index": 200571,
+      "user_message_index": 0,
+      "reply_message_index": 1,
+      "title": "Computers And Electronics",
+      "intent_id": "information_lookup",
+      "selection_review": null,
+      "selection_note": "Deliberately selected original exchange. Released AI label; recorded reply, not a reference answer."
+    },
+    {
+      "kind": "domain",
+      "id": "creative_writing_and_editing",
+      "row_index": 2397283,
+      "user_message_index": 0,
+      "reply_message_index": 1,
+      "title": "Creative Writing And Editing",
+      "intent_id": "text_generation",
+      "selection_review": null,
+      "selection_note": "Deliberately selected original exchange. Released AI label; recorded reply, not a reference answer."
+    },
+    {
+      "kind": "domain",
+      "id": "data_analysis_and_visualization",
+      "row_index": 141035,
+      "user_message_index": 0,
+      "reply_message_index": 1,
+      "title": "Data Analysis And Visualization",
+      "intent_id": "information_lookup",
+      "selection_review": null,
+      "selection_note": "Deliberately selected original exchange. Released AI label; recorded reply, not a reference answer."
+    },
+    {
+      "kind": "domain",
+      "id": "education_and_learning",
+      "row_index": 1810024,
+      "user_message_index": 0,
+      "reply_message_index": 1,
+      "title": "Education And Learning",
+      "intent_id": "information_lookup",
+      "selection_review": null,
+      "selection_note": "Deliberately selected original exchange. Released AI label; recorded reply, not a reference answer."
+    },
+    {
+      "kind": "domain",
+      "id": "engineering_and_design",
+      "row_index": 433486,
+      "user_message_index": 0,
+      "reply_message_index": 1,
+      "title": "Engineering And Design",
+      "intent_id": "information_lookup",
+      "selection_review": null,
+      "selection_note": "Deliberately selected original exchange. Released AI label; recorded reply, not a reference answer."
+    },
+    {
+      "kind": "domain",
+      "id": "entertainment",
+      "row_index": 390495,
+      "user_message_index": 0,
+      "reply_message_index": 1,
+      "title": "Entertainment",
+      "intent_id": "analysis",
+      "selection_review": null,
+      "selection_note": "Deliberately selected original exchange. Released AI label; recorded reply, not a reference answer."
+    },
+    {
+      "kind": "domain",
+      "id": "fashion_and_beauty",
+      "row_index": 2875304,
+      "user_message_index": 0,
+      "reply_message_index": 1,
+      "title": "Fashion And Beauty",
+      "intent_id": "open_ended_discovery",
+      "selection_review": null,
+      "selection_note": "Deliberately selected original exchange. Released AI label; recorded reply, not a reference answer."
+    },
+    {
+      "kind": "domain",
+      "id": "food_and_drink",
+      "row_index": 197061,
+      "user_message_index": 0,
+      "reply_message_index": 1,
+      "title": "Food And Drink",
+      "intent_id": "information_lookup",
+      "selection_review": "Direct sandwich recipe request and recipe reply.",
+      "selection_note": "Deliberately selected original exchange. Released AI label; recorded reply, not a reference answer."
+    },
+    {
+      "kind": "domain",
+      "id": "gaming",
+      "row_index": 220335,
+      "user_message_index": 0,
+      "reply_message_index": 1,
+      "title": "Gaming",
+      "intent_id": "information_lookup",
+      "selection_review": "Direct question about a named video game.",
+      "selection_note": "Deliberately selected original exchange. Released AI label; recorded reply, not a reference answer."
+    },
+    {
+      "kind": "domain",
+      "id": "health_and_medicine",
+      "row_index": 184747,
+      "user_message_index": 0,
+      "reply_message_index": 1,
+      "title": "Health And Medicine",
+      "intent_id": "information_lookup",
+      "selection_review": null,
+      "selection_note": "Deliberately selected original exchange. Released AI label; recorded reply, not a reference answer."
+    },
+    {
+      "kind": "domain",
+      "id": "history_and_culture",
+      "row_index": 498690,
+      "user_message_index": 0,
+      "reply_message_index": 1,
+      "title": "History And Culture",
+      "intent_id": "text_generation",
+      "selection_review": null,
+      "selection_note": "Deliberately selected original exchange. Released AI label; recorded reply, not a reference answer."
+    },
+    {
+      "kind": "domain",
+      "id": "home_and_auto",
+      "row_index": 1952933,
+      "user_message_index": 0,
+      "reply_message_index": 1,
+      "title": "Home And Auto",
+      "intent_id": "information_lookup",
+      "selection_review": null,
+      "selection_note": "Deliberately selected original exchange. Released AI label; recorded reply, not a reference answer."
+    },
+    {
+      "kind": "domain",
+      "id": "jobs_and_employment",
+      "row_index": 960138,
+      "user_message_index": 0,
+      "reply_message_index": 1,
+      "title": "Jobs And Employment",
+      "intent_id": "text_generation",
+      "selection_review": null,
+      "selection_note": "Deliberately selected original exchange. Released AI label; recorded reply, not a reference answer."
+    },
+    {
+      "kind": "domain",
+      "id": "law_and_politics",
+      "row_index": 1318805,
+      "user_message_index": 0,
+      "reply_message_index": 1,
+      "title": "Law And Politics",
+      "intent_id": "information_lookup",
+      "selection_review": "Specific question about an employer legal obligation.",
+      "selection_note": "Deliberately selected original exchange. Released AI label; recorded reply, not a reference answer."
+    },
+    {
+      "kind": "domain",
+      "id": "machine_learning_and_ai",
+      "row_index": 200572,
+      "user_message_index": 0,
+      "reply_message_index": 1,
+      "title": "Machine Learning And Ai",
+      "intent_id": "information_lookup",
+      "selection_review": null,
+      "selection_note": "Deliberately selected original exchange. Released AI label; recorded reply, not a reference answer."
+    },
+    {
+      "kind": "domain",
+      "id": "marketing_and_sales",
+      "row_index": 1164669,
+      "user_message_index": 0,
+      "reply_message_index": 1,
+      "title": "Marketing And Sales",
+      "intent_id": "text_generation",
+      "selection_review": null,
+      "selection_note": "Deliberately selected original exchange. Released AI label; recorded reply, not a reference answer."
+    },
+    {
+      "kind": "domain",
+      "id": "mathematics_and_logic",
+      "row_index": 103967,
+      "user_message_index": 0,
+      "reply_message_index": 1,
+      "title": "Mathematics And Logic",
+      "intent_id": "information_lookup",
+      "selection_review": null,
+      "selection_note": "Deliberately selected original exchange. Released AI label; recorded reply, not a reference answer."
+    },
+    {
+      "kind": "domain",
+      "id": "other",
+      "row_index": 2431251,
+      "user_message_index": 0,
+      "reply_message_index": 1,
+      "title": "Other",
+      "intent_id": "information_lookup",
+      "selection_review": null,
+      "selection_note": "Deliberately selected original exchange. Released AI label; recorded reply, not a reference answer."
+    },
+    {
+      "kind": "domain",
+      "id": "physics_and_chemistry",
+      "row_index": 655284,
+      "user_message_index": 0,
+      "reply_message_index": 1,
+      "title": "Physics And Chemistry",
+      "intent_id": "information_lookup",
+      "selection_review": null,
+      "selection_note": "Deliberately selected original exchange. Released AI label; recorded reply, not a reference answer."
+    },
+    {
+      "kind": "domain",
+      "id": "professional_writing_and_editing",
+      "row_index": 657284,
+      "user_message_index": 0,
+      "reply_message_index": 1,
+      "title": "Professional Writing And Editing",
+      "intent_id": "translation_or_conversion",
+      "selection_review": "Supplied sentence and requested academic rewrite.",
+      "selection_note": "Deliberately selected original exchange. Released AI label; recorded reply, not a reference answer."
+    },
+    {
+      "kind": "domain",
+      "id": "programming_and_scripting",
+      "row_index": 450990,
+      "user_message_index": 0,
+      "reply_message_index": 1,
+      "title": "Programming And Scripting",
+      "intent_id": "information_lookup",
+      "selection_review": null,
+      "selection_note": "Deliberately selected original exchange. Released AI label; recorded reply, not a reference answer."
+    },
+    {
+      "kind": "domain",
+      "id": "religion_and_philosophy",
+      "row_index": 198490,
+      "user_message_index": 0,
+      "reply_message_index": 1,
+      "title": "Religion And Philosophy",
+      "intent_id": "information_lookup",
+      "selection_review": "Direct question about evidence for a religious figure's historical life.",
+      "selection_note": "Deliberately selected original exchange. Released AI label; recorded reply, not a reference answer."
+    },
+    {
+      "kind": "domain",
+      "id": "shopping_and_ecommerce",
+      "row_index": 200617,
+      "user_message_index": 0,
+      "reply_message_index": 1,
+      "title": "Shopping And Ecommerce",
+      "intent_id": "information_lookup",
+      "selection_review": null,
+      "selection_note": "Deliberately selected original exchange. Released AI label; recorded reply, not a reference answer."
+    },
+    {
+      "kind": "domain",
+      "id": "small_talk_and_chatbot",
+      "row_index": 745077,
+      "user_message_index": 0,
+      "reply_message_index": 1,
+      "title": "Small Talk And Chatbot",
+      "intent_id": "open_ended_discovery",
+      "selection_review": null,
+      "selection_note": "Deliberately selected original exchange. Released AI label; recorded reply, not a reference answer."
+    },
+    {
+      "kind": "domain",
+      "id": "sports_and_fitness",
+      "row_index": 141020,
+      "user_message_index": 0,
+      "reply_message_index": 1,
+      "title": "Sports And Fitness",
+      "intent_id": "text_generation",
+      "selection_review": null,
+      "selection_note": "Deliberately selected original exchange. Released AI label; recorded reply, not a reference answer."
+    },
+    {
+      "kind": "domain",
+      "id": "translation_and_language",
+      "row_index": 1061296,
+      "user_message_index": 0,
+      "reply_message_index": 1,
+      "title": "Translation And Language",
+      "intent_id": "translation_or_conversion",
+      "selection_review": "English translation instruction with an explicit source phrase.",
+      "selection_note": "Deliberately selected original exchange. Released AI label; recorded reply, not a reference answer."
+    },
+    {
+      "kind": "domain",
+      "id": "travel_and_tourism",
+      "row_index": 567433,
+      "user_message_index": 0,
+      "reply_message_index": 1,
+      "title": "Travel And Tourism",
+      "intent_id": "information_lookup",
+      "selection_review": null,
+      "selection_note": "Deliberately selected original exchange. Released AI label; recorded reply, not a reference answer."
+    },
+    {
+      "kind": "domain",
+      "id": "unclassified",
+      "row_index": 774161,
+      "user_message_index": 0,
+      "reply_message_index": 1,
+      "title": "Unclassified",
+      "intent_id": "image_creation",
+      "selection_review": "Benign image request; no label assigned and reason unknown.",
+      "selection_note": "No released label assigned. The reason is unknown; this example is deliberately selected."
+    },
+    {
+      "kind": "intent",
+      "id": "analysis",
+      "row_index": 390495,
+      "user_message_index": 0,
+      "reply_message_index": 1,
+      "title": "Analysis",
+      "intent_id": "analysis",
+      "selection_review": null,
+      "selection_note": "Deliberately selected original exchange. Released AI label; recorded reply, not a reference answer."
+    },
+    {
+      "kind": "intent",
+      "id": "image_creation",
+      "row_index": 1335335,
+      "user_message_index": 0,
+      "reply_message_index": 1,
+      "title": "Image Creation",
+      "intent_id": "image_creation",
+      "selection_review": null,
+      "selection_note": "Deliberately selected original exchange. Released AI label; recorded reply, not a reference answer."
+    },
+    {
+      "kind": "intent",
+      "id": "information_gathering",
+      "row_index": 1442569,
+      "user_message_index": 0,
+      "reply_message_index": 1,
+      "title": "Information Gathering",
+      "intent_id": "information_gathering",
+      "selection_review": null,
+      "selection_note": "Deliberately selected original exchange. Released AI label; recorded reply, not a reference answer."
+    },
+    {
+      "kind": "intent",
+      "id": "information_lookup",
+      "row_index": 1494984,
+      "user_message_index": 0,
+      "reply_message_index": 1,
+      "title": "Information Lookup",
+      "intent_id": "information_lookup",
+      "selection_review": "Question asking when a historical invention appeared.",
+      "selection_note": "Deliberately selected original exchange. Released AI label; recorded reply, not a reference answer."
+    },
+    {
+      "kind": "intent",
+      "id": "open_ended_discovery",
+      "row_index": 745077,
+      "user_message_index": 0,
+      "reply_message_index": 1,
+      "title": "Open Ended Discovery",
+      "intent_id": "open_ended_discovery",
+      "selection_review": null,
+      "selection_note": "Deliberately selected original exchange. Released AI label; recorded reply, not a reference answer."
+    },
+    {
+      "kind": "intent",
+      "id": "summarization",
+      "row_index": 82043,
+      "user_message_index": 0,
+      "reply_message_index": 1,
+      "title": "Summarization",
+      "intent_id": "summarization",
+      "selection_review": "Source description is supplied in the request to summarize it.",
+      "selection_note": "Deliberately selected original exchange. Released AI label; recorded reply, not a reference answer."
+    },
+    {
+      "kind": "intent",
+      "id": "text_generation",
+      "row_index": 2397283,
+      "user_message_index": 0,
+      "reply_message_index": 1,
+      "title": "Text Generation",
+      "intent_id": "text_generation",
+      "selection_review": null,
+      "selection_note": "Deliberately selected original exchange. Released AI label; recorded reply, not a reference answer."
+    },
+    {
+      "kind": "intent",
+      "id": "translation_or_conversion",
+      "row_index": 1061296,
+      "user_message_index": 0,
+      "reply_message_index": 1,
+      "title": "Translation Or Conversion",
+      "intent_id": "translation_or_conversion",
+      "selection_review": null,
+      "selection_note": "Deliberately selected original exchange. Released AI label; recorded reply, not a reference answer."
+    },
+    {
+      "kind": "intent",
+      "id": "unclassified",
+      "row_index": 192137,
+      "user_message_index": 0,
+      "reply_message_index": 1,
+      "title": "Unclassified",
+      "intent_id": "unclassified",
+      "selection_review": "Scientific paragraph edit with no assigned intent; reason unknown.",
+      "selection_note": "No released label assigned. The reason is unknown; this example is deliberately selected."
+    },
+    {
+      "kind": "intent",
+      "id": "web_site_navigation",
+      "row_index": 6219,
+      "user_message_index": 0,
+      "reply_message_index": 1,
+      "title": "Web Site Navigation",
+      "intent_id": "web_site_navigation",
+      "selection_review": "Request for ebook websites; response names two public library sites.",
+      "selection_note": "Deliberately selected original exchange. Released AI label; recorded reply, not a reference answer."
+    }
+  ],
+  "example_selection": {
+    "source_dataset": "allenai/WildChat-4.8M",
+    "source_revision": "c827c6df8fcf008219ffaffa4d1dd77491099367",
+    "label_revision": "b4e77e44b62ba2ddd0f7b53667b218e345faba09",
+    "label_status": "Released Microsoft AI-generated topic annotations, not human ground truth.",
+    "selection": "Source-English-labeled two-message exchanges, deliberately selected rather than representative. Explicit AI-reviewed overrides improve category clarity and benign unclassified examples. Source labels and counts are unchanged.",
+    "joined_candidate_rows": 22418,
+    "categories_covered": {
+      "domain": 31,
+      "intent": 10
+    }
+  }
+}

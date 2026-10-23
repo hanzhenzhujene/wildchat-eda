@@ -1,0 +1,135 @@
+{
+  "type": "object",
+  "properties": {
+    "purpose": {
+      "type": "string",
+      "enum": [
+        "text_work",
+        "technical_problem",
+        "information_learning",
+        "creative_roleplay",
+        "social_chat",
+        "personal_guidance",
+        "other_unclear"
+      ]
+    },
+    "relational_mode": {
+      "type": "string",
+      "enum": [
+        "personal_help",
+        "social_participation",
+        "described_hypothetical",
+        "none",
+        "unclear"
+      ]
+    },
+    "packaging": {
+      "type": "string",
+      "enum": [
+        "direct_request",
+        "pasted_document",
+        "embedded_history",
+        "unclear"
+      ]
+    },
+    "context": {
+      "type": "string",
+      "enum": [
+        "partner",
+        "family",
+        "friends",
+        "work_school",
+        "community",
+        "mixed",
+        "none",
+        "unclear"
+      ]
+    },
+    "help_type": {
+      "type": "string",
+      "enum": [
+        "advice",
+        "drafting",
+        "none"
+      ]
+    },
+    "frame": {
+      "type": "string",
+      "enum": [
+        "apparently_personal",
+        "explicit_hypothetical",
+        "fiction_roleplay",
+        "supplied_material",
+        "presented_social_exchange",
+        "general_or_none",
+        "unclear"
+      ]
+    },
+    "benchmark_route": {
+      "type": "string",
+      "enum": [
+        "advice_response",
+        "communication_draft",
+        "social_response",
+        "scenario_seed",
+        "not_candidate",
+        "uncertain"
+      ]
+    },
+    "confidence": {
+      "type": "string",
+      "enum": [
+        "high",
+        "medium",
+        "low"
+      ]
+    },
+    "evidence_message_index": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "earlier_relational_request": {
+      "type": "boolean"
+    },
+    "earlier_evidence_message_index": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "reason": {
+      "type": "string"
+    },
+    "uncertainty": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "human_check": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "purpose",
+    "relational_mode",
+    "packaging",
+    "context",
+    "help_type",
+    "frame",
+    "benchmark_route",
+    "confidence",
+    "evidence_message_index",
+    "earlier_relational_request",
+    "earlier_evidence_message_index",
+    "reason",
+    "uncertainty",
+    "human_check"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,453 @@
+{
+  "schema_version": 1,
+  "scope": "Descriptive EDA of the 20,000-record, 200-block sample; not population prevalence or a time trend.",
+  "provenance": {
+    "sample_sha256": "dad3169fca01c3a6e4f649e1f87635c46971cd55b018cd1a9bf9361a3e681041",
+    "features_sha256": "79ced657958ef8a0fce46570be2c50078f62ffec17f630f7fe0d8635f299fb2c",
+    "source_revision": "c827c6df8fcf008219ffaffa4d1dd77491099367",
+    "code_sha256": "242a289d8660b3bc37180a52a6559ccba030ba6f7a79ba1b25a75d87aaac69fa",
+    "records": 20000,
+    "raw_text_written": false
+  },
+  "definitions": {
+    "record": "One dataset row, not one unique person or necessarily an independent conversation.",
+    "stored_user_message": "One stored user-role message; it can contain quoted documents or embedded conversation history.",
+    "word_count": "Whitespace-delimited tokens across all user messages or all assistant messages in a record. Length charts use source-English-labeled records only; automatic labels are not independently verified.",
+    "known_template": "Both exact persona and group-environment strings from supplementary.py match user text. A template flag does not verify group participation or the current request.",
+    "known_job_template": "Post-hoc literal match requiring all three case-insensitive strings: as a recruiter; summarize the job; ==TEXT==. This identifies a specific template, not all job requests or verified automation.",
+    "model_family": "Descriptive grouping by model-name prefix, not a comparison of model capability.",
+    "repetition": "Repeated source conversation hashes were checked against SHA-256 of the ordered role/content messages. No same-hash group had differing dialogue content; both measures yield 1,370 extra copies. Repeated opening text can be generic greetings. Overlapping counts must not be added.",
+    "quantiles": "NumPy linear sample quantiles; p90 means 90% of records have length at or below this value."
+  },
+  "language_label_counts": {
+    "English": 10636,
+    "Russian": 2292,
+    "Chinese": 1737,
+    "French": 840,
+    "Vietnamese": 793,
+    "Yoruba": 555,
+    "Arabic": 468,
+    "Indonesian": 427,
+    "Spanish": 378,
+    "Portuguese": 334,
+    "German": 174,
+    "Persian": 143,
+    "Korean": 104,
+    "Serbian": 103,
+    "Tagalog": 90,
+    "Italian": 80,
+    "Turkish": 76,
+    "Maori": 75,
+    "Sotho": 71,
+    "Japanese": 70,
+    "Nolang": 66,
+    "Latin": 42,
+    "Dutch": 36,
+    "Ukrainian": 35,
+    "Polish": 34,
+    "Esperanto": 28,
+    "Romanian": 24,
+    "Hungarian": 23,
+    "Estonian": 21,
+    "Catalan": 20,
+    "Malay": 19,
+    "Somali": 15,
+    "Hebrew": 15,
+    "Hindi": 15,
+    "Azerbaijani": 13,
+    "Tsonga": 9,
+    "Macedonian": 9,
+    "Swedish": 8,
+    "Lithuanian": 8,
+    "Finnish": 7,
+    "Czech": 7,
+    "Basque": 7,
+    "Zulu": 7,
+    "Welsh": 6,
+    "Xhosa": 5,
+    "Slovak": 5,
+    "Swahili": 5,
+    "Bulgarian": 5,
+    "Slovene": 4,
+    "Nynorsk": 4,
+    "Bokmal": 4,
+    "Albanian": 4,
+    "Afrikaans": 4,
+    "Bengali": 4,
+    "Tswana": 4,
+    "Urdu": 4,
+    "Ganda": 3,
+    "Greek": 3,
+    "Danish": 3,
+    "Shona": 3,
+    "Kazakh": 3,
+    "Thai": 2,
+    "Mongolian": 2,
+    "Belarusian": 2,
+    "Armenian": 2,
+    "Bosnian": 1,
+    "Irish": 1,
+    "Marathi": 1,
+    "Latvian": 1,
+    "Croatian": 1
+  },
+  "language_label_count": 70,
+  "model_family_counts": {
+    "GPT-4o": 5656,
+    "GPT-4o mini": 4133,
+    "GPT-3.5": 4117,
+    "GPT-4.1 mini": 3900,
+    "GPT-4 / GPT-4 Turbo": 1487,
+    "o1 preview": 382,
+    "o1 mini": 325
+  },
+  "month_counts": {
+    "2023-04": 300,
+    "2023-05": 600,
+    "2023-06": 600,
+    "2023-07": 400,
+    "2023-08": 300,
+    "2023-09": 300,
+    "2023-10": 400,
+    "2023-11": 500,
+    "2023-12": 300,
+    "2024-01": 200,
+    "2024-02": 300,
+    "2024-03": 300,
+    "2024-04": 300,
+    "2024-05": 500,
+    "2024-06": 500,
+    "2024-07": 300,
+    "2024-08": 400,
+    "2024-09": 700,
+    "2024-10": 2700,
+    "2024-11": 2700,
+    "2024-12": 900,
+    "2025-01": 400,
+    "2025-02": 1500,
+    "2025-03": 400,
+    "2025-04": 1600,
+    "2025-05": 1800,
+    "2025-06": 500,
+    "2025-07": 300
+  },
+  "stored_user_message_counts": {
+    "1": 16599,
+    "2": 1236,
+    "3": 645,
+    "4": 391,
+    "5": 267,
+    "6": 191,
+    "7": 142,
+    "8": 110,
+    "9": 94,
+    "10": 64,
+    "11": 38,
+    "12": 39,
+    "13": 37,
+    "14": 26,
+    "15": 13,
+    "16": 19,
+    "17": 11,
+    "18": 9,
+    "19": 8,
+    "20": 8,
+    "21": 8,
+    "22": 3,
+    "23": 6,
+    "24": 5,
+    "25": 2,
+    "26": 4,
+    "27": 1,
+    "28": 3,
+    "29": 1,
+    "31": 2,
+    "32": 2,
+    "33": 1,
+    "34": 1,
+    "36": 1,
+    "37": 1,
+    "38": 1,
+    "39": 1,
+    "41": 1,
+    "43": 1,
+    "44": 1,
+    "47": 1,
+    "49": 2,
+    "52": 1,
+    "92": 1,
+    "181": 1,
+    "321": 1
+  },
+  "stored_user_message_buckets": {
+    "1": 16599,
+    "2": 1236,
+    "3": 645,
+    "4\u20135": 658,
+    "6\u201310": 601,
+    "11+": 261
+  },
+  "stored_user_message_quantiles": {
+    "min": 1.0,
+    "p10": 1.0,
+    "p25": 1.0,
+    "median": 1.0,
+    "p75": 1.0,
+    "p90": 3.0,
+    "p95": 5.0,
+    "p99": 12.0,
+    "max": 321.0
+  },
+  "year_profiles": [
+    {
+      "year": "2023",
+      "records": 3700,
+      "one_user_message": 2175,
+      "one_user_message_pct": 58.784,
+      "known_wrapper": 0,
+      "model_family_counts": {
+        "GPT-3.5": 3177,
+        "GPT-4 / GPT-4 Turbo": 523
+      }
+    },
+    {
+      "year": "2024",
+      "records": 9800,
+      "one_user_message": 8255,
+      "one_user_message_pct": 84.235,
+      "known_wrapper": 0,
+      "model_family_counts": {
+        "GPT-4 / GPT-4 Turbo": 964,
+        "GPT-3.5": 940,
+        "GPT-4o": 5656,
+        "GPT-4o mini": 1533,
+        "o1 mini": 325,
+        "o1 preview": 382
+      }
+    },
+    {
+      "year": "2025",
+      "records": 6500,
+      "one_user_message": 6169,
+      "one_user_message_pct": 94.908,
+      "known_wrapper": 1259,
+      "model_family_counts": {
+        "GPT-4o mini": 2600,
+        "GPT-4.1 mini": 3900
+      }
+    }
+  ],
+  "length_profiles": {
+    "source_english": {
+      "records": 10636,
+      "user_words": {
+        "min": 1.0,
+        "p10": 11.0,
+        "p25": 41.0,
+        "median": 193.0,
+        "p75": 528.0,
+        "p90": 1649.0,
+        "p95": 2564.25,
+        "p99": 9047.2,
+        "max": 55715.0
+      },
+      "assistant_words": {
+        "min": 1.0,
+        "p10": 5.0,
+        "p25": 20.0,
+        "median": 170.0,
+        "p75": 420.25,
+        "p90": 813.5,
+        "p95": 1343.0,
+        "p99": 3451.65,
+        "max": 34596.0
+      },
+      "user_words_above_1000": 1687,
+      "user_words_above_5000": 207,
+      "empty_user_text": 0
+    },
+    "english_known_template": {
+      "records": 704,
+      "user_words": {
+        "min": 749.0,
+        "p10": 1370.3,
+        "p25": 1636.75,
+        "median": 2005.5,
+        "p75": 2530.25,
+        "p90": 3568.8,
+        "p95": 4880.25,
+        "p99": 5117.95,
+        "max": 23742.0
+      },
+      "assistant_words": {
+        "min": 1.0,
+        "p10": 10.0,
+        "p25": 14.0,
+        "median": 20.0,
+        "p75": 29.0,
+        "p90": 51.0,
+        "p95": 75.0,
+        "p99": 111.91,
+        "max": 408.0
+      },
+      "user_words_above_1000": 685,
+      "user_words_above_5000": 25,
+      "empty_user_text": 0
+    },
+    "english_other_records": {
+      "records": 9932,
+      "user_words": {
+        "min": 1.0,
+        "p10": 11.0,
+        "p25": 36.0,
+        "median": 158.0,
+        "p75": 458.25,
+        "p90": 1012.0,
+        "p95": 1723.45,
+        "p99": 9097.15,
+        "max": 55715.0
+      },
+      "assistant_words": {
+        "min": 1.0,
+        "p10": 3.0,
+        "p25": 24.0,
+        "median": 207.0,
+        "p75": 448.25,
+        "p90": 841.0,
+        "p95": 1422.45,
+        "p99": 3709.14,
+        "max": 34596.0
+      },
+      "user_words_above_1000": 1002,
+      "user_words_above_5000": 182,
+      "empty_user_text": 0
+    }
+  },
+  "known_template_records": 1259,
+  "known_template_source_language_counts": {
+    "English": 704,
+    "Yoruba": 540,
+    "Tagalog": 14,
+    "Portuguese": 1
+  },
+  "known_job_template": {
+    "records": 351,
+    "pct_sample": 1.755,
+    "source_english_records": 288,
+    "language_counts": {
+      "English": 288,
+      "Russian": 63
+    },
+    "year_counts": {
+      "2024": 351
+    },
+    "model_counts": {
+      "gpt-4o-2024-08-06": 351
+    },
+    "stored_user_message_counts": {
+      "1": 351
+    },
+    "overlap_with_group_template": 0,
+    "english_length_profile": {
+      "records": 288,
+      "user_words": {
+        "min": 148.0,
+        "p10": 176.0,
+        "p25": 184.0,
+        "median": 244.5,
+        "p75": 290.0,
+        "p90": 344.0,
+        "p95": 384.95,
+        "p99": 436.43,
+        "max": 549.0
+      },
+      "assistant_words": {
+        "min": 1.0,
+        "p10": 1.0,
+        "p25": 1.0,
+        "median": 18.0,
+        "p75": 34.0,
+        "p90": 40.0,
+        "p95": 47.3,
+        "p99": 71.0,
+        "max": 71.0
+      },
+      "user_words_above_1000": 0,
+      "user_words_above_5000": 0,
+      "empty_user_text": 0
+    }
+  },
+  "data_quality": {
+    "distinct_conversation_hashes": 18630,
+    "extra_rows_beyond_distinct_conversation_hashes": 1370,
+    "records_in_repeated_conversation_hash_groups": 1698,
+    "repeated_conversation_hash_groups": 328,
+    "max_conversation_hash_multiplicity": 162,
+    "exact_dialogue_content_duplicate_extra_rows": 1370,
+    "source_hash_groups_with_different_dialogue_contents": 0,
+    "conversation_hash_multiplicity_group_counts": {
+      "1": 18302,
+      "2": 201,
+      "3\u20135": 92,
+      "6+": 35
+    },
+    "nonempty_first_message_records": 19899,
+    "distinct_nonempty_first_message_hashes": 16404,
+    "extra_rows_beyond_distinct_nonempty_opening_hashes": 3495,
+    "records_in_repeated_opening_hash_groups": 4558,
+    "max_opening_hash_multiplicity": 386,
+    "redacted_records": 193,
+    "records_with_an_empty_user_message": 159,
+    "truncated_records": 0
+  },
+  "figures": {
+    "01_languages": {
+      "png": "outputs/figures/01_languages.png",
+      "svg": "outputs/figures/01_languages.svg",
+      "panel_png": "outputs/figures/01_languages_panel.png",
+      "description": "Source-language counts; eight largest labels plus remainder. All 20,000 records."
+    },
+    "02_models": {
+      "png": "outputs/figures/02_models.png",
+      "svg": "outputs/figures/02_models.svg",
+      "panel_png": "outputs/figures/02_models_panel.png",
+      "description": "Model-name family counts. All 20,000 records; all responses from OpenAI models."
+    },
+    "03_models_by_year": {
+      "png": "outputs/figures/03_models_by_year.png",
+      "svg": "outputs/figures/03_models_by_year.svg",
+      "panel_png": "outputs/figures/03_models_by_year_panel.png",
+      "description": "Within-year family shares; no causal model or time comparison."
+    },
+    "04_stored_turns": {
+      "png": "outputs/figures/04_stored_turns.png",
+      "svg": "outputs/figures/04_stored_turns.svg",
+      "panel_png": "outputs/figures/04_stored_turns_panel.png",
+      "description": "Stored user-message count histogram and within-year one-message share. Includes embedded histories."
+    },
+    "05_text_length_ecdf": {
+      "png": "outputs/figures/05_text_length_ecdf.png",
+      "svg": "outputs/figures/05_text_length_ecdf.svg",
+      "panel_png": "outputs/figures/05_text_length_ecdf_panel.png",
+      "description": "English-labeled record-level input/output length ECDF; whitespace words summed across messages."
+    },
+    "06_template_length": {
+      "png": "outputs/figures/06_template_length.png",
+      "svg": "outputs/figures/06_template_length.svg",
+      "panel_png": "outputs/figures/06_template_length_panel.png",
+      "description": "Input-length histogram, normalized separately within English known-template and other records."
+    },
+    "07_repetition_quality": {
+      "png": "outputs/figures/07_repetition_quality.png",
+      "svg": "outputs/figures/07_repetition_quality.svg",
+      "panel_png": "outputs/figures/07_repetition_quality_panel.png",
+      "description": "Repeated conversation-hash multiplicities and overlapping quality diagnostics."
+    },
+    "08_month_coverage": {
+      "png": "outputs/figures/08_month_coverage.png",
+      "svg": "outputs/figures/08_month_coverage.svg",
+      "panel_png": "outputs/figures/08_month_coverage_panel.png",
+      "description": "Monthly composition of the block sample; not a source-population usage trend."
+    }
+  }
+}

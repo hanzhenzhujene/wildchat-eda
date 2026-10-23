@@ -1,0 +1,34 @@
+import {readFileSync} from 'node:fs';
+import vm from 'node:vm';
+import assert from 'node:assert/strict';
+const root=new URL('../',import.meta.url);
+const source=readFileSync(new URL('website/app.js',root),'utf8');
+const packed=JSON.parse(readFileSync(new URL('website/data/records.json',root),'utf8'));
+const records=packed.rows.map(row=>Object.fromEntries(packed.columns.map((key,i)=>[key,row[i]])));
+const filters={language:'',year:'',family:'',template:'',depth:'',month:'',turnBand:'',flag:''};
+const state={filters:{...filters},chartProbe:null,explorerTab:'length'};
+const context=vm.createContext({state,D:{records},fmt:n=>Number(n).toLocaleString('en-US')});
+const block=source.slice(source.indexOf('function validProbe('),source.indexOf('function exampleRail('));
+const selected=source.split('\n').find(line=>line.startsWith('function selectedRecords('));
+assert.ok(block.includes('function setExplorerTab(')&&selected,'Read the production selection functions');
+vm.runInContext(selected+'\n'+block,context);
+const call=code=>vm.runInContext(code,context);
+const reset=language=>{state.filters={...filters,language};state.chartProbe=null;state.explorerTab='length';};
+let checks=0;
+for(const language of ['', 'English', 'Russian', 'Vietnamese']){
+ reset(language);const before=call('explorerRows().length');
+ call("setExplorerTab('records')");
+ assert.equal(state.filters.language,language,'Navigation must preserve the explicit language filter');
+ assert.equal(call('explorerRows().length'),before,'Rows must match the length-view population');
+ assert.equal(call('probeRecords(selectedRecords()).length'),before,'CSV population must match visible rows');
+ state.chartProbe=call('validProbe(JSON.parse(JSON.stringify(state.chartProbe)))');
+ assert.equal(call('explorerRows().length'),before,'A copied/reloaded selection must retain its population');checks++;
+}
+assert.equal(records.filter(r=>r.language==='English').length,10636);
+reset('Russian');call("setExplorerTab('records')");assert.equal(call('explorerRows().length'),0);
+state.chartProbe=null;assert.equal(call('explorerRows().length'),2292,'Clearing chart scope restores the explicit Russian selection');checks++;
+reset('');state.chartProbe={kind:'ecdf',field:'user_words',max:100};const before=call('explorerRows().length');call("setExplorerTab('records')");assert.equal(call('explorerRows().length'),before);assert.equal(state.chartProbe.kind,'ecdf');checks++;
+reset('English');state.explorerTab='records';assert.equal(call('explorerSelectionLabel(255498)'),'Outside this chart selection');assert.equal(call('explorerSelectionLabel(286012)'),'10,636 selected records');checks++;
+reset('Vietnamese');state.explorerTab='records';assert.equal(call('explorerSelectionLabel(255498)'),'793 selected records');checks++;
+reset('');call("setExplorerTab('records')");call("setExplorerTab('composition')");assert.equal(state.chartProbe,null);assert.equal(call('explorerRows().length'),20000);checks++;
+console.log(`${checks} selection-scope regressions passed.`);

@@ -1,0 +1,30 @@
+{
+  "complete": true,
+  "dataset": "allenai/WildChat-4.8M",
+  "config": "default",
+  "split": "train",
+  "revision": "c827c6df8fcf008219ffaffa4d1dd77491099367",
+  "population_rows": 3199860,
+  "rows_processed": 3199860,
+  "shards_processed": 86,
+  "source_columns": [
+    "conversation_hash",
+    "model",
+    "timestamp",
+    "turn",
+    "language",
+    "toxic",
+    "redacted",
+    "conversation.list.element.role",
+    "conversation.list.element.content"
+  ],
+  "all_lfs_digests_verified": true,
+  "source_turn_mismatches": 0,
+  "random_sample_rows": 20000,
+  "seed": 20261020,
+  "retrieval_date": "2026-10-20",
+  "excluded_columns": "IP, geographic, device/header fields and moderation details were not projected",
+  "raw_shards_retained": false,
+  "raw_text_in_derived_outputs": false,
+  "temporary_downloads": "Complete source shards were downloaded, projected, then deleted after each completed shard."
+}

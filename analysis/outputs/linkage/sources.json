@@ -1,0 +1,14 @@
+{
+  "dataset": "allenai/WildChat-4.8M",
+  "revision": "c827c6df8fcf008219ffaffa4d1dd77491099367",
+  "readme": "https://huggingface.co/datasets/allenai/WildChat-4.8M/blob/c827c6df8fcf008219ffaffa4d1dd77491099367/README.md#data-fields",
+  "schema": "https://huggingface.co/datasets/allenai/WildChat-4.8M/blob/c827c6df8fcf008219ffaffa4d1dd77491099367/README.md?code=true#L23-L30",
+  "paper": "https://arxiv.org/html/2405.01470v1#S2.SS0.SSS0.Px3",
+  "processing_code_revision": "5acbf7e94d15c3182da795f52d3cce4b83325152",
+  "processing_hash_function": "https://github.com/da03/wildchat/blob/5acbf7e94d15c3182da795f52d3cce4b83325152/utils.py#L59-L86",
+  "processing_header_fields": "https://github.com/da03/wildchat/blob/5acbf7e94d15c3182da795f52d3cce4b83325152/utils.py#L109-L120",
+  "processing_grouping": "https://github.com/da03/wildchat/blob/5acbf7e94d15c3182da795f52d3cce4b83325152/utils.py#L1152-L1188",
+  "processing_turn_ids": "https://github.com/da03/wildchat/blob/5acbf7e94d15c3182da795f52d3cce4b83325152/utils.py#L1270-L1284",
+  "screenshots": "Actual browser screenshots, unedited. Schema screenshot uses native source-line highlighting.",
+  "captured_date": "2026-10-21"
+}

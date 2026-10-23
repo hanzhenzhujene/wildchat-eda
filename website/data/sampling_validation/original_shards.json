@@ -1,0 +1,613 @@
+{
+  "dataset": "allenai/WildChat-4.8M",
+  "revision": "c827c6df8fcf008219ffaffa4d1dd77491099367",
+  "source_url": "https://huggingface.co/api/datasets/allenai/WildChat-4.8M/tree/c827c6df8fcf008219ffaffa4d1dd77491099367/data?recursive=true&expand=false",
+  "retrieved_at_utc": "2026-10-20T17:35:47.129447+00:00",
+  "file_count": 86,
+  "total_bytes": 15282293424,
+  "rows_note": "Only shard00000 and00085 row counts independently verified from footer probes; all other per-file counts unknown.",
+  "files": [
+    {
+      "path": "data/train-00000-of-00086.parquet",
+      "size": 125527585,
+      "sha256": "6df660dca78dd92b865bef09b928992ceb6c913b4f06082315876a5997ad2eaa",
+      "rows": 37208,
+      "url": "https://huggingface.co/datasets/allenai/WildChat-4.8M/resolve/c827c6df8fcf008219ffaffa4d1dd77491099367/data/train-00000-of-00086.parquet"
+    },
+    {
+      "path": "data/train-00001-of-00086.parquet",
+      "size": 120499402,
+      "sha256": "9eb37ee110a470e6b7bc4ac23bde112a2756e06f96e5517bad93b87cedca03bd",
+      "rows": null,
+      "url": "https://huggingface.co/datasets/allenai/WildChat-4.8M/resolve/c827c6df8fcf008219ffaffa4d1dd77491099367/data/train-00001-of-00086.parquet"
+    },
+    {
+      "path": "data/train-00002-of-00086.parquet",
+      "size": 115463083,
+      "sha256": "8cafa7a6d3387f8f15edc77b98108cbd8dedca5a927dbdb626ec720a718bfb2b",
+      "rows": null,
+      "url": "https://huggingface.co/datasets/allenai/WildChat-4.8M/resolve/c827c6df8fcf008219ffaffa4d1dd77491099367/data/train-00002-of-00086.parquet"
+    },
+    {
+      "path": "data/train-00003-of-00086.parquet",
+      "size": 111331332,
+      "sha256": "4304a25529bce00187a754bb8629a7d9cbafbc8933f374ae05c9527d03f7bb8d",
+      "rows": null,
+      "url": "https://huggingface.co/datasets/allenai/WildChat-4.8M/resolve/c827c6df8fcf008219ffaffa4d1dd77491099367/data/train-00003-of-00086.parquet"
+    },
+    {
+      "path": "data/train-00004-of-00086.parquet",
+      "size": 126873194,
+      "sha256": "bf69902b6fa66f19ffd8ab6fffcc4d17107df93c7f80dbc76d53037aab5849fb",
+      "rows": null,
+      "url": "https://huggingface.co/datasets/allenai/WildChat-4.8M/resolve/c827c6df8fcf008219ffaffa4d1dd77491099367/data/train-00004-of-00086.parquet"
+    },
+    {
+      "path": "data/train-00005-of-00086.parquet",
+      "size": 114861320,
+      "sha256": "1d13a7a8da0fd1c73446ff72a79019fffe81d83943780ebb4c740a97edaaf129",
+      "rows": null,
+      "url": "https://huggingface.co/datasets/allenai/WildChat-4.8M/resolve/c827c6df8fcf008219ffaffa4d1dd77491099367/data/train-00005-of-00086.parquet"
+    },
+    {
+      "path": "data/train-00006-of-00086.parquet",
+      "size": 116894276,
+      "sha256": "64ed8e61ee03db406e8cd64e05dbdf61b412ef2ec10c76dcea7a43584efe0b5e",
+      "rows": null,
+      "url": "https://huggingface.co/datasets/allenai/WildChat-4.8M/resolve/c827c6df8fcf008219ffaffa4d1dd77491099367/data/train-00006-of-00086.parquet"
+    },
+    {
+      "path": "data/train-00007-of-00086.parquet",
+      "size": 119347100,
+      "sha256": "1e2990268f6a824dbd6939ba098e2d2f4642189de1ae4d8239aab637c2b289e6",
+      "rows": null,
+      "url": "https://huggingface.co/datasets/allenai/WildChat-4.8M/resolve/c827c6df8fcf008219ffaffa4d1dd77491099367/data/train-00007-of-00086.parquet"
+    },
+    {
+      "path": "data/train-00008-of-00086.parquet",
+      "size": 105238405,
+      "sha256": "d89c47296bbbd1e1a0ee4372b65f939069b890c11619e66200efda7705931d5b",
+      "rows": null,
+      "url": "https://huggingface.co/datasets/allenai/WildChat-4.8M/resolve/c827c6df8fcf008219ffaffa4d1dd77491099367/data/train-00008-of-00086.parquet"
+    },
+    {
+      "path": "data/train-00009-of-00086.parquet",
+      "size": 106372202,
+      "sha256": "012e5a06e10703755b10f197623813329fafb4a9b1fd3f7a7ab93e049f23e6cc",
+      "rows": null,
+      "url": "https://huggingface.co/datasets/allenai/WildChat-4.8M/resolve/c827c6df8fcf008219ffaffa4d1dd77491099367/data/train-00009-of-00086.parquet"
+    },
+    {
+      "path": "data/train-00010-of-00086.parquet",
+      "size": 106465090,
+      "sha256": "5c0ae4433886ec1ea0dc4f7daa1f26574e75c471614b6d2420afd674a338f153",
+      "rows": null,
+      "url": "https://huggingface.co/datasets/allenai/WildChat-4.8M/resolve/c827c6df8fcf008219ffaffa4d1dd77491099367/data/train-00010-of-00086.parquet"
+    },
+    {
+      "path": "data/train-00011-of-00086.parquet",
+      "size": 102841742,
+      "sha256": "b09ef3afceb329a0ff6696cda9312ed9b2a4cf5c7d2e0cb72829a3a2c14f101a",
+      "rows": null,
+      "url": "https://huggingface.co/datasets/allenai/WildChat-4.8M/resolve/c827c6df8fcf008219ffaffa4d1dd77491099367/data/train-00011-of-00086.parquet"
+    },
+    {
+      "path": "data/train-00012-of-00086.parquet",
+      "size": 93221542,
+      "sha256": "31408ad8b4c34899c9b910128004ca4d61ff2c1322da17977ea24808c1de67d1",
+      "rows": null,
+      "url": "https://huggingface.co/datasets/allenai/WildChat-4.8M/resolve/c827c6df8fcf008219ffaffa4d1dd77491099367/data/train-00012-of-00086.parquet"
+    },
+    {
+      "path": "data/train-00013-of-00086.parquet",
+      "size": 129110204,
+      "sha256": "d2bacf903d35f781d52a63d9a9e5ac11b0620f56a672d8b16e07f44c97afb16c",
+      "rows": null,
+      "url": "https://huggingface.co/datasets/allenai/WildChat-4.8M/resolve/c827c6df8fcf008219ffaffa4d1dd77491099367/data/train-00013-of-00086.parquet"
+    },
+    {
+      "path": "data/train-00014-of-00086.parquet",
+      "size": 168003355,
+      "sha256": "8538243cf3cf6513c46658d4dc2da19f6bde729f3e04197abe9abac30aae8bfe",
+      "rows": null,
+      "url": "https://huggingface.co/datasets/allenai/WildChat-4.8M/resolve/c827c6df8fcf008219ffaffa4d1dd77491099367/data/train-00014-of-00086.parquet"
+    },
+    {
+      "path": "data/train-00015-of-00086.parquet",
+      "size": 188687810,
+      "sha256": "005d33719a3974709ebe46240b9104f1f920378358019786f25d423f4294eda5",
+      "rows": null,
+      "url": "https://huggingface.co/datasets/allenai/WildChat-4.8M/resolve/c827c6df8fcf008219ffaffa4d1dd77491099367/data/train-00015-of-00086.parquet"
+    },
+    {
+      "path": "data/train-00016-of-00086.parquet",
+      "size": 195987104,
+      "sha256": "5797e81c900c1cdfc35425899736d66d435196054cd11d5ba478f9813b031c1f",
+      "rows": null,
+      "url": "https://huggingface.co/datasets/allenai/WildChat-4.8M/resolve/c827c6df8fcf008219ffaffa4d1dd77491099367/data/train-00016-of-00086.parquet"
+    },
+    {
+      "path": "data/train-00017-of-00086.parquet",
+      "size": 156064968,
+      "sha256": "7191bedb90425e05955f1b1287d00017d62046825144e7cd0298dfe121d8404c",
+      "rows": null,
+      "url": "https://huggingface.co/datasets/allenai/WildChat-4.8M/resolve/c827c6df8fcf008219ffaffa4d1dd77491099367/data/train-00017-of-00086.parquet"
+    },
+    {
+      "path": "data/train-00018-of-00086.parquet",
+      "size": 158654366,
+      "sha256": "83ee586e02d7a0d830e4be485483b3e015894f5964d0e73e6162f70ef8e00227",
+      "rows": null,
+      "url": "https://huggingface.co/datasets/allenai/WildChat-4.8M/resolve/c827c6df8fcf008219ffaffa4d1dd77491099367/data/train-00018-of-00086.parquet"
+    },
+    {
+      "path": "data/train-00019-of-00086.parquet",
+      "size": 175368628,
+      "sha256": "23f8a623dbbf2e6eb98ff425260d41352364f615e896070ee06630d22886ac30",
+      "rows": null,
+      "url": "https://huggingface.co/datasets/allenai/WildChat-4.8M/resolve/c827c6df8fcf008219ffaffa4d1dd77491099367/data/train-00019-of-00086.parquet"
+    },
+    {
+      "path": "data/train-00020-of-00086.parquet",
+      "size": 191655778,
+      "sha256": "eef65cc1403a4528857b4caa310cf962bf459c11a2e961333507afcc5c2a922f",
+      "rows": null,
+      "url": "https://huggingface.co/datasets/allenai/WildChat-4.8M/resolve/c827c6df8fcf008219ffaffa4d1dd77491099367/data/train-00020-of-00086.parquet"
+    },
+    {
+      "path": "data/train-00021-of-00086.parquet",
+      "size": 182873201,
+      "sha256": "bce3c99d78a7ca923bf5e539646ead5d8e967785936dfef0dc29ba38779cbc3b",
+      "rows": null,
+      "url": "https://huggingface.co/datasets/allenai/WildChat-4.8M/resolve/c827c6df8fcf008219ffaffa4d1dd77491099367/data/train-00021-of-00086.parquet"
+    },
+    {
+      "path": "data/train-00022-of-00086.parquet",
+      "size": 138085341,
+      "sha256": "08e96271de5893c70475028bac65d34afb59e4b63e8d6b6e93e8a73bfa170e81",
+      "rows": null,
+      "url": "https://huggingface.co/datasets/allenai/WildChat-4.8M/resolve/c827c6df8fcf008219ffaffa4d1dd77491099367/data/train-00022-of-00086.parquet"
+    },
+    {
+      "path": "data/train-00023-of-00086.parquet",
+      "size": 134695370,
+      "sha256": "3905c03b6de65c5728a875613f599902360167e776617487b964c2a9b48b27a4",
+      "rows": null,
+      "url": "https://huggingface.co/datasets/allenai/WildChat-4.8M/resolve/c827c6df8fcf008219ffaffa4d1dd77491099367/data/train-00023-of-00086.parquet"
+    },
+    {
+      "path": "data/train-00024-of-00086.parquet",
+      "size": 142303607,
+      "sha256": "89fed451d935d70f6a066304347808e586447f7e994f3a9a06a79879cf68911a",
+      "rows": null,
+      "url": "https://huggingface.co/datasets/allenai/WildChat-4.8M/resolve/c827c6df8fcf008219ffaffa4d1dd77491099367/data/train-00024-of-00086.parquet"
+    },
+    {
+      "path": "data/train-00025-of-00086.parquet",
+      "size": 162745428,
+      "sha256": "c50c6f435d58cacb6efdf01245bf518da8e7038f2b667ef46acd2d738596c232",
+      "rows": null,
+      "url": "https://huggingface.co/datasets/allenai/WildChat-4.8M/resolve/c827c6df8fcf008219ffaffa4d1dd77491099367/data/train-00025-of-00086.parquet"
+    },
+    {
+      "path": "data/train-00026-of-00086.parquet",
+      "size": 166054540,
+      "sha256": "537f7dcd7744aa7890a5ef8cef9559eac68712d9cf1f0a20d06b5127d5c0f846",
+      "rows": null,
+      "url": "https://huggingface.co/datasets/allenai/WildChat-4.8M/resolve/c827c6df8fcf008219ffaffa4d1dd77491099367/data/train-00026-of-00086.parquet"
+    },
+    {
+      "path": "data/train-00027-of-00086.parquet",
+      "size": 185259420,
+      "sha256": "c1b1397e6d5cd772e461d1aee8dbdd6d5f4a6042434600616fe3be02baa4be80",
+      "rows": null,
+      "url": "https://huggingface.co/datasets/allenai/WildChat-4.8M/resolve/c827c6df8fcf008219ffaffa4d1dd77491099367/data/train-00027-of-00086.parquet"
+    },
+    {
+      "path": "data/train-00028-of-00086.parquet",
+      "size": 183605707,
+      "sha256": "c3c7fa6d1ee01a2604d840c081dc4f625556d4afd1ec1db6dec662a390eb97c1",
+      "rows": null,
+      "url": "https://huggingface.co/datasets/allenai/WildChat-4.8M/resolve/c827c6df8fcf008219ffaffa4d1dd77491099367/data/train-00028-of-00086.parquet"
+    },
+    {
+      "path": "data/train-00029-of-00086.parquet",
+      "size": 169848284,
+      "sha256": "92a46955e009695db1fd99d3460be99a23cdcc58f659f5b3b737e4cd98b2c562",
+      "rows": null,
+      "url": "https://huggingface.co/datasets/allenai/WildChat-4.8M/resolve/c827c6df8fcf008219ffaffa4d1dd77491099367/data/train-00029-of-00086.parquet"
+    },
+    {
+      "path": "data/train-00030-of-00086.parquet",
+      "size": 215958271,
+      "sha256": "d12254a456e9e17f1b8f9c62203d8951e18edcfcf491135043842c5de618f679",
+      "rows": null,
+      "url": "https://huggingface.co/datasets/allenai/WildChat-4.8M/resolve/c827c6df8fcf008219ffaffa4d1dd77491099367/data/train-00030-of-00086.parquet"
+    },
+    {
+      "path": "data/train-00031-of-00086.parquet",
+      "size": 140234157,
+      "sha256": "00c21c305fb807f1cf2db30546ecde7fa0dd707c8e9a8e4629eac5865d03381f",
+      "rows": null,
+      "url": "https://huggingface.co/datasets/allenai/WildChat-4.8M/resolve/c827c6df8fcf008219ffaffa4d1dd77491099367/data/train-00031-of-00086.parquet"
+    },
+    {
+      "path": "data/train-00032-of-00086.parquet",
+      "size": 129753926,
+      "sha256": "ce5a1e027939c589eb01be83486c041934aa70708c59cde6e84d0f8a9756f416",
+      "rows": null,
+      "url": "https://huggingface.co/datasets/allenai/WildChat-4.8M/resolve/c827c6df8fcf008219ffaffa4d1dd77491099367/data/train-00032-of-00086.parquet"
+    },
+    {
+      "path": "data/train-00033-of-00086.parquet",
+      "size": 72070510,
+      "sha256": "445bfee1a5b6d2f611644eb2ce79f7abed1cc15efb8062c0eee013a963573ddd",
+      "rows": null,
+      "url": "https://huggingface.co/datasets/allenai/WildChat-4.8M/resolve/c827c6df8fcf008219ffaffa4d1dd77491099367/data/train-00033-of-00086.parquet"
+    },
+    {
+      "path": "data/train-00034-of-00086.parquet",
+      "size": 80445922,
+      "sha256": "cedf81b7f59646e2ef1aba9987dfd2761637e70708cc8276b0415c0b1b6fb659",
+      "rows": null,
+      "url": "https://huggingface.co/datasets/allenai/WildChat-4.8M/resolve/c827c6df8fcf008219ffaffa4d1dd77491099367/data/train-00034-of-00086.parquet"
+    },
+    {
+      "path": "data/train-00035-of-00086.parquet",
+      "size": 144345325,
+      "sha256": "a246f82120add98df360f94c2fa7dfe0a4507bc76bf36374238a9620ce044985",
+      "rows": null,
+      "url": "https://huggingface.co/datasets/allenai/WildChat-4.8M/resolve/c827c6df8fcf008219ffaffa4d1dd77491099367/data/train-00035-of-00086.parquet"
+    },
+    {
+      "path": "data/train-00036-of-00086.parquet",
+      "size": 121529823,
+      "sha256": "e1ccaa1cb50ec05d28913af0289b0ba7d47c56f01071d3d9232d7d851b293c4e",
+      "rows": null,
+      "url": "https://huggingface.co/datasets/allenai/WildChat-4.8M/resolve/c827c6df8fcf008219ffaffa4d1dd77491099367/data/train-00036-of-00086.parquet"
+    },
+    {
+      "path": "data/train-00037-of-00086.parquet",
+      "size": 106094815,
+      "sha256": "8f41d3591744fd19c86b46d6a2a2323bced623097be5dbd36f1b5455939e382a",
+      "rows": null,
+      "url": "https://huggingface.co/datasets/allenai/WildChat-4.8M/resolve/c827c6df8fcf008219ffaffa4d1dd77491099367/data/train-00037-of-00086.parquet"
+    },
+    {
+      "path": "data/train-00038-of-00086.parquet",
+      "size": 91029244,
+      "sha256": "d16d5cb1e3dc27197aa80189640e456dc75d8e6f8af956e13b4d2b2bd1e5053c",
+      "rows": null,
+      "url": "https://huggingface.co/datasets/allenai/WildChat-4.8M/resolve/c827c6df8fcf008219ffaffa4d1dd77491099367/data/train-00038-of-00086.parquet"
+    },
+    {
+      "path": "data/train-00039-of-00086.parquet",
+      "size": 132314808,
+      "sha256": "bd3551f744ff1193772662fb4a46587ac9657dfda392c27d539c033188d467b6",
+      "rows": null,
+      "url": "https://huggingface.co/datasets/allenai/WildChat-4.8M/resolve/c827c6df8fcf008219ffaffa4d1dd77491099367/data/train-00039-of-00086.parquet"
+    },
+    {
+      "path": "data/train-00040-of-00086.parquet",
+      "size": 112325169,
+      "sha256": "f41233bedd45025533b06ad929697b1254645bcea92b8fffa2d36787aabcbea0",
+      "rows": null,
+      "url": "https://huggingface.co/datasets/allenai/WildChat-4.8M/resolve/c827c6df8fcf008219ffaffa4d1dd77491099367/data/train-00040-of-00086.parquet"
+    },
+    {
+      "path": "data/train-00041-of-00086.parquet",
+      "size": 85601395,
+      "sha256": "4a404d97109aa4426a48c9784a9767ffa2b92fb3adce95d289612211bcb2ea9e",
+      "rows": null,
+      "url": "https://huggingface.co/datasets/allenai/WildChat-4.8M/resolve/c827c6df8fcf008219ffaffa4d1dd77491099367/data/train-00041-of-00086.parquet"
+    },
+    {
+      "path": "data/train-00042-of-00086.parquet",
+      "size": 100908554,
+      "sha256": "5e9679614fcc4603fca79e9466a8fd21b2c1869a63be4f862a6c264d00956bdf",
+      "rows": null,
+      "url": "https://huggingface.co/datasets/allenai/WildChat-4.8M/resolve/c827c6df8fcf008219ffaffa4d1dd77491099367/data/train-00042-of-00086.parquet"
+    },
+    {
+      "path": "data/train-00043-of-00086.parquet",
+      "size": 134836162,
+      "sha256": "67e27a2bbc3d7e334c334a68f3ea206c0833d06a676100a21b9c2dda3fccfacd",
+      "rows": null,
+      "url": "https://huggingface.co/datasets/allenai/WildChat-4.8M/resolve/c827c6df8fcf008219ffaffa4d1dd77491099367/data/train-00043-of-00086.parquet"
+    },
+    {
+      "path": "data/train-00044-of-00086.parquet",
+      "size": 178996989,
+      "sha256": "bb34e29bf1b12b0611d5aebb897e78cb3c6bbc2fd792fd824b147ca9a774d6a0",
+      "rows": null,
+      "url": "https://huggingface.co/datasets/allenai/WildChat-4.8M/resolve/c827c6df8fcf008219ffaffa4d1dd77491099367/data/train-00044-of-00086.parquet"
+    },
+    {
+      "path": "data/train-00045-of-00086.parquet",
+      "size": 71012685,
+      "sha256": "cb8a62df488ec1bfb7fa912341a55a2a334636e2cec60702832c4e091b31d87f",
+      "rows": null,
+      "url": "https://huggingface.co/datasets/allenai/WildChat-4.8M/resolve/c827c6df8fcf008219ffaffa4d1dd77491099367/data/train-00045-of-00086.parquet"
+    },
+    {
+      "path": "data/train-00046-of-00086.parquet",
+      "size": 163609724,
+      "sha256": "e269361e0fa44963bf1a3cae1601a975a427957b6c1f272dc281afe9a692fe81",
+      "rows": null,
+      "url": "https://huggingface.co/datasets/allenai/WildChat-4.8M/resolve/c827c6df8fcf008219ffaffa4d1dd77491099367/data/train-00046-of-00086.parquet"
+    },
+    {
+      "path": "data/train-00047-of-00086.parquet",
+      "size": 116124638,
+      "sha256": "c1ec394a6981e667d74e7b5df119017a46669bd953cfc0312539eb15e59027b2",
+      "rows": null,
+      "url": "https://huggingface.co/datasets/allenai/WildChat-4.8M/resolve/c827c6df8fcf008219ffaffa4d1dd77491099367/data/train-00047-of-00086.parquet"
+    },
+    {
+      "path": "data/train-00048-of-00086.parquet",
+      "size": 221199791,
+      "sha256": "94ab314bc5e7c20f32a9bc9e2a6dcdee2cd73e10ffec620551d00f2d766cc932",
+      "rows": null,
+      "url": "https://huggingface.co/datasets/allenai/WildChat-4.8M/resolve/c827c6df8fcf008219ffaffa4d1dd77491099367/data/train-00048-of-00086.parquet"
+    },
+    {
+      "path": "data/train-00049-of-00086.parquet",
+      "size": 103170595,
+      "sha256": "6f8f300c0501ce5d83912abf1ae1097ed04c30d9ef93005003a39f4c61f1024c",
+      "rows": null,
+      "url": "https://huggingface.co/datasets/allenai/WildChat-4.8M/resolve/c827c6df8fcf008219ffaffa4d1dd77491099367/data/train-00049-of-00086.parquet"
+    },
+    {
+      "path": "data/train-00050-of-00086.parquet",
+      "size": 142241146,
+      "sha256": "203f57614c093871cbe42dd9da0528cb33354230a511d3ec509c80c6fce0b116",
+      "rows": null,
+      "url": "https://huggingface.co/datasets/allenai/WildChat-4.8M/resolve/c827c6df8fcf008219ffaffa4d1dd77491099367/data/train-00050-of-00086.parquet"
+    },
+    {
+      "path": "data/train-00051-of-00086.parquet",
+      "size": 156188404,
+      "sha256": "62561019494ce8f14da95c3ba5248a95499c4458eff8ff55a85ecb49bf87fb19",
+      "rows": null,
+      "url": "https://huggingface.co/datasets/allenai/WildChat-4.8M/resolve/c827c6df8fcf008219ffaffa4d1dd77491099367/data/train-00051-of-00086.parquet"
+    },
+    {
+      "path": "data/train-00052-of-00086.parquet",
+      "size": 217887036,
+      "sha256": "71c342aa4ad3f49979058300d4a1e7fd22fc0042c48818ee5b0036372bb4ad70",
+      "rows": null,
+      "url": "https://huggingface.co/datasets/allenai/WildChat-4.8M/resolve/c827c6df8fcf008219ffaffa4d1dd77491099367/data/train-00052-of-00086.parquet"
+    },
+    {
+      "path": "data/train-00053-of-00086.parquet",
+      "size": 204207011,
+      "sha256": "d42f4151d56d27c63bd277aa095b93f215c857dc7caefe977c56f7c46327c971",
+      "rows": null,
+      "url": "https://huggingface.co/datasets/allenai/WildChat-4.8M/resolve/c827c6df8fcf008219ffaffa4d1dd77491099367/data/train-00053-of-00086.parquet"
+    },
+    {
+      "path": "data/train-00054-of-00086.parquet",
+      "size": 190323883,
+      "sha256": "090f7aeca356f1fc97a403d070350030dc2a46ed4ac609f94e6dfe7a944b810d",
+      "rows": null,
+      "url": "https://huggingface.co/datasets/allenai/WildChat-4.8M/resolve/c827c6df8fcf008219ffaffa4d1dd77491099367/data/train-00054-of-00086.parquet"
+    },
+    {
+      "path": "data/train-00055-of-00086.parquet",
+      "size": 160219119,
+      "sha256": "f864db4ce3a00c3ebf3062d70a7e6c7db090149528ada00f783273120acc39f4",
+      "rows": null,
+      "url": "https://huggingface.co/datasets/allenai/WildChat-4.8M/resolve/c827c6df8fcf008219ffaffa4d1dd77491099367/data/train-00055-of-00086.parquet"
+    },
+    {
+      "path": "data/train-00056-of-00086.parquet",
+      "size": 192970337,
+      "sha256": "3bfff845bb9c1af9d4b94efaf4d90ad0db75b6155955dca8a332294954396c8f",
+      "rows": null,
+      "url": "https://huggingface.co/datasets/allenai/WildChat-4.8M/resolve/c827c6df8fcf008219ffaffa4d1dd77491099367/data/train-00056-of-00086.parquet"
+    },
+    {
+      "path": "data/train-00057-of-00086.parquet",
+      "size": 69567568,
+      "sha256": "a7ff032a7d74b3ca1fb1077a9f141047c1ba8f6e3336d36dbdd7fbb74fc15be5",
+      "rows": null,
+      "url": "https://huggingface.co/datasets/allenai/WildChat-4.8M/resolve/c827c6df8fcf008219ffaffa4d1dd77491099367/data/train-00057-of-00086.parquet"
+    },
+    {
+      "path": "data/train-00058-of-00086.parquet",
+      "size": 268021931,
+      "sha256": "02be58c38df261f500e14d0736d127359908e892fe3d9541317ca0e67e3d225d",
+      "rows": null,
+      "url": "https://huggingface.co/datasets/allenai/WildChat-4.8M/resolve/c827c6df8fcf008219ffaffa4d1dd77491099367/data/train-00058-of-00086.parquet"
+    },
+    {
+      "path": "data/train-00059-of-00086.parquet",
+      "size": 63544556,
+      "sha256": "096c15853c9cb757c8f7a8416dc3c9eb0d21220218df2a25b316514f7d85e248",
+      "rows": null,
+      "url": "https://huggingface.co/datasets/allenai/WildChat-4.8M/resolve/c827c6df8fcf008219ffaffa4d1dd77491099367/data/train-00059-of-00086.parquet"
+    },
+    {
+      "path": "data/train-00060-of-00086.parquet",
+      "size": 70833528,
+      "sha256": "be5810990246339f316addbeb9d27a4a60281fc82e11fa5781a56c3ec0f2ec85",
+      "rows": null,
+      "url": "https://huggingface.co/datasets/allenai/WildChat-4.8M/resolve/c827c6df8fcf008219ffaffa4d1dd77491099367/data/train-00060-of-00086.parquet"
+    },
+    {
+      "path": "data/train-00061-of-00086.parquet",
+      "size": 97859176,
+      "sha256": "16c729bad04fa62c7ea1d59958a35a271e32038dd6f64f2bf4ad0dddd0861289",
+      "rows": null,
+      "url": "https://huggingface.co/datasets/allenai/WildChat-4.8M/resolve/c827c6df8fcf008219ffaffa4d1dd77491099367/data/train-00061-of-00086.parquet"
+    },
+    {
+      "path": "data/train-00062-of-00086.parquet",
+      "size": 97674635,
+      "sha256": "53915ea5cc45f186c6b2c2a52d5aa905065809824ca6bad48aed857806ba311c",
+      "rows": null,
+      "url": "https://huggingface.co/datasets/allenai/WildChat-4.8M/resolve/c827c6df8fcf008219ffaffa4d1dd77491099367/data/train-00062-of-00086.parquet"
+    },
+    {
+      "path": "data/train-00063-of-00086.parquet",
+      "size": 84508864,
+      "sha256": "db27216a826c67eb07e850955eafe0317db831611ebbbb5c94267bc7388ef4b1",
+      "rows": null,
+      "url": "https://huggingface.co/datasets/allenai/WildChat-4.8M/resolve/c827c6df8fcf008219ffaffa4d1dd77491099367/data/train-00063-of-00086.parquet"
+    },
+    {
+      "path": "data/train-00064-of-00086.parquet",
+      "size": 129959637,
+      "sha256": "e564311b99ac2427621c14a9a01d39570810883b0936d8ca2e60676dbecdbf2a",
+      "rows": null,
+      "url": "https://huggingface.co/datasets/allenai/WildChat-4.8M/resolve/c827c6df8fcf008219ffaffa4d1dd77491099367/data/train-00064-of-00086.parquet"
+    },
+    {
+      "path": "data/train-00065-of-00086.parquet",
+      "size": 86476263,
+      "sha256": "7ff5f195fc8ce27f99d9c9acf5e699b9974858929758d4b9f9bb01dae572e3a8",
+      "rows": null,
+      "url": "https://huggingface.co/datasets/allenai/WildChat-4.8M/resolve/c827c6df8fcf008219ffaffa4d1dd77491099367/data/train-00065-of-00086.parquet"
+    },
+    {
+      "path": "data/train-00066-of-00086.parquet",
+      "size": 102379733,
+      "sha256": "dd8d7aa249b24f0d095e1faaa3f36bc128a72078f8da62b504e584faf479fdfa",
+      "rows": null,
+      "url": "https://huggingface.co/datasets/allenai/WildChat-4.8M/resolve/c827c6df8fcf008219ffaffa4d1dd77491099367/data/train-00066-of-00086.parquet"
+    },
+    {
+      "path": "data/train-00067-of-00086.parquet",
+      "size": 166945361,
+      "sha256": "2e6d04701794be220967da3e685acfeea466922b8acaabd8b41ef384932606f4",
+      "rows": null,
+      "url": "https://huggingface.co/datasets/allenai/WildChat-4.8M/resolve/c827c6df8fcf008219ffaffa4d1dd77491099367/data/train-00067-of-00086.parquet"
+    },
+    {
+      "path": "data/train-00068-of-00086.parquet",
+      "size": 136181360,
+      "sha256": "c822fccefee6c93d9b294fc46b1c6d4ea4a7fc09ecf29ee560f728e1789da138",
+      "rows": null,
+      "url": "https://huggingface.co/datasets/allenai/WildChat-4.8M/resolve/c827c6df8fcf008219ffaffa4d1dd77491099367/data/train-00068-of-00086.parquet"
+    },
+    {
+      "path": "data/train-00069-of-00086.parquet",
+      "size": 113771808,
+      "sha256": "8faa032640cd97f38a2f8556493c11bd286687a8fc288c78035e030be7799bb3",
+      "rows": null,
+      "url": "https://huggingface.co/datasets/allenai/WildChat-4.8M/resolve/c827c6df8fcf008219ffaffa4d1dd77491099367/data/train-00069-of-00086.parquet"
+    },
+    {
+      "path": "data/train-00070-of-00086.parquet",
+      "size": 429379222,
+      "sha256": "456dcd23a5440b3ff11e9929fe0b3f2df980722520f0cf10ac4c97b3e0e0840c",
+      "rows": null,
+      "url": "https://huggingface.co/datasets/allenai/WildChat-4.8M/resolve/c827c6df8fcf008219ffaffa4d1dd77491099367/data/train-00070-of-00086.parquet"
+    },
+    {
+      "path": "data/train-00071-of-00086.parquet",
+      "size": 443104768,
+      "sha256": "790b7136cf1c30bea4636879ce707b9f60eff68d21c0c91f3da809aa7a7c40e7",
+      "rows": null,
+      "url": "https://huggingface.co/datasets/allenai/WildChat-4.8M/resolve/c827c6df8fcf008219ffaffa4d1dd77491099367/data/train-00071-of-00086.parquet"
+    },
+    {
+      "path": "data/train-00072-of-00086.parquet",
+      "size": 561212647,
+      "sha256": "8073eae7e88514bce1371e2cba2d99fda729c2e721deb2003d0706998990d80f",
+      "rows": null,
+      "url": "https://huggingface.co/datasets/allenai/WildChat-4.8M/resolve/c827c6df8fcf008219ffaffa4d1dd77491099367/data/train-00072-of-00086.parquet"
+    },
+    {
+      "path": "data/train-00073-of-00086.parquet",
+      "size": 350815505,
+      "sha256": "1714979e501bb94155dfc10e8ecc83cc572f95052a92f93190137bb3c2f0bbf7",
+      "rows": null,
+      "url": "https://huggingface.co/datasets/allenai/WildChat-4.8M/resolve/c827c6df8fcf008219ffaffa4d1dd77491099367/data/train-00073-of-00086.parquet"
+    },
+    {
+      "path": "data/train-00074-of-00086.parquet",
+      "size": 430081448,
+      "sha256": "cf643737d8408520de2b2dcdbd2e8162d7d4474ff892d5ce3b4704d7e6029018",
+      "rows": null,
+      "url": "https://huggingface.co/datasets/allenai/WildChat-4.8M/resolve/c827c6df8fcf008219ffaffa4d1dd77491099367/data/train-00074-of-00086.parquet"
+    },
+    {
+      "path": "data/train-00075-of-00086.parquet",
+      "size": 203068659,
+      "sha256": "8f49eccd9d0223f3943fca1f442b689d966db7b694509e8631674b66470e4896",
+      "rows": null,
+      "url": "https://huggingface.co/datasets/allenai/WildChat-4.8M/resolve/c827c6df8fcf008219ffaffa4d1dd77491099367/data/train-00075-of-00086.parquet"
+    },
+    {
+      "path": "data/train-00076-of-00086.parquet",
+      "size": 270361626,
+      "sha256": "6c14a0804085b68ec7e048f54f7568158c3308d02e1361df2bc6bfc334c2023a",
+      "rows": null,
+      "url": "https://huggingface.co/datasets/allenai/WildChat-4.8M/resolve/c827c6df8fcf008219ffaffa4d1dd77491099367/data/train-00076-of-00086.parquet"
+    },
+    {
+      "path": "data/train-00077-of-00086.parquet",
+      "size": 239863313,
+      "sha256": "ac3de10a380ae6d6af11d5808163c3bbd025cb0427c11daefd2efc147d893ab9",
+      "rows": null,
+      "url": "https://huggingface.co/datasets/allenai/WildChat-4.8M/resolve/c827c6df8fcf008219ffaffa4d1dd77491099367/data/train-00077-of-00086.parquet"
+    },
+    {
+      "path": "data/train-00078-of-00086.parquet",
+      "size": 108060533,
+      "sha256": "93e62729e5a918c1f4303039408fb3389598a425fd01e49bd4fb61b7ba042d77",
+      "rows": null,
+      "url": "https://huggingface.co/datasets/allenai/WildChat-4.8M/resolve/c827c6df8fcf008219ffaffa4d1dd77491099367/data/train-00078-of-00086.parquet"
+    },
+    {
+      "path": "data/train-00079-of-00086.parquet",
+      "size": 276821905,
+      "sha256": "88a95e33d3312b5d907777a0c68380e7e97f7c19673908038ce486eb98b4f8b6",
+      "rows": null,
+      "url": "https://huggingface.co/datasets/allenai/WildChat-4.8M/resolve/c827c6df8fcf008219ffaffa4d1dd77491099367/data/train-00079-of-00086.parquet"
+    },
+    {
+      "path": "data/train-00080-of-00086.parquet",
+      "size": 186001659,
+      "sha256": "1ed63ac322419a05307a474c0db595cb440ca8d72c434dfcfd74f4bdf90028ae",
+      "rows": null,
+      "url": "https://huggingface.co/datasets/allenai/WildChat-4.8M/resolve/c827c6df8fcf008219ffaffa4d1dd77491099367/data/train-00080-of-00086.parquet"
+    },
+    {
+      "path": "data/train-00081-of-00086.parquet",
+      "size": 234968053,
+      "sha256": "5225536ee428b75536d4094c33647c588ee923d90891e66c066b22d7ce3a6eb7",
+      "rows": null,
+      "url": "https://huggingface.co/datasets/allenai/WildChat-4.8M/resolve/c827c6df8fcf008219ffaffa4d1dd77491099367/data/train-00081-of-00086.parquet"
+    },
+    {
+      "path": "data/train-00082-of-00086.parquet",
+      "size": 431597604,
+      "sha256": "cc59d977ccf6b461555b8b641cf842082e5bcdc3965f21e9e11478c6e9cb56a5",
+      "rows": null,
+      "url": "https://huggingface.co/datasets/allenai/WildChat-4.8M/resolve/c827c6df8fcf008219ffaffa4d1dd77491099367/data/train-00082-of-00086.parquet"
+    },
+    {
+      "path": "data/train-00083-of-00086.parquet",
+      "size": 507065268,
+      "sha256": "b2690a72cc7ea4877bf8f727e2af7f426a291aa3c91d48647d090b646fc27819",
+      "rows": null,
+      "url": "https://huggingface.co/datasets/allenai/WildChat-4.8M/resolve/c827c6df8fcf008219ffaffa4d1dd77491099367/data/train-00083-of-00086.parquet"
+    },
+    {
+      "path": "data/train-00084-of-00086.parquet",
+      "size": 546361015,
+      "sha256": "365a2ee2c4595eb044cc3ad36b72ec582244283645001cd705d0d0e73651548d",
+      "rows": null,
+      "url": "https://huggingface.co/datasets/allenai/WildChat-4.8M/resolve/c827c6df8fcf008219ffaffa4d1dd77491099367/data/train-00084-of-00086.parquet"
+    },
+    {
+      "path": "data/train-00085-of-00086.parquet",
+      "size": 496266956,
+      "sha256": "898fd913b72075c13e237a70e9f60da9adbb9fd652b46970e123a3258b19f9ff",
+      "rows": 37207,
+      "url": "https://huggingface.co/datasets/allenai/WildChat-4.8M/resolve/c827c6df8fcf008219ffaffa4d1dd77491099367/data/train-00085-of-00086.parquet"
+    }
+  ]
+}

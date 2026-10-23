@@ -1,0 +1,229 @@
+{
+  "schema_version": 1,
+  "analysis_date": "2026-10-17",
+  "scope": "Completeness of the saved EDA: metadata profiling of 20,000 rows; semantic review of the named subsets. No human validation or whole-corpus semantic claim.",
+  "provenance": {
+    "method": "Direct aggregation of exported metadata and finalized annotations; no label changes. Pairwise flags use Boolean intersections. All six examples were checked against ordered source messages.",
+    "inputs": {
+      "website/dist/data/records.json": "554056bde7d05ea60da29875449ef2ed375be479cf3d6506e280204f6a06d214",
+      "outputs/content_annotations.json": "96ab43908bcc61126091bc9c7c21a819f85d1dcda4fa494bc41fad5f2ecfb851",
+      "outputs/content_review_plan.json": "f6ccaa7ca1f1f995343d0055eb8656e32de222da0e9551fbe67c7cda18fe54bc",
+      "outputs/annotations.json": "ca75176079a2fd5ce6766310155f3bb01ec575355b75d51629dd76c5aeedc0ec",
+      "outputs/review_plan.json": "f88190dc5304f772ae62b946088edd89f1fd64dfd767c3a94e217751770e22bc"
+    }
+  },
+  "metadata": {
+    "rows": 20000,
+    "unique_row_ids": 20000,
+    "columns": 17,
+    "missing_by_column": {
+      "row_index": 0,
+      "language": 0,
+      "model": 0,
+      "model_family": 0,
+      "date": 0,
+      "year": 0,
+      "user_turns": 0,
+      "assistant_messages": 0,
+      "user_words": 0,
+      "assistant_words": 0,
+      "redacted": 0,
+      "candidate": 0,
+      "group_template": 0,
+      "repeat_count": 0,
+      "code_flag": 0,
+      "creative_flag": 0,
+      "empty_user_messages": 0
+    },
+    "user_assistant_message_count_match": 20000,
+    "zero_assistant_words": 0,
+    "flag_counts": {
+      "code_flag": {
+        "records": 1831,
+        "source_english_records": 1109
+      },
+      "creative_flag": {
+        "records": 1369,
+        "source_english_records": 1041
+      },
+      "redacted": {
+        "records": 193,
+        "source_english_records": 108
+      },
+      "candidate": {
+        "records": 1747,
+        "source_english_records": 1747
+      },
+      "group_template": {
+        "records": 1259,
+        "source_english_records": 704
+      },
+      "repeated_dialogue": {
+        "records": 1698,
+        "source_english_records": 1339
+      },
+      "empty_user_message": {
+        "records": 159,
+        "source_english_records": 40
+      },
+      "zero_user_words": {
+        "records": 64,
+        "source_english_records": 0
+      }
+    },
+    "flag_pair_intersections": {
+      "code_flag & creative_flag": 139,
+      "code_flag & redacted": 74,
+      "code_flag & candidate": 191,
+      "code_flag & group_template": 18,
+      "code_flag & repeated_dialogue": 133,
+      "code_flag & empty_user_message": 3,
+      "code_flag & zero_user_words": 0,
+      "creative_flag & redacted": 24,
+      "creative_flag & candidate": 349,
+      "creative_flag & group_template": 93,
+      "creative_flag & repeated_dialogue": 16,
+      "creative_flag & empty_user_message": 5,
+      "creative_flag & zero_user_words": 0,
+      "redacted & candidate": 50,
+      "redacted & group_template": 0,
+      "redacted & repeated_dialogue": 6,
+      "redacted & empty_user_message": 2,
+      "redacted & zero_user_words": 0,
+      "candidate & group_template": 686,
+      "candidate & repeated_dialogue": 14,
+      "candidate & empty_user_message": 3,
+      "candidate & zero_user_words": 0,
+      "group_template & repeated_dialogue": 2,
+      "group_template & empty_user_message": 0,
+      "group_template & zero_user_words": 0,
+      "repeated_dialogue & empty_user_message": 34,
+      "repeated_dialogue & zero_user_words": 34,
+      "empty_user_message & zero_user_words": 64
+    },
+    "flags_are": "Text/metadata diagnostics; code/creative/template matches are not human-validated task or authenticity labels."
+  },
+  "content_audit": {
+    "planned": 120,
+    "reviewed": 120,
+    "missing_ids": [],
+    "duplicate_ids": 0,
+    "label_fields_complete": {
+      "purpose": 120,
+      "packaging": 120,
+      "relational_mode": 120,
+      "confidence": 120,
+      "reason": 120
+    },
+    "confidence_counts": {
+      "high": 95,
+      "low": 2,
+      "medium": 23
+    },
+    "uncertainty_note_records": 26,
+    "purpose_counts": {
+      "creative_roleplay": 15,
+      "information_learning": 16,
+      "other_unclear": 3,
+      "social_chat": 11,
+      "technical_problem": 17,
+      "text_work": 58
+    },
+    "relational_mode_counts": {
+      "described_hypothetical": 7,
+      "none_or_unclear": 111,
+      "social_participation": 2
+    },
+    "no_clear_relational_focus": {
+      "n": 111,
+      "purpose_counts": {
+        "creative_roleplay": 10,
+        "information_learning": 16,
+        "other_unclear": 3,
+        "social_chat": 9,
+        "technical_problem": 17,
+        "text_work": 56
+      },
+      "interpretation": "All 111 were reviewed. The combined label means no clear interpersonal focus, including insufficient context; it does not mean unreviewed.",
+      "unresolved_task_records": [
+        {
+          "row_index": 2031017,
+          "reason": "An empty final user message follows a completed historical essay.",
+          "uncertain_reason": "The final turn supplies no active request or instruction to continue the earlier task."
+        },
+        {
+          "row_index": 2362037,
+          "reason": "Ask how to transform computer code into a food dish.",
+          "uncertain_reason": "The request may be a joke or metaphor; no intended actionable task is established."
+        },
+        {
+          "row_index": 2992181,
+          "reason": "Asks to be made an admin with no specified platform or actionable task.",
+          "uncertain_reason": "It is unclear whether this is a social role request or technical administration."
+        }
+      ]
+    },
+    "validation": "AI-assisted labels, not human validated."
+  },
+  "retrieval_audit": {
+    "hits": {
+      "planned": 80,
+      "reviewed": 80,
+      "labels": {
+        "fiction_or_general": 37,
+        "personal_drafting": 2,
+        "unclear": 1,
+        "unrelated": 40
+      }
+    },
+    "nonhits": {
+      "planned": 40,
+      "reviewed": 40,
+      "labels": {
+        "fiction_or_general": 19,
+        "unrelated": 21
+      }
+    },
+    "missing_ids": [],
+    "content_audit_overlap_records": 0,
+    "all_fields_present": {
+      "row_index": 120,
+      "label": 120,
+      "context": 120,
+      "reason": 120,
+      "relational_user_turn": 120,
+      "followup": 120,
+      "missing_context": 120,
+      "example_ok": 120,
+      "format": 120
+    },
+    "validation": "AI-assisted labels, not human-validated; 80 hit and 40 non-hit counts are conditional on selection."
+  },
+  "reviewed_unique_record_union": 240,
+  "source_example_753427": {
+    "raw_source_available": true,
+    "stored_messages": 10,
+    "alternating_pairs": 5,
+    "all_contents_nonempty": true,
+    "source_truncated_cells": [],
+    "ordered_role_content_sha256": "9766e9c91e16cc8a80db0670f0937a23ceb3d806e67bf9bf5e710328e9554a08",
+    "meaning": "All five source pairs are now displayed as deidentified paraphrases."
+  },
+  "outside_analysis_scope": {
+    "source_technical_demographic_fields": "IP/header/location and generation parameters are not needed for this relational EDA and are not exported. Source moderation is not a relational quality label.",
+    "human_outcomes": "Stored dialogue does not independently verify actions, other people's accounts, or relationship change.",
+    "semantic_review": "Metadata profiling of 20,000 records does not mean semantic review of 20,000 conversations. Discovery candidates outside the named audit sets are not used to estimate prevalence."
+  },
+  "verification": {
+    "existing_integrity_tests": 9,
+    "result": "passed",
+    "command": ".venv/bin/python -m unittest discover -s tests -v"
+  },
+  "examples_verified": {
+    "records": 6,
+    "complete_stored_pair_displays": 6,
+    "incomplete_source_reply_ids": [
+      286012
+    ]
+  }
+}

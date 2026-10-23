@@ -1,0 +1,16 @@
+{
+  "completed_at_utc": "2026-10-21T01:47:16.928549+00:00",
+  "requested_n": 2000,
+  "written_n": 2000,
+  "status_counts": {
+    "labeled": 1998,
+    "input_limit": 2
+  },
+  "usage": {
+    "prompt_tokens": 10209057,
+    "completion_tokens": 704856,
+    "total_tokens": 10913913
+  },
+  "protocol_sha256": "52524f994d9df4f2348d3aed6d02b23549640dab4fab9c0948fbdbca26351fec",
+  "model": "gpt-5.4-mini-2026-03-17"
+}

@@ -1,0 +1,11 @@
+# Tested dependency snapshot is in requirements-lock.txt (Python 3.9+).
+requests>=2.31,<3
+numpy>=1.26,<3
+matplotlib>=3.8,<3.10
+Pillow>=10,<12
+reportlab>=4,<5
+pypdf>=5,<7
+pyarrow>=21,<22
+duckdb==1.4.5
+pytz==2026.5
+# Optional immutable streaming fallback: pip install datasets

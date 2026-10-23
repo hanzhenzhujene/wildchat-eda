@@ -1,0 +1,1093 @@
+{
+  "schema_version": 1,
+  "purpose": "Whole-sample context and known wrapper-string diagnostics using only the existing local cache.",
+  "scope": "Descriptive counts of a 200-block, 20,000-row sample. Rows are not users; no prevalence inference or new human validation.",
+  "provenance": {
+    "dataset": "allenai/WildChat-4.8M",
+    "config": "default",
+    "split": "train",
+    "revision": "c827c6df8fcf008219ffaffa4d1dd77491099367",
+    "num_rows": 3199860,
+    "retrieval_date": "2026-10-17",
+    "design": "200 equal-size index strata; one seeded random contiguous 100-row block per stratum. Descriptive block sample, not independent random conversations. No population prevalence estimates.",
+    "sample_sha256": "dad3169fca01c3a6e4f649e1f87635c46971cd55b018cd1a9bf9361a3e681041",
+    "sample_manifest_sha256": "7c1d8623afbbfe87f93cb4f69840b17045f6ceefbd43cdbbc056f37a8ec17e80",
+    "raw_checksum_matches_manifest": true,
+    "linked_input_sha256": {
+      "src/analyze.py": "23a9ca8ad404428784c9b7bfd4965b426837cdfc73734375d4219c05d6e2098f",
+      "src/supplementary.py": "a1d6b30a59cbab6c6d79531f197eab9c4e500b2ff0528c166f76648ec0c06ef3",
+      "outputs/annotations.json": "ca75176079a2fd5ce6766310155f3bb01ec575355b75d51629dd76c5aeedc0ec",
+      "outputs/review_plan.json": "f88190dc5304f772ae62b946088edd89f1fd64dfd767c3a94e217751770e22bc",
+      "outputs/summary.json": "7b27aab712eb159caf0910c98b14660ac7a96c1648942d2766361f9b1902d561"
+    },
+    "raw_text_or_row_identifiers_written": false
+  },
+  "definitions": {
+    "source_label_english": "Source language equals English, excluding truncated rows. Automatic source label, not verified request language.",
+    "keyword_candidates": "Unchanged src/analyze.py English/user-message retrieval rule; not validated relational requests.",
+    "user_turn": "One stored message whose role is user. A message can contain many embedded speakers or turns.",
+    "model_family": "Descriptive grouping by model-name prefix; GPT-4 and GPT-4 Turbo combined. No equivalence claim.",
+    "wrapper_flag_unit": "Record with a match in at least one stored user message; assistant text excluded.",
+    "known_bot_token": "Broad named-bot/game token component of the existing post-hoc search.",
+    "known_group_wrapper": "Both specific named-bot persona and group-environment phrase flags occur in the record's user text.",
+    "wrapper_limit": "String flags identify a known template, not verified group conversation, actual multiple people, current request, or relational relevance. Other templates can be missed.",
+    "pattern_registry": {
+      "known_bot_token": {
+        "regex": "\\b(Blockman|Zexy)\\b",
+        "case_insensitive": true
+      },
+      "named_bot_persona": {
+        "regex": "\\bYou are an AI named Zexy\\b",
+        "case_insensitive": true
+      },
+      "group_environment": {
+        "regex": "\\bcurrently chatting in a Blockman Go group\\b",
+        "case_insensitive": true
+      },
+      "history_instruction": {
+        "regex": "\\bsystem data of last 100 group messages\\b",
+        "case_insensitive": true
+      }
+    }
+  },
+  "populations": {
+    "all_sample": {
+      "rows": 20000,
+      "source_label_english_rows": 10636,
+      "source_label_english_pct": 53.18,
+      "source_language_label_counts": {
+        "Afrikaans": 4,
+        "Albanian": 4,
+        "Arabic": 468,
+        "Armenian": 2,
+        "Azerbaijani": 13,
+        "Basque": 7,
+        "Belarusian": 2,
+        "Bengali": 4,
+        "Bokmal": 4,
+        "Bosnian": 1,
+        "Bulgarian": 5,
+        "Catalan": 20,
+        "Chinese": 1737,
+        "Croatian": 1,
+        "Czech": 7,
+        "Danish": 3,
+        "Dutch": 36,
+        "English": 10636,
+        "Esperanto": 28,
+        "Estonian": 21,
+        "Finnish": 7,
+        "French": 840,
+        "Ganda": 3,
+        "German": 174,
+        "Greek": 3,
+        "Hebrew": 15,
+        "Hindi": 15,
+        "Hungarian": 23,
+        "Indonesian": 427,
+        "Irish": 1,
+        "Italian": 80,
+        "Japanese": 70,
+        "Kazakh": 3,
+        "Korean": 104,
+        "Latin": 42,
+        "Latvian": 1,
+        "Lithuanian": 8,
+        "Macedonian": 9,
+        "Malay": 19,
+        "Maori": 75,
+        "Marathi": 1,
+        "Mongolian": 2,
+        "Nolang": 66,
+        "Nynorsk": 4,
+        "Persian": 143,
+        "Polish": 34,
+        "Portuguese": 334,
+        "Romanian": 24,
+        "Russian": 2292,
+        "Serbian": 103,
+        "Shona": 3,
+        "Slovak": 5,
+        "Slovene": 4,
+        "Somali": 15,
+        "Sotho": 71,
+        "Spanish": 378,
+        "Swahili": 5,
+        "Swedish": 8,
+        "Tagalog": 90,
+        "Thai": 2,
+        "Tsonga": 9,
+        "Tswana": 4,
+        "Turkish": 76,
+        "Ukrainian": 35,
+        "Urdu": 4,
+        "Vietnamese": 793,
+        "Welsh": 6,
+        "Xhosa": 5,
+        "Yoruba": 555,
+        "Zulu": 7
+      },
+      "keyword_candidate_rows": 1747,
+      "keyword_candidate_pct": 8.73,
+      "year_counts": {
+        "2023": 3700,
+        "2024": 9800,
+        "2025": 6500
+      },
+      "model_family_counts": {
+        "GPT-3.5": 4117,
+        "GPT-4 / GPT-4 Turbo": 1487,
+        "GPT-4.1 mini": 3900,
+        "GPT-4o": 5656,
+        "GPT-4o mini": 4133,
+        "o1 mini": 325,
+        "o1 preview": 382
+      },
+      "model_counts": {
+        "gpt-3.5-turbo-0125": 834,
+        "gpt-3.5-turbo-0301": 1062,
+        "gpt-3.5-turbo-0613": 2221,
+        "gpt-4-0125-preview": 407,
+        "gpt-4-0314": 338,
+        "gpt-4-1106-preview": 572,
+        "gpt-4-turbo-2024-04-09": 170,
+        "gpt-4.1-mini-2025-04-14": 3900,
+        "gpt-4o-2024-05-13": 667,
+        "gpt-4o-2024-08-06": 4813,
+        "gpt-4o-2024-11-20": 176,
+        "gpt-4o-mini-2024-07-18": 4133,
+        "o1-mini-2024-09-12": 325,
+        "o1-preview-2024-09-12": 382
+      },
+      "user_turn_buckets": {
+        "1": 16599,
+        "2-3": 1881,
+        "4+": 1520
+      },
+      "median_stored_user_turns": 1.0,
+      "total_stored_user_turns": 33350,
+      "multi_user_turn_rows": 3401,
+      "date_min": "2023-04-11",
+      "date_max": "2025-07-25",
+      "wrapper_string_flags": {
+        "known_bot_token": {
+          "rows": 1259,
+          "pct_population": 6.3
+        },
+        "named_bot_persona": {
+          "rows": 1259,
+          "pct_population": 6.3
+        },
+        "group_environment": {
+          "rows": 1259,
+          "pct_population": 6.3
+        },
+        "history_instruction": {
+          "rows": 1236,
+          "pct_population": 6.18
+        },
+        "known_group_wrapper": {
+          "rows": 1259,
+          "pct_population": 6.3
+        }
+      }
+    },
+    "source_label_english": {
+      "rows": 10636,
+      "source_label_english_rows": 10636,
+      "source_label_english_pct": 100.0,
+      "source_language_label_counts": {
+        "English": 10636
+      },
+      "keyword_candidate_rows": 1747,
+      "keyword_candidate_pct": 16.43,
+      "year_counts": {
+        "2023": 1923,
+        "2024": 5366,
+        "2025": 3347
+      },
+      "model_family_counts": {
+        "GPT-3.5": 2383,
+        "GPT-4 / GPT-4 Turbo": 858,
+        "GPT-4.1 mini": 1978,
+        "GPT-4o": 2918,
+        "GPT-4o mini": 2075,
+        "o1 mini": 205,
+        "o1 preview": 219
+      },
+      "model_counts": {
+        "gpt-3.5-turbo-0125": 684,
+        "gpt-3.5-turbo-0301": 442,
+        "gpt-3.5-turbo-0613": 1257,
+        "gpt-4-0125-preview": 254,
+        "gpt-4-0314": 214,
+        "gpt-4-1106-preview": 300,
+        "gpt-4-turbo-2024-04-09": 90,
+        "gpt-4.1-mini-2025-04-14": 1978,
+        "gpt-4o-2024-05-13": 376,
+        "gpt-4o-2024-08-06": 2499,
+        "gpt-4o-2024-11-20": 43,
+        "gpt-4o-mini-2024-07-18": 2075,
+        "o1-mini-2024-09-12": 205,
+        "o1-preview-2024-09-12": 219
+      },
+      "user_turn_buckets": {
+        "1": 9067,
+        "2-3": 898,
+        "4+": 671
+      },
+      "median_stored_user_turns": 1.0,
+      "total_stored_user_turns": 16429,
+      "multi_user_turn_rows": 1569,
+      "date_min": "2023-04-11",
+      "date_max": "2025-07-25",
+      "wrapper_string_flags": {
+        "known_bot_token": {
+          "rows": 704,
+          "pct_population": 6.62
+        },
+        "named_bot_persona": {
+          "rows": 704,
+          "pct_population": 6.62
+        },
+        "group_environment": {
+          "rows": 704,
+          "pct_population": 6.62
+        },
+        "history_instruction": {
+          "rows": 681,
+          "pct_population": 6.4
+        },
+        "known_group_wrapper": {
+          "rows": 704,
+          "pct_population": 6.62
+        }
+      }
+    },
+    "keyword_candidates": {
+      "rows": 1747,
+      "source_label_english_rows": 1747,
+      "source_label_english_pct": 100.0,
+      "source_language_label_counts": {
+        "English": 1747
+      },
+      "keyword_candidate_rows": 1747,
+      "keyword_candidate_pct": 100.0,
+      "year_counts": {
+        "2023": 179,
+        "2024": 733,
+        "2025": 835
+      },
+      "model_family_counts": {
+        "GPT-3.5": 161,
+        "GPT-4 / GPT-4 Turbo": 118,
+        "GPT-4.1 mini": 764,
+        "GPT-4o": 438,
+        "GPT-4o mini": 212,
+        "o1 mini": 20,
+        "o1 preview": 34
+      },
+      "model_counts": {
+        "gpt-3.5-turbo-0125": 15,
+        "gpt-3.5-turbo-0301": 31,
+        "gpt-3.5-turbo-0613": 115,
+        "gpt-4-0125-preview": 26,
+        "gpt-4-0314": 29,
+        "gpt-4-1106-preview": 49,
+        "gpt-4-turbo-2024-04-09": 14,
+        "gpt-4.1-mini-2025-04-14": 764,
+        "gpt-4o-2024-05-13": 59,
+        "gpt-4o-2024-08-06": 372,
+        "gpt-4o-2024-11-20": 7,
+        "gpt-4o-mini-2024-07-18": 212,
+        "o1-mini-2024-09-12": 20,
+        "o1-preview-2024-09-12": 34
+      },
+      "user_turn_buckets": {
+        "1": 1451,
+        "2-3": 120,
+        "4+": 176
+      },
+      "median_stored_user_turns": 1,
+      "total_stored_user_turns": 3367,
+      "multi_user_turn_rows": 296,
+      "date_min": "2023-04-11",
+      "date_max": "2025-07-25",
+      "wrapper_string_flags": {
+        "known_bot_token": {
+          "rows": 686,
+          "pct_population": 39.27
+        },
+        "named_bot_persona": {
+          "rows": 686,
+          "pct_population": 39.27
+        },
+        "group_environment": {
+          "rows": 686,
+          "pct_population": 39.27
+        },
+        "history_instruction": {
+          "rows": 681,
+          "pct_population": 38.98
+        },
+        "known_group_wrapper": {
+          "rows": 686,
+          "pct_population": 39.27
+        }
+      }
+    }
+  },
+  "whole_sample_by_year": [
+    {
+      "year": "2023",
+      "rows": 3700,
+      "pct_all_sample_rows": 18.5,
+      "source_label_english_rows": 1923,
+      "source_label_english_pct_within_group": 51.97,
+      "keyword_candidate_rows": 179,
+      "keyword_candidate_pct_within_english": 9.31,
+      "user_turn_buckets": {
+        "1": 2175,
+        "2-3": 891,
+        "4+": 634
+      },
+      "known_group_wrapper_rows": 0,
+      "known_group_wrapper_pct_within_group": 0.0
+    },
+    {
+      "year": "2024",
+      "rows": 9800,
+      "pct_all_sample_rows": 49.0,
+      "source_label_english_rows": 5366,
+      "source_label_english_pct_within_group": 54.76,
+      "keyword_candidate_rows": 733,
+      "keyword_candidate_pct_within_english": 13.66,
+      "user_turn_buckets": {
+        "1": 8255,
+        "2-3": 841,
+        "4+": 704
+      },
+      "known_group_wrapper_rows": 0,
+      "known_group_wrapper_pct_within_group": 0.0
+    },
+    {
+      "year": "2025",
+      "rows": 6500,
+      "pct_all_sample_rows": 32.5,
+      "source_label_english_rows": 3347,
+      "source_label_english_pct_within_group": 51.49,
+      "keyword_candidate_rows": 835,
+      "keyword_candidate_pct_within_english": 24.95,
+      "user_turn_buckets": {
+        "1": 6169,
+        "2-3": 149,
+        "4+": 182
+      },
+      "known_group_wrapper_rows": 1259,
+      "known_group_wrapper_pct_within_group": 19.37
+    }
+  ],
+  "whole_sample_by_model_family": [
+    {
+      "model_family": "GPT-3.5",
+      "rows": 4117,
+      "pct_all_sample_rows": 20.59,
+      "source_label_english_rows": 2383,
+      "source_label_english_pct_within_group": 57.88,
+      "keyword_candidate_rows": 161,
+      "keyword_candidate_pct_within_english": 6.76,
+      "user_turn_buckets": {
+        "1": 2575,
+        "2-3": 899,
+        "4+": 643
+      },
+      "known_group_wrapper_rows": 0,
+      "known_group_wrapper_pct_within_group": 0.0
+    },
+    {
+      "model_family": "GPT-4 / GPT-4 Turbo",
+      "rows": 1487,
+      "pct_all_sample_rows": 7.43,
+      "source_label_english_rows": 858,
+      "source_label_english_pct_within_group": 57.7,
+      "keyword_candidate_rows": 118,
+      "keyword_candidate_pct_within_english": 13.75,
+      "user_turn_buckets": {
+        "1": 867,
+        "2-3": 365,
+        "4+": 255
+      },
+      "known_group_wrapper_rows": 0,
+      "known_group_wrapper_pct_within_group": 0.0
+    },
+    {
+      "model_family": "GPT-4.1 mini",
+      "rows": 3900,
+      "pct_all_sample_rows": 19.5,
+      "source_label_english_rows": 1978,
+      "source_label_english_pct_within_group": 50.72,
+      "keyword_candidate_rows": 764,
+      "keyword_candidate_pct_within_english": 38.62,
+      "user_turn_buckets": {
+        "1": 3747,
+        "2-3": 71,
+        "4+": 82
+      },
+      "known_group_wrapper_rows": 1259,
+      "known_group_wrapper_pct_within_group": 32.28
+    },
+    {
+      "model_family": "GPT-4o",
+      "rows": 5656,
+      "pct_all_sample_rows": 28.28,
+      "source_label_english_rows": 2918,
+      "source_label_english_pct_within_group": 51.59,
+      "keyword_candidate_rows": 438,
+      "keyword_candidate_pct_within_english": 15.01,
+      "user_turn_buckets": {
+        "1": 5004,
+        "2-3": 343,
+        "4+": 309
+      },
+      "known_group_wrapper_rows": 0,
+      "known_group_wrapper_pct_within_group": 0.0
+    },
+    {
+      "model_family": "GPT-4o mini",
+      "rows": 4133,
+      "pct_all_sample_rows": 20.66,
+      "source_label_english_rows": 2075,
+      "source_label_english_pct_within_group": 50.21,
+      "keyword_candidate_rows": 212,
+      "keyword_candidate_pct_within_english": 10.22,
+      "user_turn_buckets": {
+        "1": 3699,
+        "2-3": 203,
+        "4+": 231
+      },
+      "known_group_wrapper_rows": 0,
+      "known_group_wrapper_pct_within_group": 0.0
+    },
+    {
+      "model_family": "o1 mini",
+      "rows": 325,
+      "pct_all_sample_rows": 1.62,
+      "source_label_english_rows": 205,
+      "source_label_english_pct_within_group": 63.08,
+      "keyword_candidate_rows": 20,
+      "keyword_candidate_pct_within_english": 9.76,
+      "user_turn_buckets": {
+        "1": 325
+      },
+      "known_group_wrapper_rows": 0,
+      "known_group_wrapper_pct_within_group": 0.0
+    },
+    {
+      "model_family": "o1 preview",
+      "rows": 382,
+      "pct_all_sample_rows": 1.91,
+      "source_label_english_rows": 219,
+      "source_label_english_pct_within_group": 57.33,
+      "keyword_candidate_rows": 34,
+      "keyword_candidate_pct_within_english": 15.53,
+      "user_turn_buckets": {
+        "1": 382
+      },
+      "known_group_wrapper_rows": 0,
+      "known_group_wrapper_pct_within_group": 0.0
+    }
+  ],
+  "whole_sample_by_year_and_model_family": [
+    {
+      "year": "2023",
+      "model_family": "GPT-3.5",
+      "rows": 3177,
+      "pct_all_sample_rows": 15.88,
+      "source_label_english_rows": 1627,
+      "source_label_english_pct_within_group": 51.21,
+      "keyword_candidate_rows": 140,
+      "keyword_candidate_pct_within_english": 8.6,
+      "user_turn_buckets": {
+        "1": 1859,
+        "2-3": 763,
+        "4+": 555
+      },
+      "known_group_wrapper_rows": 0,
+      "known_group_wrapper_pct_within_group": 0.0
+    },
+    {
+      "year": "2023",
+      "model_family": "GPT-4 / GPT-4 Turbo",
+      "rows": 523,
+      "pct_all_sample_rows": 2.61,
+      "source_label_english_rows": 296,
+      "source_label_english_pct_within_group": 56.6,
+      "keyword_candidate_rows": 39,
+      "keyword_candidate_pct_within_english": 13.18,
+      "user_turn_buckets": {
+        "1": 316,
+        "2-3": 128,
+        "4+": 79
+      },
+      "known_group_wrapper_rows": 0,
+      "known_group_wrapper_pct_within_group": 0.0
+    },
+    {
+      "year": "2024",
+      "model_family": "GPT-3.5",
+      "rows": 940,
+      "pct_all_sample_rows": 4.7,
+      "source_label_english_rows": 756,
+      "source_label_english_pct_within_group": 80.43,
+      "keyword_candidate_rows": 21,
+      "keyword_candidate_pct_within_english": 2.78,
+      "user_turn_buckets": {
+        "1": 716,
+        "2-3": 136,
+        "4+": 88
+      },
+      "known_group_wrapper_rows": 0,
+      "known_group_wrapper_pct_within_group": 0.0
+    },
+    {
+      "year": "2024",
+      "model_family": "GPT-4 / GPT-4 Turbo",
+      "rows": 964,
+      "pct_all_sample_rows": 4.82,
+      "source_label_english_rows": 562,
+      "source_label_english_pct_within_group": 58.3,
+      "keyword_candidate_rows": 79,
+      "keyword_candidate_pct_within_english": 14.06,
+      "user_turn_buckets": {
+        "1": 551,
+        "2-3": 237,
+        "4+": 176
+      },
+      "known_group_wrapper_rows": 0,
+      "known_group_wrapper_pct_within_group": 0.0
+    },
+    {
+      "year": "2024",
+      "model_family": "GPT-4o",
+      "rows": 5656,
+      "pct_all_sample_rows": 28.28,
+      "source_label_english_rows": 2918,
+      "source_label_english_pct_within_group": 51.59,
+      "keyword_candidate_rows": 438,
+      "keyword_candidate_pct_within_english": 15.01,
+      "user_turn_buckets": {
+        "1": 5004,
+        "2-3": 343,
+        "4+": 309
+      },
+      "known_group_wrapper_rows": 0,
+      "known_group_wrapper_pct_within_group": 0.0
+    },
+    {
+      "year": "2024",
+      "model_family": "GPT-4o mini",
+      "rows": 1533,
+      "pct_all_sample_rows": 7.66,
+      "source_label_english_rows": 706,
+      "source_label_english_pct_within_group": 46.05,
+      "keyword_candidate_rows": 141,
+      "keyword_candidate_pct_within_english": 19.97,
+      "user_turn_buckets": {
+        "1": 1277,
+        "2-3": 125,
+        "4+": 131
+      },
+      "known_group_wrapper_rows": 0,
+      "known_group_wrapper_pct_within_group": 0.0
+    },
+    {
+      "year": "2024",
+      "model_family": "o1 mini",
+      "rows": 325,
+      "pct_all_sample_rows": 1.62,
+      "source_label_english_rows": 205,
+      "source_label_english_pct_within_group": 63.08,
+      "keyword_candidate_rows": 20,
+      "keyword_candidate_pct_within_english": 9.76,
+      "user_turn_buckets": {
+        "1": 325
+      },
+      "known_group_wrapper_rows": 0,
+      "known_group_wrapper_pct_within_group": 0.0
+    },
+    {
+      "year": "2024",
+      "model_family": "o1 preview",
+      "rows": 382,
+      "pct_all_sample_rows": 1.91,
+      "source_label_english_rows": 219,
+      "source_label_english_pct_within_group": 57.33,
+      "keyword_candidate_rows": 34,
+      "keyword_candidate_pct_within_english": 15.53,
+      "user_turn_buckets": {
+        "1": 382
+      },
+      "known_group_wrapper_rows": 0,
+      "known_group_wrapper_pct_within_group": 0.0
+    },
+    {
+      "year": "2025",
+      "model_family": "GPT-4.1 mini",
+      "rows": 3900,
+      "pct_all_sample_rows": 19.5,
+      "source_label_english_rows": 1978,
+      "source_label_english_pct_within_group": 50.72,
+      "keyword_candidate_rows": 764,
+      "keyword_candidate_pct_within_english": 38.62,
+      "user_turn_buckets": {
+        "1": 3747,
+        "2-3": 71,
+        "4+": 82
+      },
+      "known_group_wrapper_rows": 1259,
+      "known_group_wrapper_pct_within_group": 32.28
+    },
+    {
+      "year": "2025",
+      "model_family": "GPT-4o mini",
+      "rows": 2600,
+      "pct_all_sample_rows": 13.0,
+      "source_label_english_rows": 1369,
+      "source_label_english_pct_within_group": 52.65,
+      "keyword_candidate_rows": 71,
+      "keyword_candidate_pct_within_english": 5.19,
+      "user_turn_buckets": {
+        "1": 2422,
+        "2-3": 78,
+        "4+": 100
+      },
+      "known_group_wrapper_rows": 0,
+      "known_group_wrapper_pct_within_group": 0.0
+    }
+  ],
+  "known_group_wrapper_profile": {
+    "rows": 1259,
+    "source_label_english_rows": 704,
+    "source_label_english_pct": 55.92,
+    "source_language_label_counts": {
+      "English": 704,
+      "Portuguese": 1,
+      "Tagalog": 14,
+      "Yoruba": 540
+    },
+    "keyword_candidate_rows": 686,
+    "keyword_candidate_pct": 54.49,
+    "year_counts": {
+      "2025": 1259
+    },
+    "model_family_counts": {
+      "GPT-4.1 mini": 1259
+    },
+    "model_counts": {
+      "gpt-4.1-mini-2025-04-14": 1259
+    },
+    "user_turn_buckets": {
+      "1": 1259
+    },
+    "median_stored_user_turns": 1,
+    "total_stored_user_turns": 1259,
+    "multi_user_turn_rows": 0,
+    "date_min": "2025-04-22",
+    "date_max": "2025-07-08",
+    "wrapper_string_flags": {
+      "known_bot_token": {
+        "rows": 1259,
+        "pct_population": 100.0
+      },
+      "named_bot_persona": {
+        "rows": 1259,
+        "pct_population": 100.0
+      },
+      "group_environment": {
+        "rows": 1259,
+        "pct_population": 100.0
+      },
+      "history_instruction": {
+        "rows": 1236,
+        "pct_population": 98.17
+      },
+      "known_group_wrapper": {
+        "rows": 1259,
+        "pct_population": 100.0
+      }
+    }
+  },
+  "known_group_wrapper_month_counts": {
+    "2025-04": 736,
+    "2025-05": 174,
+    "2025-06": 204,
+    "2025-07": 145
+  },
+  "known_group_wrapper_by_population": {
+    "all_sample": {
+      "rows": 1259,
+      "source_label_english_rows": 704,
+      "source_label_english_pct": 55.92,
+      "source_language_label_counts": {
+        "English": 704,
+        "Portuguese": 1,
+        "Tagalog": 14,
+        "Yoruba": 540
+      },
+      "keyword_candidate_rows": 686,
+      "keyword_candidate_pct": 54.49,
+      "year_counts": {
+        "2025": 1259
+      },
+      "model_family_counts": {
+        "GPT-4.1 mini": 1259
+      },
+      "model_counts": {
+        "gpt-4.1-mini-2025-04-14": 1259
+      },
+      "user_turn_buckets": {
+        "1": 1259
+      },
+      "median_stored_user_turns": 1,
+      "total_stored_user_turns": 1259,
+      "multi_user_turn_rows": 0,
+      "date_min": "2025-04-22",
+      "date_max": "2025-07-08",
+      "wrapper_string_flags": {
+        "known_bot_token": {
+          "rows": 1259,
+          "pct_population": 100.0
+        },
+        "named_bot_persona": {
+          "rows": 1259,
+          "pct_population": 100.0
+        },
+        "group_environment": {
+          "rows": 1259,
+          "pct_population": 100.0
+        },
+        "history_instruction": {
+          "rows": 1236,
+          "pct_population": 98.17
+        },
+        "known_group_wrapper": {
+          "rows": 1259,
+          "pct_population": 100.0
+        }
+      }
+    },
+    "source_label_english": {
+      "rows": 704,
+      "source_label_english_rows": 704,
+      "source_label_english_pct": 100.0,
+      "source_language_label_counts": {
+        "English": 704
+      },
+      "keyword_candidate_rows": 686,
+      "keyword_candidate_pct": 97.44,
+      "year_counts": {
+        "2025": 704
+      },
+      "model_family_counts": {
+        "GPT-4.1 mini": 704
+      },
+      "model_counts": {
+        "gpt-4.1-mini-2025-04-14": 704
+      },
+      "user_turn_buckets": {
+        "1": 704
+      },
+      "median_stored_user_turns": 1.0,
+      "total_stored_user_turns": 704,
+      "multi_user_turn_rows": 0,
+      "date_min": "2025-04-22",
+      "date_max": "2025-07-08",
+      "wrapper_string_flags": {
+        "known_bot_token": {
+          "rows": 704,
+          "pct_population": 100.0
+        },
+        "named_bot_persona": {
+          "rows": 704,
+          "pct_population": 100.0
+        },
+        "group_environment": {
+          "rows": 704,
+          "pct_population": 100.0
+        },
+        "history_instruction": {
+          "rows": 681,
+          "pct_population": 96.73
+        },
+        "known_group_wrapper": {
+          "rows": 704,
+          "pct_population": 100.0
+        }
+      }
+    },
+    "keyword_candidates": {
+      "rows": 686,
+      "source_label_english_rows": 686,
+      "source_label_english_pct": 100.0,
+      "source_language_label_counts": {
+        "English": 686
+      },
+      "keyword_candidate_rows": 686,
+      "keyword_candidate_pct": 100.0,
+      "year_counts": {
+        "2025": 686
+      },
+      "model_family_counts": {
+        "GPT-4.1 mini": 686
+      },
+      "model_counts": {
+        "gpt-4.1-mini-2025-04-14": 686
+      },
+      "user_turn_buckets": {
+        "1": 686
+      },
+      "median_stored_user_turns": 1.0,
+      "total_stored_user_turns": 686,
+      "multi_user_turn_rows": 0,
+      "date_min": "2025-04-22",
+      "date_max": "2025-07-08",
+      "wrapper_string_flags": {
+        "known_bot_token": {
+          "rows": 686,
+          "pct_population": 100.0
+        },
+        "named_bot_persona": {
+          "rows": 686,
+          "pct_population": 100.0
+        },
+        "group_environment": {
+          "rows": 686,
+          "pct_population": 100.0
+        },
+        "history_instruction": {
+          "rows": 681,
+          "pct_population": 99.27
+        },
+        "known_group_wrapper": {
+          "rows": 686,
+          "pct_population": 100.0
+        }
+      }
+    }
+  },
+  "without_known_group_wrapper_profile": {
+    "rows": 18741,
+    "source_label_english_rows": 9932,
+    "source_label_english_pct": 53.0,
+    "source_language_label_counts": {
+      "Afrikaans": 4,
+      "Albanian": 4,
+      "Arabic": 468,
+      "Armenian": 2,
+      "Azerbaijani": 13,
+      "Basque": 7,
+      "Belarusian": 2,
+      "Bengali": 4,
+      "Bokmal": 4,
+      "Bosnian": 1,
+      "Bulgarian": 5,
+      "Catalan": 20,
+      "Chinese": 1737,
+      "Croatian": 1,
+      "Czech": 7,
+      "Danish": 3,
+      "Dutch": 36,
+      "English": 9932,
+      "Esperanto": 28,
+      "Estonian": 21,
+      "Finnish": 7,
+      "French": 840,
+      "Ganda": 3,
+      "German": 174,
+      "Greek": 3,
+      "Hebrew": 15,
+      "Hindi": 15,
+      "Hungarian": 23,
+      "Indonesian": 427,
+      "Irish": 1,
+      "Italian": 80,
+      "Japanese": 70,
+      "Kazakh": 3,
+      "Korean": 104,
+      "Latin": 42,
+      "Latvian": 1,
+      "Lithuanian": 8,
+      "Macedonian": 9,
+      "Malay": 19,
+      "Maori": 75,
+      "Marathi": 1,
+      "Mongolian": 2,
+      "Nolang": 66,
+      "Nynorsk": 4,
+      "Persian": 143,
+      "Polish": 34,
+      "Portuguese": 333,
+      "Romanian": 24,
+      "Russian": 2292,
+      "Serbian": 103,
+      "Shona": 3,
+      "Slovak": 5,
+      "Slovene": 4,
+      "Somali": 15,
+      "Sotho": 71,
+      "Spanish": 378,
+      "Swahili": 5,
+      "Swedish": 8,
+      "Tagalog": 76,
+      "Thai": 2,
+      "Tsonga": 9,
+      "Tswana": 4,
+      "Turkish": 76,
+      "Ukrainian": 35,
+      "Urdu": 4,
+      "Vietnamese": 793,
+      "Welsh": 6,
+      "Xhosa": 5,
+      "Yoruba": 15,
+      "Zulu": 7
+    },
+    "keyword_candidate_rows": 1061,
+    "keyword_candidate_pct": 5.66,
+    "year_counts": {
+      "2023": 3700,
+      "2024": 9800,
+      "2025": 5241
+    },
+    "model_family_counts": {
+      "GPT-3.5": 4117,
+      "GPT-4 / GPT-4 Turbo": 1487,
+      "GPT-4.1 mini": 2641,
+      "GPT-4o": 5656,
+      "GPT-4o mini": 4133,
+      "o1 mini": 325,
+      "o1 preview": 382
+    },
+    "model_counts": {
+      "gpt-3.5-turbo-0125": 834,
+      "gpt-3.5-turbo-0301": 1062,
+      "gpt-3.5-turbo-0613": 2221,
+      "gpt-4-0125-preview": 407,
+      "gpt-4-0314": 338,
+      "gpt-4-1106-preview": 572,
+      "gpt-4-turbo-2024-04-09": 170,
+      "gpt-4.1-mini-2025-04-14": 2641,
+      "gpt-4o-2024-05-13": 667,
+      "gpt-4o-2024-08-06": 4813,
+      "gpt-4o-2024-11-20": 176,
+      "gpt-4o-mini-2024-07-18": 4133,
+      "o1-mini-2024-09-12": 325,
+      "o1-preview-2024-09-12": 382
+    },
+    "user_turn_buckets": {
+      "1": 15340,
+      "2-3": 1881,
+      "4+": 1520
+    },
+    "median_stored_user_turns": 1,
+    "total_stored_user_turns": 32091,
+    "multi_user_turn_rows": 3401,
+    "date_min": "2023-04-11",
+    "date_max": "2025-07-25",
+    "wrapper_string_flags": {
+      "known_bot_token": {
+        "rows": 0,
+        "pct_population": 0.0
+      },
+      "named_bot_persona": {
+        "rows": 0,
+        "pct_population": 0.0
+      },
+      "group_environment": {
+        "rows": 0,
+        "pct_population": 0.0
+      },
+      "history_instruction": {
+        "rows": 0,
+        "pct_population": 0.0
+      },
+      "known_group_wrapper": {
+        "rows": 0,
+        "pct_population": 0.0
+      }
+    }
+  },
+  "saved_candidate_audit": {
+    "review_type": "Saved AI-assisted labels, not human-validated labels; no new semantic coding.",
+    "candidate_review_rows": 80,
+    "label_counts": {
+      "fiction_or_general": 37,
+      "personal_drafting": 2,
+      "unclear": 1,
+      "unrelated": 40
+    },
+    "format_counts": {
+      "embedded_group_history": 35,
+      "embedded_other_history": 8,
+      "native_chat": 8,
+      "pasted_document": 29
+    },
+    "format_by_label_and_wrapper": [
+      {
+        "format": "embedded_group_history",
+        "rows": 35,
+        "label_counts": {
+          "fiction_or_general": 5,
+          "unclear": 1,
+          "unrelated": 29
+        },
+        "known_group_wrapper_rows": 35
+      },
+      {
+        "format": "embedded_other_history",
+        "rows": 8,
+        "label_counts": {
+          "fiction_or_general": 6,
+          "unrelated": 2
+        },
+        "known_group_wrapper_rows": 0
+      },
+      {
+        "format": "native_chat",
+        "rows": 8,
+        "label_counts": {
+          "fiction_or_general": 5,
+          "personal_drafting": 2,
+          "unrelated": 1
+        },
+        "known_group_wrapper_rows": 0
+      },
+      {
+        "format": "pasted_document",
+        "rows": 29,
+        "label_counts": {
+          "fiction_or_general": 21,
+          "unrelated": 8
+        },
+        "known_group_wrapper_rows": 0
+      }
+    ],
+    "personal_label_rows": 2,
+    "personal_label_pct_reviewed_candidates": 2.5,
+    "personal_label_format_counts": {
+      "native_chat": 2
+    },
+    "personal_label_followup_counts": {
+      "clarification": 1,
+      "none": 1
+    },
+    "relevant_message_index_present_rows": 3,
+    "relevant_message_index_present_label_counts": {
+      "personal_drafting": 2,
+      "unclear": 1
+    },
+    "reported_action_followup_rows": 0,
+    "direct_current_request_evidence_count": null,
+    "direct_current_request_evidence_status": "Unavailable: saved annotations have no separate current-request-versus-embedded-history evidence field. Do not infer that count from reason text, format, or a non-null relevant-message index. Personal labels and follow-up labels above are the available narrower evidence.",
+    "scope": "Counts describe 80 seeded retrieval candidates only; not all 1,747 candidates, all English records, or population prevalence."
+  }
+}

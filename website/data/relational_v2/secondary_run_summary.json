@@ -1,0 +1,31 @@
+{
+  "completed_at_utc": "2026-10-21T01:55:00.748654+00:00",
+  "requested_n": 454,
+  "written_n": 454,
+  "status_counts": {
+    "labeled": 314,
+    "failed": 18,
+    "input_limit": 2,
+    "not_run_quota": 120
+  },
+  "completed_labels_n": 314,
+  "saved_attempted_failures_n": 18,
+  "input_limit_n": 2,
+  "no_saved_completion_quota_n": 120,
+  "attempted_status_note": "The 18 failed files retain recorded attempt counts. For 120 selected rows without a saved response, requests may not have started or may have been interrupted; per-row request starts were not logged. not_run_quota means no completed check, not proof of zero API attempts.",
+  "stop_reason": "credit_balance_exhausted",
+  "quota_verification": {
+    "http_status": 429,
+    "error_type": "insufficient_quota",
+    "error_code": "credit_balance_exhausted"
+  },
+  "usage": {
+    "prompt_tokens": 1244179,
+    "completion_tokens": 33906,
+    "total_tokens": 1278085
+  },
+  "usage_note": "Sum of saved successful final response usage only. Retried, interrupted, failed and diagnostic calls are not fully included; this is not total billed use.",
+  "protocol_sha256": "52524f994d9df4f2348d3aed6d02b23549640dab4fab9c0948fbdbca26351fec",
+  "model": "gpt-4.1-2025-04-14",
+  "human_validation": false
+}

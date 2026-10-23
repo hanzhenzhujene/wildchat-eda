@@ -1,0 +1,22 @@
+{
+  "protocol_sha256": "52524f994d9df4f2348d3aed6d02b23549640dab4fab9c0948fbdbca26351fec",
+  "prompt_sha256": "47072ff8e0095599251b4870cd2f7a278c37ee05549fe927b833843c6dd59056",
+  "schema_sha256": "fd3d2452bcdf92dd622e39c62cb08db6a4dd37b7b1442db1390adbacec28693f",
+  "primary_model": "gpt-5.4-mini-2026-03-17",
+  "secondary_model": "gpt-4.1-2025-04-14",
+  "endpoint": "https://api.openai.com/v1/chat/completions",
+  "primary_settings": {
+    "store": false,
+    "reasoning_effort": "medium",
+    "max_completion_tokens": 4000
+  },
+  "secondary_settings": {
+    "store": false,
+    "temperature": 0,
+    "max_completion_tokens": 1200
+  },
+  "input_character_limit": 250000,
+  "input_limit_policy": "Do not truncate; retain row as unresolved and requiring full-source review.",
+  "source_payload": "Full stored role/content messages with zero-based message indexes. No source model/language passed to annotator.",
+  "review_type": "AI labels and blind second AI labels only. No human validation."
+}

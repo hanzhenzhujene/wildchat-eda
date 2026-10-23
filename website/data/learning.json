@@ -1,0 +1,303 @@
+{
+  "glossary": [
+    {
+      "term": "Dataset record",
+      "definition": "One dataset row: metadata plus a stored conversation (an ordered message list).",
+      "why": "A row is not a unique person. Repeated content can appear in multiple rows.",
+      "zh": "一条数据记录；不等于一个人。"
+    },
+    {
+      "term": "Conversation",
+      "definition": "The ordered message list stored in a record.",
+      "why": "It need not be a unique session or independent observation. Multiple records can repeat conversation content.",
+      "zh": "记录中保存的消息序列；不保证对应独立会话或独立用户。"
+    },
+    {
+      "term": "Message",
+      "definition": "One entry with a role and content in the stored conversation.",
+      "why": "A message can contain pasted dialogue or several tasks. Neither is counted as extra stored messages.",
+      "zh": "一个 role/content 条目；其中可粘贴历史对话或包含多个任务。"
+    },
+    {
+      "term": "Stored turn",
+      "definition": "In this Atlas, user turns count stored user-role messages. Pairing a user message with a reply is an exchange.",
+      "why": "A prompt can contain a pasted dialogue without adding stored turns.",
+      "zh": "此处 user turns 按保存的 user 消息计数；不是语义上的请求数。"
+    },
+    {
+      "term": "Active request",
+      "definition": "What the user is currently asking the AI to do, interpreted with the relevant earlier context.",
+      "why": "The current content analysis samples 2,000 records directly from the full release and codes the final request in each using earlier context. Empty or unclear requests stay in the denominator.",
+      "zh": "用户当前真正要求 AI 做的事。"
+    },
+    {
+      "term": "Input format (packaging)",
+      "definition": "How the request is presented: directly, alongside a document, or inside a supplied dialogue history.",
+      "why": "Packaging describes structure, not the user’s purpose or whether events are real.",
+      "zh": "请求的包装形式；与目的分开判断。"
+    },
+    {
+      "term": "Block sample",
+      "definition": "This analysis selects 100 consecutive rows at a random start in each of 200 index sections.",
+      "why": "The 20,000 rows are not 20,000 independent draws. Percentages describe this sample, not all AI users.",
+      "zh": "分块抽样；这里不能直接推算总体比例。"
+    },
+    {
+      "term": "Retrieval candidate",
+      "definition": "A record selected by a search rule, before its relevance is confirmed.",
+      "why": "Relationship keywords also occur in fiction, documents and bot instructions. A hit is not a relational case.",
+      "zh": "被搜索规则捞到的候选项；还未确认相关。"
+    },
+    {
+      "term": "AI-labeled audit",
+      "definition": "Records labeled by AI using a documented coding protocol. Human validation is not recorded.",
+      "why": "Multiple AI reviewers can expose disagreements, but this does not replace human validation.",
+      "zh": "AI 标注的审核记录；不等于已经过人工验证。"
+    },
+    {
+      "term": "Relational relevance",
+      "definition": "How the request involves other people: personal help, AI participation, or described interpersonal content.",
+      "why": "This is a screening dimension. It does not score the quality of an AI reply.",
+      "zh": "是否、以何种方式涉及他人的关系情境。"
+    },
+    {
+      "term": "Reference answer",
+      "definition": "An answer accepted as a standard against which another answer can be evaluated.",
+      "why": "WildChat’s existing AI replies are observations. They have not been established as correct or desirable answers.",
+      "zh": "参考答案；已有 AI 回复不自动具备这个地位。"
+    },
+    {
+      "term": "Human outcome",
+      "definition": "Evidence of what happened to people after an interaction, such as whether advice was followed or a relationship changed.",
+      "why": "An AI reply or a positive user reaction does not by itself establish a lasting benefit.",
+      "zh": "人实际发生了什么变化；与回复质量分开。"
+    }
+  ],
+  "quizzes": [
+    {
+      "id": "q-record",
+      "question": "A row contains one user message with a long pasted group chat, followed by one AI reply. How many user turns are stored?",
+      "options": [
+        "One; the pasted history is inside that message.",
+        "One for every speaker in the pasted history.",
+        "The length alone tells us how many turns occurred."
+      ],
+      "correctIndex": 0,
+      "explanation": "Stored messages and supplied history are different levels of structure. The history may matter for interpretation, but it is not another stored exchange.",
+      "section": "data"
+    },
+    {
+      "id": "q-language",
+      "question": "A record labeled English contains English instructions and a Russian job advert. What can we conclude?",
+      "options": [
+        "Every part of the record is English.",
+        "The source language label may not describe every part of the input.",
+        "The record must be incorrectly stored."
+      ],
+      "correctIndex": 1,
+      "explanation": "Automatic language labels summarize the record. The actual request, supplied material and reply can use different languages.",
+      "section": "composition"
+    },
+    {
+      "id": "q-length",
+      "question": "A record has 2,000 input words and a 20-word reply. Does that establish a deep personal conversation?",
+      "options": [
+        "Yes; long input is evidence of personal depth.",
+        "No; it could be a bot prompt with a supplied history.",
+        "Yes, if the word “friend” appears."
+      ],
+      "correctIndex": 1,
+      "explanation": "Length describes reading load. Inspect the active request and packaging to find out what the exchange is about.",
+      "section": "structure"
+    },
+    {
+      "id": "q-purpose",
+      "question": "A worker asks AI to shorten a message to a client. Can this be both text work and interpersonal content?",
+      "options": [
+        "Yes; task purpose and interpersonal content are separate labels.",
+        "No; rewriting cannot involve other people.",
+        "No; every request has only one kind of label."
+      ],
+      "correctIndex": 0,
+      "explanation": "Text work describes the task. Interpersonal content describes who or what it concerns.",
+      "section": "purpose"
+    },
+    {
+      "id": "q-zero",
+      "question": "No personal-help requests were labeled in the earlier 120-record pilot. What does that show?",
+      "options": [
+        "WildChat contains no personal-help requests.",
+        "The full release has the same distribution.",
+        "None were labeled among these 120 final inputs."
+      ],
+      "correctIndex": 2,
+      "explanation": "None were labeled in those 120 final inputs. The later 2,000-row draw and the selected examples are separate evidence sets.",
+      "section": "relational"
+    },
+    {
+      "id": "q-reference",
+      "question": "A source record includes an AI answer. What role can that answer play?",
+      "options": [
+        "A stored model response.",
+        "A verified correct answer.",
+        "Evidence that the user followed its advice."
+      ],
+      "correctIndex": 0,
+      "explanation": "The recorded reply can be studied. Its presence does not make it a reference answer or demonstrate an effect on the user.",
+      "section": "relational"
+    },
+    {
+      "id": "q-audit",
+      "question": "Two AI reviewers agree on a label after discussion. Is that human validation?",
+      "options": [
+        "Yes; agreement is enough.",
+        "No; human judgment has not been supplied.",
+        "Yes, if both reviewers can explain their reasons."
+      ],
+      "correctIndex": 1,
+      "explanation": "AI review is useful for finding ambiguity and correcting mistakes. Validation against human judgment remains a separate task.",
+      "section": "methods"
+    }
+  ],
+  "sections": [
+    {
+      "id": "data",
+      "title": "What is one record?",
+      "takeaway": "Separate the current request from documents or dialogue pasted into it.",
+      "detail": "One row stores metadata plus role-labeled messages. It can be an ordinary exchange, a document task, or a request wrapped in a bot prompt. Start with an example before interpreting the distributions."
+    },
+    {
+      "id": "composition",
+      "title": "What does this release contain?",
+      "takeaway": "Language, model and date describe released records; they do not establish model quality or platform usage.",
+      "detail": "The full pinned release is compared with the original block sample and a uniform row sample. Recorded models appear in different periods and prompt mixtures, so these are coverage comparisons."
+    },
+    {
+      "id": "structure",
+      "title": "How much conversation is actually stored?",
+      "takeaway": "A long prompt can contain a short task; one stored turn can contain a long supplied history.",
+      "detail": "Compare stored turn counts with input and reply lengths. The known group-bot template helps explain a cluster of long inputs and short outputs, but it is only one detected template."
+    },
+    {
+      "id": "purpose",
+      "title": "What is the user asking for?",
+      "takeaway": "Purpose, packaging and relational relevance are separate dimensions.",
+      "detail": "The random content sample labels the final active request. A document can contain fictional relationships; a rewriting request can help with an apparent personal conflict. Do not infer purpose from format alone."
+    },
+    {
+      "id": "relational",
+      "title": "How do requests involve other people?",
+      "takeaway": "Personal help, supplied exchanges and described situations have different meanings.",
+      "detail": "A personal-help request presents a situation as the user’s own. Supplied dialogue or fiction may contain interpersonal content without establishing a real interaction."
+    },
+    {
+      "id": "methods",
+      "title": "How much confidence should we place in the counts?",
+      "takeaway": "Full-release counts and sampled request labels have different scopes.",
+      "detail": "Metadata, stored message counts, word lengths and the named template screen cover every pinned released row. Other text screens use a uniform 20,000-row reference. Request labels now cover a separate uniform draw of 2,000 rows from the full release; no human validation is recorded."
+    }
+  ],
+  "methodSteps": [
+    {
+      "title": "Pin one release",
+      "body": "Use allenai/WildChat-4.8M at revision c827c6df8fcf008219ffaffa4d1dd77491099367. Its public subset has 3,199,860 rows; the release name is not the analyzed row count."
+    },
+    {
+      "title": "Retain the original block sample",
+      "body": "Divide the source index into 200 sections. Select a seeded start and 100 consecutive rows in each section. This spreads coverage without making independent or equally probable draws of every source row."
+    },
+    {
+      "title": "Measure stored properties",
+      "body": "Scan all 3,199,860 rows for source labels, messages, whitespace lengths, hashes and the named template. Check every file against its published SHA-256. Compare the original 20,000 rows with a new uniform 20,000-row sample (seed 20261020); richer regex screens use the two samples. Original message text is displayed for 40 selected records; the full corpus is not republished."
+    },
+    {
+      "title": "Draw a full-release content sample",
+      "body": "Select 2,000 rows without replacement from all 3,199,860 released rows (seed 2026102002). No language, topic or deduplication filter. AI labels the final active request with earlier context. Keep empty or unclear requests in the denominator."
+    },
+    {
+      "title": "Check the retrieval rule separately",
+      "body": "Screen 10,636 English-labeled rows using relationship, first-person and help markers. Review 80 of 1,747 hits plus 40 non-hits. These counts describe the search, not topic prevalence."
+    },
+    {
+      "title": "Check AI labels separately",
+      "body": "A blind second AI pass checks flagged records and a random selection of first-pass negatives. Both labels stay visible. The protocol and model settings are saved; human validation has not been done."
+    }
+  ],
+  "sources": [
+    {
+      "title": "WildChat paper",
+      "url": "https://arxiv.org/abs/2405.01470",
+      "note": "Collection through a free user-facing chat service, consent, reconstruction and limitations. The original paper and later public release have different counts."
+    },
+    {
+      "title": "Pinned WildChat-4.8M release",
+      "url": "https://huggingface.co/datasets/allenai/WildChat-4.8M/tree/c827c6df8fcf008219ffaffa4d1dd77491099367",
+      "note": "The source snapshot for this analysis. The public subset has 3,199,860 rows after publisher filtering."
+    },
+    {
+      "title": "Pinned dataset card",
+      "url": "https://huggingface.co/datasets/allenai/WildChat-4.8M/blob/c827c6df8fcf008219ffaffa4d1dd77491099367/README.md",
+      "note": "Field definitions, release history and filtering. A redaction flag does not guarantee that all identifying text is absent."
+    }
+  ],
+  "evidenceSets": [
+    {
+      "title": "Full-release statistics",
+      "n": 3199860,
+      "unit": "Released dataset rows",
+      "selection": "Every row at the pinned revision; 86 SHA-256-verified files",
+      "supports": "Exact source metadata, stored message and length distributions for this release.",
+      "doesNotSupport": "Human-validated relational labels, unique-user counts or human outcomes."
+    },
+    {
+      "title": "Descriptive sample",
+      "n": 20000,
+      "unit": "Dataset rows",
+      "selection": "200 index sections × 100 consecutive rows",
+      "supports": "Stored metadata, message counts and text properties.",
+      "doesNotSupport": "Population prevalence or causal model comparisons."
+    },
+    {
+      "title": "Content audit",
+      "n": 120,
+      "unit": "One final input per selected record (including empty or unclear inputs)",
+      "selection": "Randomly drawn from the 20,000-row sample; no language or keyword filter",
+      "supports": "Exploratory purpose and relevance labels for those requests.",
+      "doesNotSupport": "Human-validated taxonomy or dataset-wide topic proportions."
+    },
+    {
+      "title": "Retrieval audit",
+      "n": 120,
+      "unit": "80 keyword hits + 40 non-hits",
+      "selection": "Separate review within English-labeled records",
+      "supports": "Examples of what the keyword rule captures or misses.",
+      "doesNotSupport": "A prevalence estimate or validated recall."
+    }
+  ],
+  "dimensions": [
+    {
+      "name": "Purpose",
+      "question": "What is the user asking the AI to do?",
+      "example": "Rewrite a message about an apparent work conflict."
+    },
+    {
+      "name": "Packaging",
+      "question": "How is that request presented?",
+      "example": "A supplied draft followed by editing instructions."
+    },
+    {
+      "name": "Relational relevance",
+      "question": "How do other people enter the request?",
+      "example": "The message concerns a worker and a client."
+    }
+  ],
+  "boundaryRules": [
+    "A row is not a person; a stored message is not every message pasted inside it.",
+    "Text work can be relational when its purpose is interpersonal.",
+    "A social exchange can be a separate research target even when it is not personal advice.",
+    "No clear relational focus includes uncertain records; it is not an automatic deletion rule.",
+    "Earlier segments may be relevant even when the final request is not.",
+    "Stored replies are observations, not reference answers.",
+    "A constructed scenario, a response score and a human outcome are different forms of evidence."
+  ]
+}

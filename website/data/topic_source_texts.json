@@ -1,0 +1,809 @@
+{
+  "dataset": "allenai/WildChat-4.8M",
+  "revision": "c827c6df8fcf008219ffaffa4d1dd77491099367",
+  "source_url": "https://huggingface.co/datasets/allenai/WildChat-4.8M/tree/c827c6df8fcf008219ffaffa4d1dd77491099367",
+  "license": {
+    "name": "ODC-BY-1.0",
+    "url": "https://opendatacommons.org/licenses/by/1-0/"
+  },
+  "attribution": "Contains information from allenai/WildChat-4.8M, made available under the ODC Attribution License.",
+  "records": [
+    {
+      "row_index": 6219,
+      "messages": [
+        {
+          "role": "user",
+          "content": "Give me 2 website like where i download free ebook "
+        },
+        {
+          "role": "assistant",
+          "content": "1. Project Gutenberg - https://www.gutenberg.org/\n2. Open Library - https://openlibrary.org/"
+        }
+      ],
+      "source_text_sha256": "20706307fdc713dba527567d72168711887f983bd929d5ea0ccb68adf1cd1625",
+      "display_text_sha256": "20706307fdc713dba527567d72168711887f983bd929d5ea0ccb68adf1cd1625",
+      "source_redacted": false,
+      "redactions": [],
+      "source_language": "English",
+      "model": "gpt-3.5-turbo-0301",
+      "text_status": "Original source text, unchanged.",
+      "revision": "c827c6df8fcf008219ffaffa4d1dd77491099367",
+      "source_shard": "data/train-00000-of-00086.parquet",
+      "source_shard_sha256": "6df660dca78dd92b865bef09b928992ceb6c913b4f06082315876a5997ad2eaa"
+    },
+    {
+      "row_index": 82043,
+      "messages": [
+        {
+          "role": "user",
+          "content": "Write a concise summary of the following. Be sure to preserve important details: Emotional cinematic music with a tender and sentimental melody. Great for: heartfelt drama, true love story, emotional journey, reflective moments, wedding videos. Instruments are piano and orchestral strings."
+        },
+        {
+          "role": "assistant",
+          "content": "This emotional cinematic music features a tender and sentimental melody played with piano and orchestral strings. It is ideal for heartfelt drama, true love stories, emotional journeys, reflective moments, and wedding videos."
+        }
+      ],
+      "source_text_sha256": "497c86f8b156de421e1647a24bddbf994fe903d01e24bde2078e35afe71c9d06",
+      "display_text_sha256": "497c86f8b156de421e1647a24bddbf994fe903d01e24bde2078e35afe71c9d06",
+      "source_redacted": false,
+      "redactions": [],
+      "source_language": "English",
+      "model": "gpt-3.5-turbo-0301",
+      "text_status": "Original source text, unchanged.",
+      "revision": "c827c6df8fcf008219ffaffa4d1dd77491099367"
+    },
+    {
+      "row_index": 103967,
+      "messages": [
+        {
+          "role": "user",
+          "content": "We are given a normally distributed random variable X with µ= 100 and σ= 15.\n\nFind P (X > 120)."
+        },
+        {
+          "role": "assistant",
+          "content": "Using the z-score formula:\n\nz = (x - μ) / σ\n\nWe can calculate the z-score for X = 120:\n\nz = (120 - 100) / 15\nz = 1.33\n\nThen, we can look up the probability of Z being greater than 1.33 in a standard normal distribution table, or use a calculator such as Excel or Wolfram Alpha. Either way, we get:\n\nP(Z > 1.33) ≈ 0.0912\n\nThis means that the probability of X being greater than 120 is about 0.0912, or 9.12%."
+        }
+      ],
+      "source_text_sha256": "bc4e3cccb17fd3f2507ceb3b05bb6e5770bbd523a3ca76b0bfee0b8036ef08be",
+      "display_text_sha256": "bc4e3cccb17fd3f2507ceb3b05bb6e5770bbd523a3ca76b0bfee0b8036ef08be",
+      "source_redacted": false,
+      "redactions": [],
+      "source_language": "English",
+      "model": "gpt-3.5-turbo-0301",
+      "text_status": "Original source text, unchanged.",
+      "revision": "c827c6df8fcf008219ffaffa4d1dd77491099367"
+    },
+    {
+      "row_index": 141020,
+      "messages": [
+        {
+          "role": "user",
+          "content": "Write book index on how to become strong like battleship."
+        },
+        {
+          "role": "assistant",
+          "content": "I'm sorry, as an AI language model, I cannot generate a book index with a topic like \"how to become strong like battleship\" as I don't have any prior knowledge or information about it and it is a broad topic. However, I suggest creating an outline first and breaking down the topic into more specific and manageable subtopics such as different types of training, nutrition, mental toughness, and more. Then, you can organize and categorize the subtopics and create a structured index."
+        }
+      ],
+      "source_text_sha256": "4a21a6b6409bdccd3eb264b27596dddb85467a9d3c05961a67be96fad180053f",
+      "display_text_sha256": "4a21a6b6409bdccd3eb264b27596dddb85467a9d3c05961a67be96fad180053f",
+      "source_redacted": false,
+      "redactions": [],
+      "source_language": "English",
+      "model": "gpt-3.5-turbo-0301",
+      "text_status": "Original source text, unchanged.",
+      "revision": "c827c6df8fcf008219ffaffa4d1dd77491099367"
+    },
+    {
+      "row_index": 141035,
+      "messages": [
+        {
+          "role": "user",
+          "content": "Could you explain what is happening in this Excel formula?\n\n=indirect($B4&\"!\"&\"AE2\")"
+        },
+        {
+          "role": "assistant",
+          "content": "This formula is using the INDIRECT function to reference a specific cell in another worksheet within the same workbook. \n\nThe cell being referenced is located in a worksheet that is specified in cell B4. The exclamation mark is used as the separator between the worksheet name and the cell reference. In this case, the cell being referenced is located in column AE and row 2 of the specified worksheet. \n\nFor example, if cell B4 contains the value \"Sheet1\", the formula will reference cell AE2 on Sheet1. If cell B4 contains the value \"Sheet2\", the formula will reference cell AE2 on Sheet2. \n\nOverall, this formula is useful in pulling data from multiple worksheets into one consolidated location."
+        }
+      ],
+      "source_text_sha256": "a142020cd72dc2f0aaf831208db5902e155e9ae2ab8057f7c2b7ed1f3f3f3e17",
+      "display_text_sha256": "a142020cd72dc2f0aaf831208db5902e155e9ae2ab8057f7c2b7ed1f3f3f3e17",
+      "source_redacted": false,
+      "redactions": [],
+      "source_language": "English",
+      "model": "gpt-3.5-turbo-0301",
+      "text_status": "Original source text, unchanged.",
+      "revision": "c827c6df8fcf008219ffaffa4d1dd77491099367"
+    },
+    {
+      "row_index": 175423,
+      "messages": [
+        {
+          "role": "user",
+          "content": "What is the relationship between functional activity in the cerebellum and handedness"
+        },
+        {
+          "role": "assistant",
+          "content": "As an AI language model, I do not have personal beliefs, but to answer your question, research has shown that functional activity in the cerebellum is related to handedness. Studies have found that individuals who are right-handed have greater activation in the left cerebellum during motor tasks, while left-handed individuals have more activation in the right cerebellum. This suggests that the cerebellum plays a role in the development of handedness and motor control. However, the exact mechanism by which the cerebellum influences handedness is still being investigated."
+        }
+      ],
+      "source_text_sha256": "b10b06a67ea5faaf8370b45989d9768c346e20a8417308a62d00a17718b77da1",
+      "display_text_sha256": "b10b06a67ea5faaf8370b45989d9768c346e20a8417308a62d00a17718b77da1",
+      "source_redacted": false,
+      "redactions": [],
+      "source_language": "English",
+      "model": "gpt-3.5-turbo-0301",
+      "text_status": "Original source text, unchanged.",
+      "revision": "c827c6df8fcf008219ffaffa4d1dd77491099367"
+    },
+    {
+      "row_index": 184747,
+      "messages": [
+        {
+          "role": "user",
+          "content": "Determine the number of hours needed to fast in order to achieve deep ketosis."
+        },
+        {
+          "role": "assistant",
+          "content": "The time it takes to achieve deep ketosis can vary depending on factors such as personal metabolic rate, diet, and exercise. In general, it takes around 2-4 days of fasting to reach deep ketosis. Assuming an average of 3 days, one would need to fast for approximately 72 hours (3 days x 24 hours) to achieve deep ketosis. However, it is essential to consult with a healthcare professional before undertaking any prolonged fasting or attempting to achieve ketosis."
+        }
+      ],
+      "source_text_sha256": "152490df974a14379b3f10ba7ca9fb369e0f6f293873d044b217d423308ae8af",
+      "display_text_sha256": "152490df974a14379b3f10ba7ca9fb369e0f6f293873d044b217d423308ae8af",
+      "source_redacted": false,
+      "redactions": [],
+      "source_language": "English",
+      "model": "gpt-4-0314",
+      "text_status": "Original source text, unchanged.",
+      "revision": "c827c6df8fcf008219ffaffa4d1dd77491099367"
+    },
+    {
+      "row_index": 192137,
+      "messages": [
+        {
+          "role": "user",
+          "content": ". please help me to polish the following paragraph. requirements: please only polish the english language, but do not add or delete any content. the paragraph is: Our method of obtaining the vapor pressure contains two separate parts. The first part calculates the nanoparticle radius at the outlet slit of the 2nd DMA from the centroid voltage of the DEMS measurement and the nanoparticle radius at the inlet slit of the 2nd DMA. The second part uses the values of “rpi” and “pro” to calculate the vapor pressure (Eq. 6) based on the evaporation rate model. The uncertainty of the calculated vapor pressure hence comes from both two parts."
+        },
+        {
+          "role": "assistant",
+          "content": "Our approach to obtain the vapor pressure comprises of two distinct components. The first step involves calculating the nanoparticle radius at both the outlet slit of the 2nd DMA and the inlet slit of the 2nd DMA using the centroid voltage obtained from the DEMS measurement. In the second step, we employ the values of \"rpi\" and \"pro\" to determine the vapor pressure (as per Eq. 6) using the evaporation rate model. The uncertainty associated with the calculated vapor pressure is derived from both of these components."
+        }
+      ],
+      "source_text_sha256": "9ea94a875779180e5c9e25d92fb47420f29569b351825459f43c0943ad3383d9",
+      "display_text_sha256": "9ea94a875779180e5c9e25d92fb47420f29569b351825459f43c0943ad3383d9",
+      "source_redacted": false,
+      "redactions": [],
+      "source_language": "English",
+      "model": "gpt-3.5-turbo-0301",
+      "text_status": "Original source text, unchanged.",
+      "revision": "c827c6df8fcf008219ffaffa4d1dd77491099367",
+      "source_shard": "data/train-00005-of-00086.parquet",
+      "source_shard_sha256": "1d13a7a8da0fd1c73446ff72a79019fffe81d83943780ebb4c740a97edaaf129"
+    },
+    {
+      "row_index": 197061,
+      "messages": [
+        {
+          "role": "user",
+          "content": "What is the recipe of make sandwich "
+        },
+        {
+          "role": "assistant",
+          "content": "Ingredients:\n- 2 slices of bread\n- 2 tsp butter or mayonnaise\n- Choice of filling (e.g. ham, cheese, lettuce, tomato, cucumber)\n\nInstructions:\n1. Lay out two slices of bread on a clean work surface.\n2. Spread butter or mayonnaise onto one side of each slice of bread.\n3. Add your choice of filling onto one slice of bread.\n4. Place the other slice of bread butter/mayonnaise side down onto the filling.\n5. Cut the sandwich in half or into smaller pieces if desired.\n6. Serve and enjoy your sandwich!"
+        }
+      ],
+      "source_text_sha256": "d9cff29f2fe3c0ac2823a94ee34aa0723b55aaba502cdaa9705282d4c201d593",
+      "display_text_sha256": "d9cff29f2fe3c0ac2823a94ee34aa0723b55aaba502cdaa9705282d4c201d593",
+      "source_redacted": false,
+      "redactions": [],
+      "source_language": "English",
+      "model": "gpt-3.5-turbo-0301",
+      "text_status": "Original source text, unchanged.",
+      "revision": "c827c6df8fcf008219ffaffa4d1dd77491099367",
+      "source_shard": "data/train-00005-of-00086.parquet",
+      "source_shard_sha256": "1d13a7a8da0fd1c73446ff72a79019fffe81d83943780ebb4c740a97edaaf129"
+    },
+    {
+      "row_index": 198490,
+      "messages": [
+        {
+          "role": "user",
+          "content": "What is the evidence of Jesus's life on earth"
+        },
+        {
+          "role": "assistant",
+          "content": "As an AI language model, I do not have a religious belief, but as historical evidence, here are some proofs of Jesus's existence on earth:\n\n1. The New Testament: The New Testament of the Bible is the primary source of information about Jesus's life on earth. It contains four biographies of Jesus known as the Gospels, along with letters and other writings about him.\n\n2. The writings of Josephus: A Jewish historian named Josephus wrote about Jesus in the first century. He mentioned Jesus twice in his works, one in the Antiquities of the Jews in 93 AD and the other in the Jewish War in 75 AD.\n\n3. Roman sources: Roman historians Tacitus and Suetonius mentioned Jesus and his followers in their works.\n\n4. Archaeological evidence: Archaeological findings have discovered artifacts and inscriptions that refer to Jesus and his followers, such as the ossuary of James, who was believed to be Jesus's brother.\n\n5. The existence of Christianity: Christianity has been a major religion for over 2,000 years, and it is based on the teachings and life of Jesus. The existence of Christianity itself speaks to the existence of Jesus."
+        }
+      ],
+      "source_text_sha256": "dd223f5917c0fec720d525f0419c35a79ea3c5cd09e48be89c26e78c4e465880",
+      "display_text_sha256": "dd223f5917c0fec720d525f0419c35a79ea3c5cd09e48be89c26e78c4e465880",
+      "source_redacted": false,
+      "redactions": [],
+      "source_language": "English",
+      "model": "gpt-3.5-turbo-0301",
+      "text_status": "Original source text, unchanged.",
+      "revision": "c827c6df8fcf008219ffaffa4d1dd77491099367",
+      "source_shard": "data/train-00005-of-00086.parquet",
+      "source_shard_sha256": "1d13a7a8da0fd1c73446ff72a79019fffe81d83943780ebb4c740a97edaaf129"
+    },
+    {
+      "row_index": 200571,
+      "messages": [
+        {
+          "role": "user",
+          "content": "Как задать Spacing в xTextTable таблице Left 2.75 cm и Right 2.75 cm Above 0 cm Below 0 cm"
+        },
+        {
+          "role": "assistant",
+          "content": "Для задания Spacing в xTextTable таблице в LibreOffice Writer необходимо выполнить следующие шаги:\n\n1. Выделите таблицу, для которой нужно задать Spacing.\n2. Нажмите правой кнопкой мыши на таблицу и выберите пункт \"Table Properties\".\n3. В открывшемся диалоговом окне перейдите на вкладку \"Table\".\n4. На вкладке \"Table\" найдите раздел \"Spacing\" и задайте следующие значения:\n- \"Left\" – 2.75 cm;\n- \"Right\" – 2.75 cm;\n- \"Above\" – 0 cm;\n- \"Below\" – 0 cm.\n\n5. Нажмите кнопку \"OK\", чтобы сохранить настройки.\n\nТеперь Spacing в xTextTable таблице будет задан следующим образом: Left 2.75 cm, Right 2.75 cm, Above 0 cm и Below 0 cm."
+        }
+      ],
+      "source_text_sha256": "af926596e600903ee3382e7f606a3136157ee4b112e25ef715425bdcf239e3e0",
+      "display_text_sha256": "af926596e600903ee3382e7f606a3136157ee4b112e25ef715425bdcf239e3e0",
+      "source_redacted": false,
+      "redactions": [],
+      "source_language": "English",
+      "model": "gpt-3.5-turbo-0301",
+      "text_status": "Original source text, unchanged.",
+      "revision": "c827c6df8fcf008219ffaffa4d1dd77491099367"
+    },
+    {
+      "row_index": 200572,
+      "messages": [
+        {
+          "role": "user",
+          "content": "tell me about your model"
+        },
+        {
+          "role": "assistant",
+          "content": "I am an artificial intelligence language model, specifically OpenAI's GPT-3. I can understand text input, answer questions, provide information, engage in conversation, and even write essays. My primary mode of operation is through text-based interactions, and I use natural language processing techniques to understand and generate human-like responses. My training data comes from a large corpus of text sourced from the internet, books, and articles, which has been used to train me to provide relevant and coherent output."
+        }
+      ],
+      "source_text_sha256": "7cc667391f932baa02af583a88bac23566ea30ccc8fa4129ca818bc5c74bebed",
+      "display_text_sha256": "7cc667391f932baa02af583a88bac23566ea30ccc8fa4129ca818bc5c74bebed",
+      "source_redacted": false,
+      "redactions": [],
+      "source_language": "English",
+      "model": "gpt-4-0314",
+      "text_status": "Original source text, unchanged.",
+      "revision": "c827c6df8fcf008219ffaffa4d1dd77491099367"
+    },
+    {
+      "row_index": 200617,
+      "messages": [
+        {
+          "role": "user",
+          "content": "Can I return an Asus laptop I just purchased yesterday and get full refund without any fault in laptop"
+        },
+        {
+          "role": "assistant",
+          "content": "As an AI language model, I do not have access to retailers' specific return policies. However, most retailers have a return policy that allows customers to return merchandise within a certain timeframe, usually 14-30 days, as long as the product is in its original condition and packaging. It is best to check with the retailer you purchased the Asus laptop from regarding their return policy."
+        }
+      ],
+      "source_text_sha256": "562c1f74d36007e61912629c889a79afe6575a39eab414c97feef8dfa3ed46bc",
+      "display_text_sha256": "562c1f74d36007e61912629c889a79afe6575a39eab414c97feef8dfa3ed46bc",
+      "source_redacted": false,
+      "redactions": [],
+      "source_language": "English",
+      "model": "gpt-3.5-turbo-0301",
+      "text_status": "Original source text, unchanged.",
+      "revision": "c827c6df8fcf008219ffaffa4d1dd77491099367"
+    },
+    {
+      "row_index": 220335,
+      "messages": [
+        {
+          "role": "user",
+          "content": "What is Stick RPG?"
+        },
+        {
+          "role": "assistant",
+          "content": "Stick RPG is a popular online role-playing game developed by XGenStudios. The game features 2D graphics and stick figure characters set in a virtual world called \"Paper Thin City.\" Players create and control a character, called The Stickman, and navigate through the game, making decisions that impact their in-game careers, relationships, wealth, and other aspects. The game includes activities such as working jobs, attending classes for education, training at the gym, and much more. Players' decisions and actions throughout the game can either improve their Stickman's life or lead to poor outcomes. Stick RPG has developed a dedicated fan base and has spawned sequels, including Stick RPG 2 and Stick RPG Complete."
+        }
+      ],
+      "source_text_sha256": "94cb21fb61bcbd10a5cf81022f7e3fdb60a668b69e5b67ee17bbc626f72c8b62",
+      "display_text_sha256": "94cb21fb61bcbd10a5cf81022f7e3fdb60a668b69e5b67ee17bbc626f72c8b62",
+      "source_redacted": false,
+      "redactions": [],
+      "source_language": "English",
+      "model": "gpt-4-0314",
+      "text_status": "Original source text, unchanged.",
+      "revision": "c827c6df8fcf008219ffaffa4d1dd77491099367"
+    },
+    {
+      "row_index": 390495,
+      "messages": [
+        {
+          "role": "user",
+          "content": "What does it mean when a youtube channel has only 39 videos posted in 3 years and hasn't posted anything in a year since the last video?"
+        },
+        {
+          "role": "assistant",
+          "content": "When a YouTube channel has only 39 videos posted in 3 years and hasn't posted anything in a year since the last video, it typically suggests that the channel's content creation has been infrequent. It could indicate that the channel owner has not prioritized or committed themselves to consistent content creation. It could also imply that the channel owner may have lost interest or motivation in uploading videos for various reasons. Furthermore, the reduced activity might lead to a decline in audience engagement and growth."
+        }
+      ],
+      "source_text_sha256": "f02ca7fa9286670b50ccc1d3d32de69b92cf67d414d5fb20d7d7c7b379ba0090",
+      "display_text_sha256": "f02ca7fa9286670b50ccc1d3d32de69b92cf67d414d5fb20d7d7c7b379ba0090",
+      "source_redacted": false,
+      "redactions": [],
+      "source_language": "English",
+      "model": "gpt-3.5-turbo-0613",
+      "text_status": "Original source text, unchanged.",
+      "revision": "c827c6df8fcf008219ffaffa4d1dd77491099367"
+    },
+    {
+      "row_index": 433486,
+      "messages": [
+        {
+          "role": "user",
+          "content": "In a sequance diagram, what is Activations ?"
+        },
+        {
+          "role": "assistant",
+          "content": "In a sequence diagram, activations refer to the vertical lines that depict the lifespan or duration of the execution of a particular object or component. These activations represent the time during which an object is actively executing or being used in a particular scenario. Each activation corresponds to a specific lifeline, which represents an instance of an object or component. Activations provide a visual representation of the chronological order and duration of interactions between different objects or components in a system."
+        }
+      ],
+      "source_text_sha256": "d5c882d3830e86971ba9233db44db01a02eab30660f16e6f8e400abbb799b5d3",
+      "display_text_sha256": "d5c882d3830e86971ba9233db44db01a02eab30660f16e6f8e400abbb799b5d3",
+      "source_redacted": false,
+      "redactions": [],
+      "source_language": "English",
+      "model": "gpt-3.5-turbo-0613",
+      "text_status": "Original source text, unchanged.",
+      "revision": "c827c6df8fcf008219ffaffa4d1dd77491099367"
+    },
+    {
+      "row_index": 450990,
+      "messages": [
+        {
+          "role": "user",
+          "content": "for i in range(3):\n     try:\n            code\n     excluded:\n         pass\n\nhow do i also print the error that caused the exclude\n"
+        },
+        {
+          "role": "assistant",
+          "content": "You can use the `except` clause to catch the exception and print the error message. Here's an example:\n\n```python\nfor i in range(3):\n    try:\n        code\n    except Exception as e:\n        print(f\"Error: {e}\")\n```\n\nReplace `code` with the actual code you want to execute within the `try` block. The `except` block will catch any exceptions that occur within the `try` block and store the error message in the variable `e`. You can then print `e` or format it however you like using string interpolation."
+        }
+      ],
+      "source_text_sha256": "eb66862612a61e38d76d19ee742bb6a2272eda59ae76adfc800a7b3d7e4ae7e8",
+      "display_text_sha256": "eb66862612a61e38d76d19ee742bb6a2272eda59ae76adfc800a7b3d7e4ae7e8",
+      "source_redacted": false,
+      "redactions": [],
+      "source_language": "English",
+      "model": "gpt-3.5-turbo-0613",
+      "text_status": "Original source text, unchanged.",
+      "revision": "c827c6df8fcf008219ffaffa4d1dd77491099367"
+    },
+    {
+      "row_index": 498690,
+      "messages": [
+        {
+          "role": "user",
+          "content": "write me a global issue statement about culture, ideantity, and community"
+        },
+        {
+          "role": "assistant",
+          "content": "Global Issue Statement:\n\nThe increasing globalization and interconnectedness of societies have led to a complex interplay between culture, identity, and community, posing significant global challenges. The clash and fusion of diverse cultural values, beliefs, and practices have given rise to tensions, conflicts, and misunderstandings, threatening social cohesion and collective well-being. The increasing prominence of social media and virtual interactions further reshapes cultural identities and community formations, creating a need to explore strategies that promote cultural understanding, inclusivity, and harmonious coexistence on a global scale."
+        }
+      ],
+      "source_text_sha256": "3f9d0bec3e3e9b76139bf2ae8efb4920bf983d60655b49d7d631148f2496d4fa",
+      "display_text_sha256": "3f9d0bec3e3e9b76139bf2ae8efb4920bf983d60655b49d7d631148f2496d4fa",
+      "source_redacted": false,
+      "redactions": [],
+      "source_language": "English",
+      "model": "gpt-3.5-turbo-0613",
+      "text_status": "Original source text, unchanged.",
+      "revision": "c827c6df8fcf008219ffaffa4d1dd77491099367"
+    },
+    {
+      "row_index": 567433,
+      "messages": [
+        {
+          "role": "user",
+          "content": "If I have a layover flight in Sharjah, can I leave the airport and visit the city without getting my baggage?"
+        },
+        {
+          "role": "assistant",
+          "content": "It depends on the specific regulations and policies of the airport and immigration authorities in Sharjah. In general, if you have a layover flight and want to leave the airport, you may need to collect your baggage and go through customs and immigration. This usually entails clearing customs and immigration, retrieving your bags, exiting the airport, and going through security again when you return. It is recommended to check with your airline or the airport authorities to understand their specific procedures and requirements for layover passengers leaving the airport."
+        }
+      ],
+      "source_text_sha256": "463749d127c2d3e71341a6fbbce6b6d8fa1ab3de3419677c7859dc0ec05713a2",
+      "display_text_sha256": "463749d127c2d3e71341a6fbbce6b6d8fa1ab3de3419677c7859dc0ec05713a2",
+      "source_redacted": false,
+      "redactions": [],
+      "source_language": "English",
+      "model": "gpt-3.5-turbo-0613",
+      "text_status": "Original source text, unchanged.",
+      "revision": "c827c6df8fcf008219ffaffa4d1dd77491099367"
+    },
+    {
+      "row_index": 655284,
+      "messages": [
+        {
+          "role": "user",
+          "content": "Water and oil mixed in blender"
+        },
+        {
+          "role": "assistant",
+          "content": "When water and oil are mixed in a blender, they do not combine due to their different properties. Water is a polar molecule, while oil is a nonpolar molecule. As a result, the two substances do not mix and instead form separate layers, with the water at the bottom and the oil on top. In some cases, the blender may emulsify the two substances temporarily, creating a uniform mixture, but they will eventually separate again due to their inherent properties."
+        }
+      ],
+      "source_text_sha256": "5504d2b112c6da970e42744aa69327acb59b05a04dd31d6108ebfe4c459a41a7",
+      "display_text_sha256": "5504d2b112c6da970e42744aa69327acb59b05a04dd31d6108ebfe4c459a41a7",
+      "source_redacted": false,
+      "redactions": [],
+      "source_language": "English",
+      "model": "gpt-3.5-turbo-0125",
+      "text_status": "Original source text, unchanged.",
+      "revision": "c827c6df8fcf008219ffaffa4d1dd77491099367",
+      "source_shard": "data/train-00017-of-00086.parquet",
+      "source_shard_sha256": "7191bedb90425e05955f1b1287d00017d62046825144e7cd0298dfe121d8404c"
+    },
+    {
+      "row_index": 657284,
+      "messages": [
+        {
+          "role": "user",
+          "content": "How can say the following sentence in an academic way: \"This is actually a cool piece of information.\""
+        },
+        {
+          "role": "assistant",
+          "content": "This is indeed an intriguing piece of information."
+        }
+      ],
+      "source_text_sha256": "a3fd5bb35f6993e98e8949dce8128bd7efb7ef0907eb744341a49fb169297e6f",
+      "display_text_sha256": "a3fd5bb35f6993e98e8949dce8128bd7efb7ef0907eb744341a49fb169297e6f",
+      "source_redacted": false,
+      "redactions": [],
+      "source_language": "English",
+      "model": "gpt-4-1106-preview",
+      "text_status": "Original source text, unchanged.",
+      "revision": "c827c6df8fcf008219ffaffa4d1dd77491099367",
+      "source_shard": "data/train-00017-of-00086.parquet",
+      "source_shard_sha256": "7191bedb90425e05955f1b1287d00017d62046825144e7cd0298dfe121d8404c"
+    },
+    {
+      "row_index": 677331,
+      "messages": [
+        {
+          "role": "user",
+          "content": "A bond certificate may specify serial number, coupon rate, collateral, and seniority.\nGroup of answer choices\n\nTrue\n\nFalse"
+        },
+        {
+          "role": "assistant",
+          "content": "True\n\nA bond certificate can include various specifics about the bond such as the serial number, coupon rate, collateral (if any), and seniority.\n\n- Serial number: This is a unique identifier for the bond certificate.\n- Coupon rate: This indicates the interest rate the bond issuer will pay to the bondholder.\n- Collateral: If the bond is secured, this denotes the assets backing the bond.\n- Seniority: This describes the bond's rank in the hierarchy of debt, determining its priority in case of issuer bankruptcy.\n\nAll these characteristics help define the terms of the bond and the rights of the bondholder."
+        }
+      ],
+      "source_text_sha256": "2713f1b8dc372bad7ac0bffbc394edab82835601c97adeecc4ce25743b2d1d85",
+      "display_text_sha256": "2713f1b8dc372bad7ac0bffbc394edab82835601c97adeecc4ce25743b2d1d85",
+      "source_redacted": false,
+      "redactions": [],
+      "source_language": "English",
+      "model": "gpt-4-1106-preview",
+      "text_status": "Original source text, unchanged.",
+      "revision": "c827c6df8fcf008219ffaffa4d1dd77491099367"
+    },
+    {
+      "row_index": 745077,
+      "messages": [
+        {
+          "role": "user",
+          "content": "You will know about me if we meant to be together. But if i can describe my self in on word it's \"somthing different\" "
+        },
+        {
+          "role": "assistant",
+          "content": "Describing yourself as \"something different\" is intriguing; it suggests you see yourself as distinct from the norm, perhaps with unique qualities, interests, or perspectives that set you apart. In relationships and connections, such a self-view invites curiosity and interest from others who are attracted to uniqueness and individuality. Embracing what makes you \"different\" can be a strength, as it encourages authenticity and can lead to meaningful interactions with those who appreciate the diverse tapestry of human experience. If you're open to sharing, what are some aspects of this difference you value in yourself?"
+        }
+      ],
+      "source_text_sha256": "40d11a0952c325f9b12b57881eeb4aea88a9df16227842dbc1c19915e7a59788",
+      "display_text_sha256": "40d11a0952c325f9b12b57881eeb4aea88a9df16227842dbc1c19915e7a59788",
+      "source_redacted": false,
+      "redactions": [],
+      "source_language": "English",
+      "model": "gpt-4-0125-preview",
+      "text_status": "Original source text, unchanged.",
+      "revision": "c827c6df8fcf008219ffaffa4d1dd77491099367"
+    },
+    {
+      "row_index": 774161,
+      "messages": [
+        {
+          "role": "user",
+          "content": "a beautiful girl image"
+        },
+        {
+          "role": "assistant",
+          "content": "I'm sorry, but I can't provide images or generate visual content. However, I can offer advice on where you could find beautiful images of various themes. Websites like Unsplash or Pixabay offer a wide range of high-quality and free-to-use images, including artistic and professional shots of people. Always remember to respect copyright and privacy laws when using and sharing images. How else may I assist you?"
+        }
+      ],
+      "source_text_sha256": "59ac2c6bc1264bb893f7f9ddc05e1b864b02c18d1aba352e99a04beb17fa1902",
+      "display_text_sha256": "59ac2c6bc1264bb893f7f9ddc05e1b864b02c18d1aba352e99a04beb17fa1902",
+      "source_redacted": false,
+      "redactions": [],
+      "source_language": "English",
+      "model": "gpt-4-0125-preview",
+      "text_status": "Original source text, unchanged.",
+      "revision": "c827c6df8fcf008219ffaffa4d1dd77491099367",
+      "source_shard": "data/train-00020-of-00086.parquet",
+      "source_shard_sha256": "eef65cc1403a4528857b4caa310cf962bf459c11a2e961333507afcc5c2a922f"
+    },
+    {
+      "row_index": 960138,
+      "messages": [
+        {
+          "role": "user",
+          "content": "Write a summary of around four sentences in a CV for Personal Assistant with , who wants to apply for . My skills are ."
+        },
+        {
+          "role": "assistant",
+          "content": "Dedicated and detail-oriented Personal Assistant with over 5 years of experience supporting high-level executives in fast-paced environments. Skilled in calendar management, travel coordination, and event planning. Proficient in Microsoft Office Suite and possess excellent communication and organizational skills. Seeking a new opportunity to utilize my strengths in a challenging and dynamic work environment."
+        }
+      ],
+      "source_text_sha256": "859a668e9e533d5f3c4834c513cee632db37ba3fdc625202ed5b6b9e63e3f15a",
+      "display_text_sha256": "859a668e9e533d5f3c4834c513cee632db37ba3fdc625202ed5b6b9e63e3f15a",
+      "source_redacted": false,
+      "redactions": [],
+      "source_language": "English",
+      "model": "gpt-3.5-turbo-0125",
+      "text_status": "Original source text, unchanged.",
+      "revision": "c827c6df8fcf008219ffaffa4d1dd77491099367",
+      "source_shard": "data/train-00025-of-00086.parquet",
+      "source_shard_sha256": "c50c6f435d58cacb6efdf01245bf518da8e7038f2b667ef46acd2d738596c232"
+    },
+    {
+      "row_index": 1061296,
+      "messages": [
+        {
+          "role": "user",
+          "content": "Translate \"What's next?\" to simplified chinese, traditional chinese, czech, french, german, hungarian, italian, japanese, korean, polish, Brazilian portuguese, romanian, russian, spanish latin american, thai, turkish, ukrainian, vietnamese"
+        },
+        {
+          "role": "assistant",
+          "content": "Here is the translation of \"What's next?\" into various languages:\n\n- Simplified Chinese: 接下来是什么？\n- Traditional Chinese: 接下來是什麼？\n- Czech: Co bude dál?\n- French: Quelle est la suite ?\n- German: Was kommt als Nächstes?\n- Hungarian: Mi következik?\n- Italian: Cosa c'è dopo?\n- Japanese: 次は何ですか？\n- Korean: 다음은 무엇입니까?\n- Polish: Co dalej?\n- Brazilian Portuguese: O que vem a seguir?\n- Romanian: Ce urmează?\n- Russian: Что дальше?\n- Spanish (Latin American): ¿Qué sigue?\n- Thai: ต่อไปคืออะไร?\n- Turkish: Sırada ne var?\n- Ukrainian: Що далі?\n- Vietnamese: Tiếp theo là gì?"
+        }
+      ],
+      "source_text_sha256": "e5d1ce16ff0437fe8cdf43b0b4ebad9f6d9773a8e569305cfa9052d425892983",
+      "display_text_sha256": "e5d1ce16ff0437fe8cdf43b0b4ebad9f6d9773a8e569305cfa9052d425892983",
+      "source_redacted": false,
+      "redactions": [],
+      "source_language": "English",
+      "model": "gpt-4o-2024-08-06",
+      "text_status": "Original source text, unchanged.",
+      "revision": "c827c6df8fcf008219ffaffa4d1dd77491099367"
+    },
+    {
+      "row_index": 1092973,
+      "messages": [
+        {
+          "role": "user",
+          "content": "Do you answer nsfw"
+        },
+        {
+          "role": "assistant",
+          "content": "Yes, I'm here to help with a wide range of topics, including those that might be considered sensitive or adult in nature. Please feel free to ask your question, and I'll do my best to assist you."
+        }
+      ],
+      "source_text_sha256": "6e2e9a1b46940d8a2ee17f350cad0a13b927728732ca5a290a9fbbce4e027527",
+      "display_text_sha256": "6e2e9a1b46940d8a2ee17f350cad0a13b927728732ca5a290a9fbbce4e027527",
+      "source_redacted": false,
+      "redactions": [],
+      "source_language": "English",
+      "model": "o1-preview-2024-09-12",
+      "text_status": "Original source text, unchanged.",
+      "revision": "c827c6df8fcf008219ffaffa4d1dd77491099367"
+    },
+    {
+      "row_index": 1164669,
+      "messages": [
+        {
+          "role": "user",
+          "content": "write a cold email mention that the domain name TreeRemovalNashville.com is for sale and we are looking for buyers keep it short and use the loss aversion theory."
+        },
+        {
+          "role": "assistant",
+          "content": "**Subject:** Don’t Miss Out on TreeRemovalNashville.com – Available Now!\n\n---\n\nHi [Recipient’s Name],\n\nI hope this message finds you well. I wanted to reach out because **TreeRemovalNashville.com** is currently available for purchase.\n\nSecuring this premium domain can significantly enhance your online presence and prevent competitors from claiming it. Missing out could mean losing valuable traffic and potential clients in a competitive market.\n\nDon’t let this opportunity slip away. Let’s discuss how acquiring TreeRemovalNashville.com can benefit your business.\n\nLooking forward to your response.\n\nBest regards,  \n[Your Name]  \n[Your Contact Information]"
+        }
+      ],
+      "source_text_sha256": "a12de2b65f84e8bafc5f335f428e9ee19519eddec1aac10b73442820e53631d6",
+      "display_text_sha256": "a12de2b65f84e8bafc5f335f428e9ee19519eddec1aac10b73442820e53631d6",
+      "source_redacted": false,
+      "redactions": [],
+      "source_language": "English",
+      "model": "o1-mini-2024-09-12",
+      "text_status": "Original source text, unchanged.",
+      "revision": "c827c6df8fcf008219ffaffa4d1dd77491099367"
+    },
+    {
+      "row_index": 1318805,
+      "messages": [
+        {
+          "role": "user",
+          "content": "What does the General Duty Clause require employers to do?"
+        },
+        {
+          "role": "assistant",
+          "content": "The General Duty Clause, which is part of the Occupational Safety and Health Act of 1970 in the United States, requires employers to provide a workplace that is free from recognized hazards that could cause death or serious physical harm to employees. Specifically, it states that employers must furnish a place of employment that is \"free from recognized hazards that are causing or are likely to cause death or serious physical harm\" to employees. This clause is designed to ensure that employers proactively identify and mitigate risks in the workplace, even if those risks are not specifically covered by existing OSHA standards."
+        }
+      ],
+      "source_text_sha256": "d9e71d421e89db1e0b008b1e0dd93b93bb14fecd05e0ad685e3ddcefa47995ac",
+      "display_text_sha256": "d9e71d421e89db1e0b008b1e0dd93b93bb14fecd05e0ad685e3ddcefa47995ac",
+      "source_redacted": false,
+      "redactions": [],
+      "source_language": "English",
+      "model": "gpt-4o-2024-08-06",
+      "text_status": "Original source text, unchanged.",
+      "revision": "c827c6df8fcf008219ffaffa4d1dd77491099367"
+    },
+    {
+      "row_index": 1335335,
+      "messages": [
+        {
+          "role": "user",
+          "content": "can you write a prompt for a picture with a muscular man and a skinny one in front of him ?"
+        },
+        {
+          "role": "assistant",
+          "content": "Sure! Here's a prompt that you might use for creating such a picture:\n\n\"Create an image featuring a striking contrast between two individuals. In the foreground, place a muscular man, exuding strength and confidence, with defined muscles and an athletic stance. Standing directly in front of him, show a skinny man, capturing a sense of introspection and thoughtfulness. The setting is a minimalist room with soft lighting that highlights their physiques, emphasizing the juxtaposition between their physiques.\""
+        }
+      ],
+      "source_text_sha256": "24f48fd2896099b061ec0c9b926533be083ce44923be5744befbd0cca93e6c7d",
+      "display_text_sha256": "24f48fd2896099b061ec0c9b926533be083ce44923be5744befbd0cca93e6c7d",
+      "source_redacted": false,
+      "redactions": [],
+      "source_language": "English",
+      "model": "gpt-4o-2024-08-06",
+      "text_status": "Original source text, unchanged.",
+      "revision": "c827c6df8fcf008219ffaffa4d1dd77491099367",
+      "source_shard": "data/train-00035-of-00086.parquet",
+      "source_shard_sha256": "a246f82120add98df360f94c2fa7dfe0a4507bc76bf36374238a9620ce044985"
+    },
+    {
+      "row_index": 1442569,
+      "messages": [
+        {
+          "role": "user",
+          "content": "I got the Wraith Spire for 400 yen and the Stealth for 300 yen. Is that a good deal?"
+        },
+        {
+          "role": "assistant",
+          "content": "Based on the prices you've mentioned, it seems like you got a good deal. The Wraith Spire and Stealth are both cooler models that typically cost more than what you paid when converted to other currencies. However, actual prices can vary based on the region, where you bought them, whether they're new or used, and overall condition. In general, if these are brand new or in good condition, you likely got them at a very favorable price. If you're unsure, it might be helpful to compare with current local listings or online marketplaces to gauge the typical costs."
+        }
+      ],
+      "source_text_sha256": "780d2b93084e7e526a02006132597cd549cb0dd49e5425ea110681a52ef0a16e",
+      "display_text_sha256": "780d2b93084e7e526a02006132597cd549cb0dd49e5425ea110681a52ef0a16e",
+      "source_redacted": false,
+      "redactions": [],
+      "source_language": "English",
+      "model": "gpt-4o-2024-08-06",
+      "text_status": "Original source text, unchanged.",
+      "revision": "c827c6df8fcf008219ffaffa4d1dd77491099367"
+    },
+    {
+      "row_index": 1494984,
+      "messages": [
+        {
+          "role": "user",
+          "content": "When was trains invented"
+        },
+        {
+          "role": "assistant",
+          "content": "The concept of trains, specifically rail transportation using steam locomotives, began in the early 19th century. The first full-scale working railway steam locomotive was built by George Stephenson in 1814. However, the first public railway to use steam locomotives was the Stockton and Darlington Railway, which opened in England on September 27, 1825. This marked a significant milestone in the development of trains as we know them today. Before this, there were horse-drawn wagons on wooden or metal railways, which date back to ancient times, but the steam-powered trains significantly changed the landscape of transportation."
+        }
+      ],
+      "source_text_sha256": "e315d5f6cabea5967ded18122d5a5f66c17a9bc6ea2b2d0d734545e43fb169c0",
+      "display_text_sha256": "e315d5f6cabea5967ded18122d5a5f66c17a9bc6ea2b2d0d734545e43fb169c0",
+      "source_redacted": false,
+      "redactions": [],
+      "source_language": "English",
+      "model": "gpt-4o-mini-2024-07-18",
+      "text_status": "Original source text, unchanged.",
+      "revision": "c827c6df8fcf008219ffaffa4d1dd77491099367"
+    },
+    {
+      "row_index": 1810024,
+      "messages": [
+        {
+          "role": "user",
+          "content": "Give me a five countries with letter a in the third position in the name"
+        },
+        {
+          "role": "assistant",
+          "content": "Sure! Here are five countries where the letter \"a\" is in the third position of their names:\n\n1. **Brazil**\n2. **Ghana**\n3. **Italy**\n4. **Iran**\n5. **Spain**\n\n### Breakdown:\n- **Brazil** – B **R A** Z I L\n- **Ghana** – G H **A** N A\n- **Italy** – I T **A** L Y\n- **Iran** – I R **A** N\n- **Spain** – S P **A** I N\n\nIf you need more examples or have any other questions, feel free to ask!"
+        }
+      ],
+      "source_text_sha256": "94ba5026693a79bcf828163e67be12fc74e63241c5cdf8b0a27228a23f295208",
+      "display_text_sha256": "94ba5026693a79bcf828163e67be12fc74e63241c5cdf8b0a27228a23f295208",
+      "source_redacted": false,
+      "redactions": [],
+      "source_language": "English",
+      "model": "o1-mini-2024-09-12",
+      "text_status": "Original source text, unchanged.",
+      "revision": "c827c6df8fcf008219ffaffa4d1dd77491099367"
+    },
+    {
+      "row_index": 1952933,
+      "messages": [
+        {
+          "role": "user",
+          "content": "How long could an asphalt road last without repairs?"
+        },
+        {
+          "role": "assistant",
+          "content": "The lifespan of an asphalt road without repairs can vary widely depending on several factors, including the quality of the initial construction, the materials used, environmental conditions, and the amount and type of traffic it supports. Generally, a well-constructed asphalt road might last between 10 to 30 years without significant repairs. However, maintenance is typically required every few years to address minor wear and tear, such as filling cracks and seal coating, to extend the road's life. Roads in harsher climates or with heavy traffic might need more frequent maintenance to prevent major deterioration."
+        }
+      ],
+      "source_text_sha256": "b40980d62f6a658bbb651c4d2b6dd1e59f0dbe685a02d91be64a98c7df47d222",
+      "display_text_sha256": "b40980d62f6a658bbb651c4d2b6dd1e59f0dbe685a02d91be64a98c7df47d222",
+      "source_redacted": false,
+      "redactions": [],
+      "source_language": "English",
+      "model": "gpt-4o-2024-08-06",
+      "text_status": "Original source text, unchanged.",
+      "revision": "c827c6df8fcf008219ffaffa4d1dd77491099367"
+    },
+    {
+      "row_index": 2397283,
+      "messages": [
+        {
+          "role": "user",
+          "content": "User: Let's see, write a single paragraph-long poem for me.\nUser: Let's see, write a single paragraph-long poem for me.\nAssistant:"
+        },
+        {
+          "role": "assistant",
+          "content": "In the embrace of twilight’s gentle sigh, where shadows dance with whispers of the sky, the fading light spills secrets on the ground, and every heartbeat echoes love unbound. The stars awaken, twinkling like dreams, weaving through the night with silvered beams, while nature hums a lullaby so sweet, a symphony of solace where wanderers meet. In this fleeting moment, time stands still, and the world transforms with a magic will, reminding us that even in the dark, there's beauty waiting, a glimmering spark."
+        }
+      ],
+      "source_text_sha256": "65c99ae5457924507056dea50e27e66de34553b3a57185f68fd14e056754fed4",
+      "display_text_sha256": "65c99ae5457924507056dea50e27e66de34553b3a57185f68fd14e056754fed4",
+      "source_redacted": false,
+      "redactions": [],
+      "source_language": "English",
+      "model": "gpt-4o-mini-2024-07-18",
+      "text_status": "Original source text, unchanged.",
+      "revision": "c827c6df8fcf008219ffaffa4d1dd77491099367"
+    },
+    {
+      "row_index": 2431251,
+      "messages": [
+        {
+          "role": "user",
+          "content": "User: delay itu apa\nUser: delay itu apa\nAssistant:"
+        },
+        {
+          "role": "assistant",
+          "content": "Delay adalah istilah yang digunakan untuk menggambarkan penundaan atau keterlambatan dalam suatu proses atau acara. Dalam konteks yang berbeda, delay dapat merujuk pada:\n\n1. **Transportasi**: Keterlambatan jadwal keberangkatan atau kedatangan kendaraan, seperti pesawat, kereta, atau bus.\n2. **Teknologi**: Dalam pemrograman atau jaringan, delay dapat berarti waktu yang diperlukan untuk mengirimkan data dari satu titik ke titik lain.\n3. **Penjadwalan**: Dalam produksi atau proyek, delay dapat berarti lambatnya penyelesaian tugas atau fase tertentu.\n\nJadi, secara umum, delay mengacu pada situasi di mana sesuatu tidak terjadi sesuai dengan waktu yang direncanakan."
+        }
+      ],
+      "source_text_sha256": "a82621aeff68232c1bfc3fddb0a730af2ec9acce4f03dcdd0c47097f6c2bf8a3",
+      "display_text_sha256": "a82621aeff68232c1bfc3fddb0a730af2ec9acce4f03dcdd0c47097f6c2bf8a3",
+      "source_redacted": false,
+      "redactions": [],
+      "source_language": "English",
+      "model": "gpt-4o-mini-2024-07-18",
+      "text_status": "Original source text, unchanged.",
+      "revision": "c827c6df8fcf008219ffaffa4d1dd77491099367",
+      "source_shard": "data/train-00065-of-00086.parquet",
+      "source_shard_sha256": "7ff5f195fc8ce27f99d9c9acf5e699b9974858929758d4b9f9bb01dae572e3a8"
+    },
+    {
+      "row_index": 2875304,
+      "messages": [
+        {
+          "role": "user",
+          "content": "User: meet gala itu ajang adu outfit\nUser: meet gala itu ajang adu outfit\nAssistant:"
+        },
+        {
+          "role": "assistant",
+          "content": "Betul! Met Gala memang dikenal sebagai ajang di mana para selebriti, desainer, dan para tamu mengenakan outfit yang sangat kreatif dan mencolok. Selain untuk menggalang dana dan mendukung Museum Costume Institute di New York, Met Gala juga jadi panggung unjuk gaya busana yang unik dan inspiratif setiap tahunnya. Kamu suka outfit dari Met Gala tahun ini?"
+        }
+      ],
+      "source_text_sha256": "586561c0949e39ede38cf52ef51329f6f7c1050cd44ed74e6833d314b61c17da",
+      "display_text_sha256": "586561c0949e39ede38cf52ef51329f6f7c1050cd44ed74e6833d314b61c17da",
+      "source_redacted": false,
+      "redactions": [],
+      "source_language": "English",
+      "model": "gpt-4.1-mini-2025-04-14",
+      "text_status": "Original source text, unchanged.",
+      "revision": "c827c6df8fcf008219ffaffa4d1dd77491099367"
+    }
+  ]
+}

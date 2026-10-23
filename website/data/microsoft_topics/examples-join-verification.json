@@ -1,0 +1,18 @@
+{
+  "cached_rows": 22506,
+  "joined_rows": 22418,
+  "excluded": {
+    "duplicate_source_compound_key": 80,
+    "ambiguous_label_compound_key": 8
+  },
+  "join_fields": [
+    "conversation_hash",
+    "model",
+    "timestamp_UTC_microseconds",
+    "turn",
+    "language"
+  ],
+  "uniqueness": "Exactly one source row and one label row per compound key required.",
+  "source_row_index_checked": true,
+  "cached_hashes_with_multiple_label_rows": 1216
+}

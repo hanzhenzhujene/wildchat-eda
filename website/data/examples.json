@@ -1,0 +1,228 @@
+[
+  {
+    "id": 255498,
+    "title": "Learning JavaScript",
+    "kind": "direct",
+    "selection": "Random 120-record content audit",
+    "language": "Vietnamese",
+    "model": "gpt-3.5-turbo-0613",
+    "user_turns": 3,
+    "summary": "A user moves from asking about JavaScript games to asking how classList works.",
+    "turns": [
+      {
+        "turn": 1,
+        "user": "Can JavaScript be used to make games?",
+        "assistant": "Yes. It lists tools for making browser games."
+      },
+      {
+        "turn": 2,
+        "user": "Make a game using JavaScript.",
+        "assistant": "It supplies a basic HTML canvas and animation-loop example."
+      },
+      {
+        "turn": 3,
+        "user": "Explain JavaScript classList in full.",
+        "assistant": "It explains how to add, remove, toggle, and inspect CSS classes."
+      }
+    ],
+    "observed": "Three actual user messages are stored separately. The task changes from making a game to explaining a concept.",
+    "missing": [
+      "Whether the user tried the code.",
+      "Whether the explanation improved understanding."
+    ],
+    "potential": "A contrast case: ordinary learning requests should not become relational cases merely because they contain a conversation.",
+    "limit": "The log records what was requested and answered, not whether the user learned it.",
+    "display_scope": "All 3 stored exchanges, shown as deidentified paraphrases.",
+    "provenance": "Deidentified English paraphrases, not verbatim quotations. Source message order is preserved.",
+    "source": "outputs/record_examples.json"
+  },
+  {
+    "id": 1671993,
+    "title": "Summarizing a job advert",
+    "kind": "document",
+    "selection": "Random 120-record content audit",
+    "language": "English",
+    "model": "gpt-4o-2024-08-06",
+    "user_turns": 1,
+    "summary": "One user message combines English instructions with a mostly Russian job advert. The reply is in Russian.",
+    "turns": [
+      {
+        "turn": 1,
+        "user": "Summarize this job advert using the requested fields and the advert's language.",
+        "assistant": "It returns a field-by-field summary in Russian, including role, location, skills, and pay."
+      }
+    ],
+    "observed": "One stored user message contains instructions plus a document. Its English language label does not capture the whole input.",
+    "missing": [
+      "Whether the supplied advert is accurate.",
+      "Whether the summary preserves every fact."
+    ],
+    "potential": "A contrast case for retrieval: a job-related document is not automatically a request about an interpersonal difficulty.",
+    "limit": "The assistant expands sparse advert wording into job duties. This example illustrates structure, not answer accuracy.",
+    "display_scope": "All 1 stored exchange, shown as deidentified paraphrases.",
+    "provenance": "Deidentified English paraphrases, not verbatim quotations. Source message order is preserved.",
+    "source": "outputs/record_examples.json"
+  },
+  {
+    "id": 2606561,
+    "title": "A group-bot reply",
+    "kind": "embedded",
+    "selection": "Random 120-record content audit",
+    "language": "English",
+    "model": "gpt-4.1-mini-2025-04-14",
+    "user_turns": 1,
+    "summary": "A bot prompt contains rules and a supplied group history, ending with a request to choose between two football players.",
+    "turns": [
+      {
+        "turn": 1,
+        "user": "Given these group-chat rules and history, choose between Messi and Ronaldo.",
+        "assistant": "It chooses Messi, then asks for the user's choice in a playful holiday-themed reply."
+      }
+    ],
+    "observed": "Many group messages appear inside one user-content field. WildChat stores just one user message and one AI reply for this record.",
+    "missing": [
+      "Whether the named participants are real.",
+      "Whether the supplied history describes an actual exchange."
+    ],
+    "potential": "It shows how AI participation in an exchange differs from advice to a user. It may inform a separate research scope; it is not personal guidance.",
+    "limit": "The supplied history is content in a prompt. The record alone does not verify the participants or group events.",
+    "display_scope": "All 1 stored exchange, shown as deidentified paraphrases.",
+    "provenance": "Deidentified English paraphrases, not verbatim quotations. Source message order is preserved.",
+    "source": "outputs/record_examples.json"
+  },
+  {
+    "id": 286012,
+    "title": "Clarifying work responsibilities",
+    "kind": "relational",
+    "selection": "Random 80-record keyword-hit audit (separate from the 120-record content audit)",
+    "language": "English",
+    "model": "gpt-3.5-turbo-0613",
+    "user_turns": 7,
+    "summary": "A worker revises a message about a mismatch between assigned duties and the agreed role.",
+    "turns": [
+      {
+        "turn": 1,
+        "user": "Shorten and professionalize this message about recruitment and administrative duties.",
+        "assistant": "It drafts an email explaining the tasks and proposing extra onboarding support."
+      },
+      {
+        "turn": 2,
+        "user": "Make it shorter, as a professional conversation with my client.",
+        "assistant": "It turns the draft into a spoken request to clarify expectations and service scope."
+      },
+      {
+        "turn": 3,
+        "user": "Focus on the original agreement for hiring an external senior recruiter.",
+        "assistant": "It rewrites the message around the hiring arrangement and asks for clarity on expected services."
+      },
+      {
+        "turn": 4,
+        "user": "Make it a casual, professional speech to my client.",
+        "assistant": "It recasts the message as a conversation about local needs, expectations and the agreed scope."
+      },
+      {
+        "turn": 5,
+        "user": "Organize it around why I was hired, my current administrative duties and how the teams should communicate.",
+        "assistant": "It contrasts administrative work with recruitment strategy and asks what the employer committed to deliver."
+      },
+      {
+        "turn": 6,
+        "user": "Emphasize using my skills appropriately and clarifying the agreed services.",
+        "assistant": "It revises the message to highlight the mismatch with the recruiter's expertise."
+      },
+      {
+        "turn": 7,
+        "user": "Turn this into a professional email with a subject line.",
+        "assistant": "It starts an email about clarifying objectives and agreed services, then stops partway through the opening paragraph.",
+        "incomplete_source_reply": true
+      }
+    ],
+    "observed": "The user repeatedly adjusts how to raise a workplace concern. These revisions are observable; the client's response is not.",
+    "missing": [
+      "The original agreement.",
+      "The client’s perspective and response.",
+      "Whether the user sent the message or acted on it."
+    ],
+    "potential": "A candidate communication task: examine how proposed wording handles the worker’s concern and the client’s interests.",
+    "limit": "No client reply or evidence that the message was sent. The last AI message is incomplete in the saved source, despite no viewer truncation flag.",
+    "display_scope": "All 7 stored exchanges, shown as deidentified paraphrases. The final AI reply is incomplete in the source.",
+    "provenance": "Paraphrases checked against the ordered messages in the pinned local source; not verbatim quotations.",
+    "source": "outputs/recovered_examples.json"
+  },
+  {
+    "id": 753427,
+    "title": "Workplace criticism",
+    "kind": "relational",
+    "selection": "Targeted example, outside the random 80-hit and 120-record audits",
+    "language": "English",
+    "model": "gpt-4-0125-preview",
+    "user_turns": 5,
+    "summary": "A user describes unwelcome comments at work, then adds details about spending priorities and a partner.",
+    "turns": [
+      {
+        "turn": 1,
+        "user": "I feel angry and sad.",
+        "assistant": "It acknowledges both feelings and suggests ways to process them, including talking to someone supportive."
+      },
+      {
+        "turn": 2,
+        "user": "Colleagues comment on my appearance. I want to prioritize saving, and my partner helps but can also be controlling.",
+        "assistant": "It suggests setting workplace boundaries, documenting inappropriate comments and seeking support."
+      },
+      {
+        "turn": 3,
+        "user": "My shoes need replacing, but I plan to wait.",
+        "assistant": "It supports choosing when to spend and suggests addressing unwanted comments politely."
+      },
+      {
+        "turn": 4,
+        "user": "I earn more than my colleagues. Why are they focused on my appearance?",
+        "assistant": "It offers possible explanations, including insecurity and workplace norms. These are its speculations, not verified motives."
+      },
+      {
+        "turn": 5,
+        "user": "My partner used to call during work but now says they are too busy.",
+        "assistant": "It suggests possible reasons for the change and discussing what the check-ins mean to each person."
+      }
+    ],
+    "observed": "The AI suggests boundaries, then offers possible explanations for others’ motives.",
+    "missing": [
+      "Other people’s accounts.",
+      "Whether advice was followed.",
+      "What changed afterward."
+    ],
+    "potential": "A candidate advice case: examine what the AI assumes about absent people when explaining a conflict.",
+    "limit": "Only the user's account is available. The AI's explanations of other people's motives are speculative; no action or relationship outcome is verified.",
+    "display_scope": "All 5 stored exchanges, shown as deidentified paraphrases.",
+    "provenance": "Paraphrases checked against the ordered messages in the pinned local source; not verbatim quotations.",
+    "source": "outputs/recovered_examples.json"
+  },
+  {
+    "id": 2632268,
+    "title": "A request to join an insult",
+    "kind": "embedded",
+    "selection": "Random keyword-hit audit; outside the personal-help scope",
+    "language": "English",
+    "model": "gpt-4.1-mini-2025-04-14",
+    "user_turns": 1,
+    "summary": "A supplied group history ends with a request for the bot to agree with an insult about another member.",
+    "turns": [
+      {
+        "turn": 1,
+        "user": "The user asks the bot to agree with an insult about another member.",
+        "assistant": "The bot echoes the insulting term in a joking, holiday-themed reply."
+      }
+    ],
+    "observed": "The AI is being asked to participate in an exchange, rather than advise someone about it.",
+    "missing": [
+      "Whether the people are real participants.",
+      "Whether the targeted person welcomed the exchange.",
+      "What happened afterward."
+    ],
+    "potential": "A separate response-level question: how does an AI handle an invitation to join hostile banter?",
+    "limit": "The reply echoes an insulting term but does not directly affirm the insult about the target. The log does not establish verified participants or harm.",
+    "display_scope": "All 1 stored exchange, shown as deidentified paraphrases.",
+    "provenance": "Deidentified paraphrases checked against the cached record by AI reviewers; not human validated.",
+    "source": "outputs/group_example.json; metadata: outputs/conversation_features.csv.gz"
+  }
+]

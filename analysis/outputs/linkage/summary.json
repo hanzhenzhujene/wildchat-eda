@@ -1,0 +1,246 @@
+{
+  "dataset": "allenai/WildChat-4.8M",
+  "revision": "c827c6df8fcf008219ffaffa4d1dd77491099367",
+  "split": "train",
+  "scope": "All 86 pinned source shards",
+  "group_key": "Exact tuple (hashed_ip, header.accept-language, header.user-agent); all components nonblank",
+  "unit": "Technical-key groups, NOT people",
+  "span_definition": "Difference between latest and earliest row timestamps (UTC last-turn timestamps)",
+  "totals": {
+    "rows": 3199860,
+    "complete_key_rows": 2832257,
+    "complete_keys": 1921755,
+    "ip_keys": 1833730,
+    "header_keys": 66709,
+    "missing_ip_rows": 0,
+    "missing_language_header_rows": 367225,
+    "missing_user_agent_rows": 76366,
+    "missing_timestamp_rows": 0,
+    "mixed_turn_ip_rows": 35803,
+    "top_ip_not_single_turn_ip_rows": 35803,
+    "turn_header_not_equal_top_rows": 0,
+    "incomplete_turn_id_rows": 0,
+    "min_timestamp": "2023-04-09 00:03:20+00:00",
+    "max_timestamp": "2025-07-31 23:56:04+00:00"
+  },
+  "repeated_key_groups": {
+    "groups": 156930,
+    "rows": 1067432,
+    "min_rows": 2,
+    "median_rows": 3.0,
+    "p90_rows": 11.0,
+    "p99_rows": 57.0,
+    "max_rows": 4726,
+    "median_span_days": 0.18066550925925928,
+    "p90_span_days": 14.281825231481482,
+    "p99_span_days": 95.88844756944435,
+    "max_span_days": 742.0551967592593,
+    "median_active_dates": 1.0,
+    "span_ge_1day": 57722,
+    "span_ge_7days": 26888,
+    "span_ge_30days": 5844,
+    "span_ge_90days": 1687,
+    "dates3_span30": 4602
+  },
+  "at_least_two_distinct_contents": {
+    "groups": 156704,
+    "rows": 1066943,
+    "min_rows": 2,
+    "median_rows": 3.0,
+    "p90_rows": 11.0,
+    "p99_rows": 58.0,
+    "max_rows": 4726,
+    "median_span_days": 0.18191550925925926,
+    "p90_span_days": 14.30549189814815,
+    "p99_span_days": 95.94351550925931,
+    "max_span_days": 742.0551967592593,
+    "median_active_dates": 1.0,
+    "span_ge_1day": 57709,
+    "span_ge_7days": 26883,
+    "span_ge_30days": 5844,
+    "span_ge_90days": 1687,
+    "dates3_span30": 4602,
+    "interpretation": "Eligibility sensitivity: at least two content hashes; other metrics retain source rows and their timestamps"
+  },
+  "ip_only_sensitivity": {
+    "groups": 130426,
+    "rows": 1496556,
+    "min_rows": 2,
+    "median_rows": 3.0,
+    "p90_rows": 15.0,
+    "p99_rows": 96.75,
+    "max_rows": 66522,
+    "median_span_days": 0.44741319444444444,
+    "p90_span_days": 118.70304398148149,
+    "p99_span_days": 558.6486197916666,
+    "max_span_days": 844.1122685185185,
+    "median_active_dates": 2.0,
+    "span_ge_1day": 57487,
+    "span_ge_7days": 37351,
+    "span_ge_30days": 24371,
+    "span_ge_90days": 15318,
+    "dates3_span30": 17102,
+    "population": "All source rows with nonblank hashed_ip; includes incomplete-header rows"
+  },
+  "ip_only_complete_rows_sensitivity": {
+    "groups": 127503,
+    "rows": 1134706,
+    "min_rows": 2,
+    "median_rows": 3.0,
+    "p90_rows": 14.0,
+    "p99_rows": 86.0,
+    "max_rows": 6927,
+    "median_span_days": 0.4351157407407407,
+    "p90_span_days": 117.9351203703704,
+    "p99_span_days": 560.2146960648148,
+    "max_span_days": 844.1122685185185,
+    "median_active_dates": 2.0,
+    "span_ge_1day": 55928,
+    "span_ge_7days": 36174,
+    "span_ge_30days": 23535,
+    "span_ge_90days": 14824,
+    "dates3_span30": 16460,
+    "population": "Same complete-key rows as the main exact-key analysis"
+  },
+  "consistent_turn_metadata_sensitivity": {
+    "groups": 151183,
+    "rows": 1041377,
+    "min_rows": 2,
+    "median_rows": 3.0,
+    "p90_rows": 12.0,
+    "p99_rows": 59.0,
+    "max_rows": 4726,
+    "median_span_days": 0.1663425925925926,
+    "p90_span_days": 14.087798611111111,
+    "p99_span_days": 92.87409490740731,
+    "max_span_days": 742.0551967592593,
+    "median_active_dates": 1.0,
+    "span_ge_1day": 54838,
+    "span_ge_7days": 25531,
+    "span_ge_30days": 5488,
+    "span_ge_90days": 1567,
+    "dates3_span30": 4300
+  },
+  "shared_turn_lineages": {
+    "unique_user_turn_ids": 5167182,
+    "shared_turn_occurrences_across_rows": 0,
+    "rows_without_turn_ids": 0,
+    "components": 3199860,
+    "components_with_multiple_complete_keys": 0,
+    "groups_with_multiple_lineages": {
+      "groups": 156930,
+      "rows": 1067432,
+      "min_rows": 2,
+      "median_rows": 3.0,
+      "p90_rows": 11.0,
+      "p99_rows": 57.0,
+      "max_rows": 4726,
+      "median_span_days": 0.18066550925925928,
+      "p90_span_days": 14.281825231481482,
+      "p99_span_days": 95.88844756944435,
+      "max_span_days": 742.0551967592593,
+      "median_active_dates": 1.0,
+      "span_ge_1day": 57722,
+      "span_ge_7days": 26888,
+      "span_ge_30days": 5844,
+      "span_ge_90days": 1687,
+      "dates3_span30": 4602
+    },
+    "one_last_timestamp_per_lineage": {
+      "groups": 156930,
+      "median_span_days": 0.18066550925925928,
+      "p90_span_days": 14.281825231481482,
+      "p99_span_days": 95.88844756944435,
+      "max_span_days": 742.0551967592593,
+      "median_active_dates": 1.0,
+      "span_ge_1day": 57722,
+      "span_ge_7days": 26888,
+      "span_ge_30days": 5844,
+      "span_ge_90days": 1687,
+      "dates3_span30": 4602,
+      "lineages": 1067432,
+      "min_lineages": 2,
+      "median_lineages": 3.0,
+      "p90_lineages": 11.0,
+      "p99_lineages": 57.0,
+      "max_lineages": 4726,
+      "count_unit": "shared-turn lineages, not source rows"
+    },
+    "interpretation": "No shared IDs does not establish absence of copied or overlapping text"
+  },
+  "span_distribution": [
+    {
+      "band": "30\u201389 days",
+      "groups": 4157
+    },
+    {
+      "band": "0 days",
+      "groups": 20
+    },
+    {
+      "band": "365+ days",
+      "groups": 66
+    },
+    {
+      "band": "90\u2013364 days",
+      "groups": 1621
+    },
+    {
+      "band": "7\u201329 days",
+      "groups": 21044
+    },
+    {
+      "band": "<1 day",
+      "groups": 99188
+    },
+    {
+      "band": "1\u20136 days",
+      "groups": 30834
+    }
+  ],
+  "records_per_key_distribution": [
+    {
+      "band": "6\u201320",
+      "groups": 31107,
+      "rows": 302407
+    },
+    {
+      "band": "2\u20135",
+      "groups": 118680,
+      "rows": 327805
+    },
+    {
+      "band": "101+",
+      "groups": 696,
+      "rows": 196339
+    },
+    {
+      "band": "1",
+      "groups": 1764825,
+      "rows": 1764825
+    },
+    {
+      "band": "21\u2013100",
+      "groups": 6447,
+      "rows": 240881
+    }
+  ],
+  "concentration": {
+    "top10_rows": 22689,
+    "top100_rows": 88004
+  },
+  "source_fields": [
+    "conversation_hash",
+    "hashed_ip",
+    "header",
+    "timestamp",
+    "conversation.list.element.role",
+    "conversation.list.element.hashed_ip",
+    "conversation.list.element.header",
+    "conversation.list.element.turn_identifier"
+  ],
+  "raw_text_read": false,
+  "raw_text_read_definition": "Message content was not projected or analyzed; full source shards were temporarily downloaded for metadata extraction",
+  "raw_shards_retained": false,
+  "linkage_keys_published": false
+}

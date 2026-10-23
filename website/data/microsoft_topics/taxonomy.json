@@ -1,0 +1,240 @@
+{
+  "domain": [
+    {
+      "raw_label": "DomainLabel.COMPUTERS_AND_ELECTRONICS",
+      "id": "computers_and_electronics",
+      "label": "Computers and Electronics",
+      "definition": "The user's topical domain is related to general questions, comments or discussion of computer and electronics, including technology products and services, and the internet."
+    },
+    {
+      "raw_label": "DomainLabel.HOME_AND_AUTO",
+      "id": "home_and_auto",
+      "label": "Home and Auto",
+      "definition": "The user's topical domain is related to home and auto related projects, products, services, and repairs."
+    },
+    {
+      "raw_label": "DomainLabel.PROGRAMMING_AND_SCRIPTING",
+      "id": "programming_and_scripting",
+      "label": "Programming and Scripting",
+      "definition": "The user's topical domain is related to creating, modifying or debugging computer code, programs, websites, web applications or scripts using various languages, frameworks or tools."
+    },
+    {
+      "raw_label": "DomainLabel.DATA_ANALYSIS_AND_VISUALIZATION",
+      "id": "data_analysis_and_visualization",
+      "label": "Data Analysis and Visualization",
+      "definition": "The user's topical domain is related to collecting, analyzing, visualizing or presenting data using various methods, tools or software."
+    },
+    {
+      "raw_label": "DomainLabel.MACHINE_LEARNING_AND_AI",
+      "id": "machine_learning_and_ai",
+      "label": "Machine Learning and Ai",
+      "definition": "The user's topical domain is related to applying or developing artificial intelligence or machine learning techniques or models using various methods, tools or software."
+    },
+    {
+      "raw_label": "DomainLabel.ENGINEERING_AND_DESIGN",
+      "id": "engineering_and_design",
+      "label": "Engineering and Design",
+      "definition": "The user's topical domain is related to the application of engineering principles or methods to various fields, such as civil, mechanical, electrical, chemical, etc., or to the design or creation of visual or auditory works."
+    },
+    {
+      "raw_label": "DomainLabel.TRANSLATION_AND_LANGUAGE",
+      "id": "translation_and_language",
+      "label": "Translation and Language",
+      "definition": "The user's topical domain is related to the translation of words, phrases or sentences in different languages, or to the learning, study or practice of word meanings or the structure, function, evolution, or diversity of languages or linguistic features, rules or systems."
+    },
+    {
+      "raw_label": "DomainLabel.PHYSICS_AND_CHEMISTRY",
+      "id": "physics_and_chemistry",
+      "label": "Physics and Chemistry",
+      "definition": "The user's topical domain is related to the study of the matter, energy, forces, reactions or interactions of the physical or chemical world, or to the concepts, theories or experiments of various branches of physics or chemistry."
+    },
+    {
+      "raw_label": "DomainLabel.BIOLOGY",
+      "id": "biology",
+      "label": "Biology",
+      "definition": "The user's topical domain is related to the study of the structure, function, evolution or diversity of living organisms."
+    },
+    {
+      "raw_label": "DomainLabel.HEALTH_AND_MEDICINE",
+      "id": "health_and_medicine",
+      "label": "Health and Medicine",
+      "definition": "The user's topical domain is related to the diagnosis, treatment or prevention of diseases or disorders, or to the physical or mental well-being of humans or animals."
+    },
+    {
+      "raw_label": "DomainLabel.MATHEMATICS_AND_LOGIC",
+      "id": "mathematics_and_logic",
+      "label": "Mathematics and Logic",
+      "definition": "The user's topical domain is related to the application or solution of mathematical or logical problems or puzzles, such as arithmetic, algebra, geometry, calculus, etc., or to the concepts, theories or arguments of various branches of mathematics or logic."
+    },
+    {
+      "raw_label": "DomainLabel.BUSINESS_AND_FINANCE",
+      "id": "business_and_finance",
+      "label": "Business and Finance",
+      "definition": "The user's topical domain is related to the operation, strategy or analysis of an organization or an industry, or to the study of the production, distribution or consumption of goods or services, or to the market, trade or currency issues, or to financial transaction, products, services or regulations."
+    },
+    {
+      "raw_label": "DomainLabel.MARKETING_AND_SALES",
+      "id": "marketing_and_sales",
+      "label": "Marketing and Sales",
+      "definition": "The user's topical domain is related to promoting or selling products or services, or to creating, evaluating or improving advertisements or marketing strategies or campaigns, or to persuading or influencing potential customers or clients."
+    },
+    {
+      "raw_label": "DomainLabel.EDUCATION_AND_LEARNING",
+      "id": "education_and_learning",
+      "label": "Education and Learning",
+      "definition": "The user's topical domain is related to learning, teaching or studying various subjects or skills, or to the methods, tools or resources for education or learning, or to the educational institutions, programs or policies."
+    },
+    {
+      "raw_label": "DomainLabel.GAMING",
+      "id": "gaming",
+      "label": "Gaming",
+      "definition": "The user's topical domain is related to the playing, designing or reviewing of video games."
+    },
+    {
+      "raw_label": "DomainLabel.ENTERTAINMENT",
+      "id": "entertainment",
+      "label": "Entertainment",
+      "definition": "The user's topical domain is related to or is about entertainment media such as movies, tv shows, music, or books, or the celebrities in that media."
+    },
+    {
+      "raw_label": "DomainLabel.SPORTS_AND_FITNESS",
+      "id": "sports_and_fitness",
+      "label": "Sports and Fitness",
+      "definition": "The user's topical domain is related to the physical activities, exercises or games that involve skill, strength or endurance, or to the equipment, rules or strategies of sports or fitness, or to the sports teams, players or events."
+    },
+    {
+      "raw_label": "DomainLabel.HISTORY_AND_CULTURE",
+      "id": "history_and_culture",
+      "label": "History and Culture",
+      "definition": "The user's topical domain is related to the past or present events, people, places, customs, beliefs, values or arts of a group of people or a region, or to the appreciation, criticism or creation of historical or cultural works."
+    },
+    {
+      "raw_label": "DomainLabel.LAW_AND_POLITICS",
+      "id": "law_and_politics",
+      "label": "Law and Politics",
+      "definition": "The user's topical domain is related to the rules, regulations or principles that govern the conduct or relations of people or entities, or to the rights, responsibilities or remedies of legal subjects or cases, or to the opinions, issues or actions of political actors or institutions."
+    },
+    {
+      "raw_label": "DomainLabel.RELIGION_AND_PHILOSOPHY",
+      "id": "religion_and_philosophy",
+      "label": "Religion and Philosophy",
+      "definition": "The user's topical domain is related to the belief, worship or practice of a supernatural or divine power or entity, or to the personal or philosophical quest for meaning or purpose, or to the concepts, theories or arguments of various schools of thought."
+    },
+    {
+      "raw_label": "DomainLabel.FASHION_AND_BEAUTY",
+      "id": "fashion_and_beauty",
+      "label": "Fashion and Beauty",
+      "definition": "The user's topical domain is related to the style, appearance or attractiveness of clothing, accessories, cosmetics or hair, or to the trends, tips or advice of fashion or beauty, or to the fashion or beauty products, services or brands."
+    },
+    {
+      "raw_label": "DomainLabel.FOOD_AND_DRINK",
+      "id": "food_and_drink",
+      "label": "Food and Drink",
+      "definition": "The user's topical domain is related to the preparation, storage or consumption of food or beverages, or to the recipes, ingredients, flavors or health benefits of food or beverages, or to the preferences, opinions or recommendations of food or beverages."
+    },
+    {
+      "raw_label": "DomainLabel.TRAVEL_AND_TOURISM",
+      "id": "travel_and_tourism",
+      "label": "Travel and Tourism",
+      "definition": "The user's topical domain is related to the movement, exploration or discovery of different places or cultures, or to the transportation, accommodation or activities of travelers, or to the travel guides, tips or advice."
+    },
+    {
+      "raw_label": "DomainLabel.SMALL_TALK_AND_CHATBOT",
+      "id": "small_talk_and_chatbot",
+      "label": "Small Talk and Chatbot",
+      "definition": "The user's topical domain is related to general questions or answers about the AI agent or the user is engaging the AI agent in jokes or other casual interaction that is not about any of the topical domains. If the user is talking about any of the topical domains, even if it appears they are confused or joking, then the topical domain should be that domain and not 'Small talk and chatbot'."
+    },
+    {
+      "raw_label": "DomainLabel.SHOPPING_AND_ECOMMERCE",
+      "id": "shopping_and_ecommerce",
+      "label": "Shopping and Ecommerce",
+      "definition": "The user's topical domain is related to purchasing goods or services, including products, prices, discounts, reviews, or points."
+    },
+    {
+      "raw_label": "DomainLabel.JOBS_AND_EMPLOYMENT",
+      "id": "jobs_and_employment",
+      "label": "Jobs and Employment",
+      "definition": "The user's topical domain is related to researching, understanding, seeking, or interviewing for a job or employment, including resume writing."
+    },
+    {
+      "raw_label": "DomainLabel.CREATIVE_WRITING_AND_EDITING",
+      "id": "creative_writing_and_editing",
+      "label": "Creative Writing and Editing",
+      "definition": "The user's topical domain is related to the creation, improvement or evaluation texts for creative or imaginative purposes or audiences, such as stories, poems, songs, etc., or to the genres, styles or themes of creative writing."
+    },
+    {
+      "raw_label": "DomainLabel.PROFESSIONAL_WRITING_AND_EDITING",
+      "id": "professional_writing_and_editing",
+      "label": "Professional Writing and Editing",
+      "definition": "The user's topical domain is related to the creation, improvement or evaluation of texts for academic purposes or audiences, such as essays, articles, theses, etc., or to the citation, referencing or plagiarism issues of academic writing."
+    },
+    {
+      "raw_label": "DomainLabel.ADULT",
+      "id": "adult",
+      "label": "Adult",
+      "definition": "The user's topical domain is related to searching for, consuming, or producing pornographic content."
+    },
+    {
+      "raw_label": "DomainLabel.OTHER",
+      "id": "other",
+      "label": "Other",
+      "definition": "the user's topical domain does not fit into any of the above specified topical domains. The topical domain should be 'Other' if and only if it absolutely does not fit into any of the other topical domains."
+    }
+  ],
+  "intent": [
+    {
+      "raw_label": "IntentLabel.WEB_SITE_NAVIGATION",
+      "id": "web_site_navigation",
+      "label": "Web Site Navigation",
+      "definition": "Conversations where the user simply wants to go to a particular website or service. For example, \"facebook\" indicates the user wants to go to the Facebook page to logon, \"gmail\" indicates the user wants to go to Gmail to perform email related actions and \"google translate\" indicates the user wants to go to \"Google Translate\" page."
+    },
+    {
+      "raw_label": "IntentLabel.INFORMATION_LOOKUP",
+      "id": "information_lookup",
+      "label": "Information Lookup",
+      "definition": "Conversations where the user wants to find factual information or answers to specific questions. The agent's responses are typically direct, concise, and informative, providing the relevant information and/or links to the sources."
+    },
+    {
+      "raw_label": "IntentLabel.INFORMATION_GATHERING",
+      "id": "information_gathering",
+      "label": "Information Gathering",
+      "definition": "Conversations where the user wants to gather information that they can use to do their task. This could be asking the agent for recommendations, asking the agent to compare two or more objects, events, ideas, problems, or situations, etc."
+    },
+    {
+      "raw_label": "IntentLabel.TRANSLATION_OR_CONVERSION",
+      "id": "translation_or_conversion",
+      "label": "Translation or Conversion",
+      "definition": "Conversations where the user wants to convert information from one form or representation to another, such as from one language to another, from one unit to another, from words to numbers or vice versa."
+    },
+    {
+      "raw_label": "IntentLabel.SUMMARIZATION",
+      "id": "summarization",
+      "label": "Summarization",
+      "definition": "Conversations where the user wants to get a brief statement that captures the main idea or theme of the given information."
+    },
+    {
+      "raw_label": "IntentLabel.ANALYSIS",
+      "id": "analysis",
+      "label": "Analysis",
+      "definition": "Conversations where the user asks analytical or conceptual questions about a complex topic or problem. The user's questions require some degree of reasoning, interpretation, argumentation, comparison, and/or data processing from the agent. The agent's responses are typically explanatory and detailed, and are based on evidence, logic, and facts."
+    },
+    {
+      "raw_label": "IntentLabel.IMAGE_CREATION",
+      "id": "image_creation",
+      "label": "Image Creation",
+      "definition": "Conversations where the user asks the agent to either generate or modify an image based on specified criteria or constraints."
+    },
+    {
+      "raw_label": "IntentLabel.TEXT_GENERATION",
+      "id": "text_generation",
+      "label": "Text Generation",
+      "definition": "Conversations where the user asks the agent to either generate new content or modify existing content based on specified criteria or constraints. In the case of generating new content, the user's questions require some degree of creativity, novelty, or innovation from the agent. The agent's responses contain new or modified outputs that match the user's specifications."
+    },
+    {
+      "raw_label": "IntentLabel.OPEN_ENDED_DISCOVERY",
+      "id": "open_ended_discovery",
+      "label": "Open Ended Discovery",
+      "definition": "Conversations where the user wants to chat or play with the agent out of curiosity, boredom, or humor, or else explore broad ideas or areas of interest without a specific goal or information need in mind. The agent's responses are typically suggestive and engaging. The agent may also encourage further inquiry or action from the user to deepen their discovery experience."
+    }
+  ]
+}

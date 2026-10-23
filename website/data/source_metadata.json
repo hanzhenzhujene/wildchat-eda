@@ -1,0 +1,183 @@
+{
+  "title": "WildChat EDA",
+  "export_schema_version": 1,
+  "source": {
+    "dataset": "allenai/WildChat-4.8M",
+    "config": "default",
+    "split": "train",
+    "revision": "c827c6df8fcf008219ffaffa4d1dd77491099367",
+    "num_rows": 3199860,
+    "retrieval_date": "2026-10-17"
+  },
+  "links": {
+    "dataset": "https://huggingface.co/datasets/allenai/WildChat-4.8M",
+    "pinned_dataset": "https://huggingface.co/datasets/allenai/WildChat-4.8M/tree/c827c6df8fcf008219ffaffa4d1dd77491099367",
+    "paper": "https://arxiv.org/abs/2405.01470"
+  },
+  "sampling": {
+    "design": "200 equal-size index strata; one seeded random contiguous 100-row block per stratum. Descriptive block sample, not independent random conversations. No population prevalence estimates.",
+    "sample_size": 20000,
+    "actual_rows": 20000,
+    "windows": 200,
+    "window_size": 100,
+    "seed": 20261017
+  },
+  "fields": {
+    "row_index": "Row offset in the pinned public source split; not a person identifier.",
+    "language": "Automatic source-language label; not independently verified.",
+    "model": "Source model name for the stored AI reply. Existing replies are not reference answers.",
+    "model_family": "Descriptive grouping by model-name prefix, not a comparison of model capability.",
+    "date": "Source date for the record, as YYYY-MM-DD.",
+    "year": "Calendar year extracted from the source date.",
+    "user_turns": "Number of stored user-role messages. A message can contain pasted history.",
+    "assistant_messages": "Number of stored assistant-role messages.",
+    "user_words": "Whitespace-delimited word count across all stored user messages, not model tokens.",
+    "assistant_words": "Whitespace-delimited word count across all stored assistant messages, not model tokens.",
+    "redacted": "Source redaction flag. False does not establish absence of personal information.",
+    "candidate": "Passed the existing English-language keyword screen; not verified relational relevance.",
+    "group_template": "Both specific persona and group-environment phrases matched in user text. This does not verify real group participation.",
+    "repeat_count": "Number of sampled records sharing this source conversation hash, including this record. Hashes themselves are not exported.",
+    "code_flag": "Existing heuristic flag for code-like user input; not a validated task label.",
+    "creative_flag": "Existing keyword flag for creative content; not a validated task label.",
+    "empty_user_messages": "Number of stored user-role messages with no non-whitespace text."
+  },
+  "privacy": {
+    "raw_dialogues_included": true,
+    "person_identifiers_included": null,
+    "source_row_offsets_included": true,
+    "description": "Selected records include dataset message text, with additional identifier redactions marked and English paraphrases separate. Names may remain in public source text. Source device and location metadata are excluded.",
+    "source_text_records": 40,
+    "additional_redactions": "Marked identifier spans in 5 records. Remaining text is unchanged."
+  },
+  "source_checksums": {
+    "outputs/conversation_features.csv.gz": "79ced657958ef8a0fce46570be2c50078f62ffec17f630f7fe0d8635f299fb2c",
+    "outputs/sample_manifest.json": "7c1d8623afbbfe87f93cb4f69840b17045f6ceefbd43cdbbc056f37a8ec17e80",
+    "outputs/content_annotations.json": "96ab43908bcc61126091bc9c7c21a819f85d1dcda4fa494bc41fad5f2ecfb851",
+    "src/supplementary.py": "a1d6b30a59cbab6c6d79531f197eab9c4e500b2ff0528c166f76648ec0c06ef3",
+    "src/analyze.py": "23a9ca8ad404428784c9b7bfd4965b426837cdfc73734375d4219c05d6e2098f",
+    "outputs/summary.json": "7b27aab712eb159caf0910c98b14660ac7a96c1648942d2766361f9b1902d561",
+    "outputs/distributions_summary.json": "761106e3e44a2bdcc7f2430fde09bcb776dbf869e100c81096a814f2090abc40",
+    "outputs/joint_lengths_summary.json": "bb4a3e953ca6368de8ff43f59075737b4f6546aeb3f13bc6a6cc54d34691640e",
+    "outputs/content_audit_summary.json": "7864e814ef35353d25c878915d465e61aaaaa4dc904421ff5ca427fb44d1ea5a",
+    "outputs/review_summary.json": "98d9877f237256a41dd83cd2487c1b2f8fb97b37a8b384fad0a474187defccfa"
+  },
+  "sample_sha256": "dad3169fca01c3a6e4f649e1f87635c46971cd55b018cd1a9bf9361a3e681041",
+  "output_checksums": {
+    "data/records.json": "554056bde7d05ea60da29875449ef2ed375be479cf3d6506e280204f6a06d214",
+    "data/aggregates.json": "5a76d020b0241be183a38e7a320ba48557d567d171e3c0420f7b6a800607bdfc",
+    "data/audit.json": "a6a89a375cf43eec3315dcb8964030b2940c4736cc0de2ed9a6bb49f0a6642a0",
+    "data/scope_verification.json": "9ac8c4c9af0eb2453a586afab0cf1fe471afc991b1e77d7483347a934d24de88"
+  },
+  "assets": [
+    {
+      "path": "assets/figures/01_languages.png",
+      "source_path": "outputs/figures/01_languages_panel.png",
+      "sha256": "7f94650ebb50e703dcb39770456e0e1c9e54c466cbdb7655ca4cfc60ef929792"
+    },
+    {
+      "path": "assets/figures/02_models.png",
+      "source_path": "outputs/figures/02_models_panel.png",
+      "sha256": "6b00193d09626b04de7bef4bb123cc48c5ea3f1afde60e4fea3663fcdb57ddd8"
+    },
+    {
+      "path": "assets/figures/03_models_by_year.png",
+      "source_path": "outputs/figures/03_models_by_year_panel.png",
+      "sha256": "eef81df67e6c1ee5ce52e63fe7696ec0c6358f7239512333fc3268d3b391eff9"
+    },
+    {
+      "path": "assets/figures/04_stored_turns.png",
+      "source_path": "outputs/figures/04_stored_turns_panel.png",
+      "sha256": "05456e950c1a8560c292ae6344085ee840e415153f103f3b1f9342569023f0c8"
+    },
+    {
+      "path": "assets/figures/05_text_length_ecdf.png",
+      "source_path": "outputs/figures/05_text_length_ecdf_panel.png",
+      "sha256": "0888224e1f6fc1345bcff8cfc7e84d1127b29aef067bfecfa985cbef9f95c1bb"
+    },
+    {
+      "path": "assets/figures/06_template_length.png",
+      "source_path": "outputs/figures/06_template_length_panel.png",
+      "sha256": "a3a7c057a0ddc890444eb7c11e4b92e203318e228001b5a90d86f9f1ad95ed34"
+    },
+    {
+      "path": "assets/figures/07_repetition_quality.png",
+      "source_path": "outputs/figures/07_repetition_quality_panel.png",
+      "sha256": "2be9435a61069ec4d71caf44d825572d5c9f1be3c4af2bdb955d279cf36a8f40"
+    },
+    {
+      "path": "assets/figures/08_month_coverage.png",
+      "source_path": "outputs/figures/08_month_coverage_panel.png",
+      "sha256": "4cc39c86f4e900abbb95541123fc5ae61fcbc715d7821f080890e9709081e5a1"
+    },
+    {
+      "path": "assets/figures/09_request_purpose.png",
+      "source_path": "outputs/figures/09_request_purpose.png",
+      "sha256": "15fe98f01245ff328b548870158a02a56fe0a0cbc0cfc29b568b720e79eb0fdf"
+    },
+    {
+      "path": "assets/figures/10_purpose_packaging.png",
+      "source_path": "outputs/figures/10_purpose_packaging.png",
+      "sha256": "c9965aae6c25c8ec311dfaf77a459a9c343ca5d0bb468809fd9d6090212a451d"
+    },
+    {
+      "path": "assets/figures/11_relational_modes.png",
+      "source_path": "outputs/figures/11_relational_modes.png",
+      "sha256": "379412ab1dbe44b4b31c825427ec4463cd9ee1ad9f8d6dfb38202a36c7bcf3b0"
+    },
+    {
+      "path": "assets/figures/12_joint_lengths.png",
+      "source_path": "outputs/figures/12_joint_lengths_panel.png",
+      "sha256": "12c8c800cb36b86ee5ede8917ca69861ab0ba9372de2e63ed7f4422a4bd4e488"
+    },
+    {
+      "path": "assets/WildChat_Relational_EDA.pdf",
+      "source_path": "outputs/WildChat_Relational_EDA.pdf",
+      "sha256": "2da122930aa72363b20b9988c097e7713164d4d430e00ad8ed66d64744cc2f23",
+      "bytes": 2527056,
+      "description": "Public visual catalog, regenerated 2026-10-23; includes current census and scoped historical figures."
+    }
+  ],
+  "sampling_validation": {
+    "source": {
+      "dataset": "allenai/WildChat-4.8M",
+      "revision": "c827c6df8fcf008219ffaffa4d1dd77491099367",
+      "n": 3199860,
+      "shards": 86,
+      "date": "2026-10-20",
+      "config": "default",
+      "split": "train"
+    },
+    "verification": {
+      "old_rows_checked": 20000,
+      "mismatches": 0,
+      "overlap": 113,
+      "checked_fields": [
+        "conversation_hash",
+        "model",
+        "language",
+        "date",
+        "source_turn",
+        "user_turns",
+        "assistant_messages",
+        "stored_messages",
+        "other_messages",
+        "user_words",
+        "assistant_words",
+        "empty_user_messages",
+        "redacted",
+        "toxic",
+        "known_group_wrapper"
+      ]
+    },
+    "comparison": "data/validation.json",
+    "census_manifest": "data/sampling_validation/scan_manifest.json",
+    "original_sample_unchanged": true,
+    "request_labels_unchanged": true
+  },
+  "public_catalog": {
+    "generated": "2026-10-23",
+    "path": "assets/WildChat_Relational_EDA.pdf",
+    "sha256": "2da122930aa72363b20b9988c097e7713164d4d430e00ad8ed66d64744cc2f23",
+    "notes": "Public visual catalog. Source metadata and historical PNG figures retain their original scopes."
+  }
+}

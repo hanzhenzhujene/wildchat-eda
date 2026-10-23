@@ -1,0 +1,44 @@
+[
+  {
+    "record": 1494984,
+    "title": "A historical information request",
+    "language": "English",
+    "model": "gpt-4o-mini-2024-07-18",
+    "message_index": 0,
+    "user": "When was trains invented",
+    "assistant": "The concept of trains, specifically rail transportation using steam locomotives, began in the early 19th century. The first full-scale working railway steam locomotive was built by George Stephenson in 1814. However, the first public railway to use steam locomotives was the Stockton and Darlington Railway, which opened in England on September 27, 1825. This marked a significant milestone in the development of trains as we know them today. Before this, there were horse-drawn wagons on wooden or metal railways, which date back to ancient times, but the steam-powered trains significantly changed the landscape of transportation.",
+    "source_status": "Original source text, unchanged.",
+    "redactions": [],
+    "url": "atlas.html#explorer?snapshot=1&view=task&label=information_lookup",
+    "stored_messages": 2,
+    "source": "https://huggingface.co/datasets/allenai/WildChat-4.8M/tree/c827c6df8fcf008219ffaffa4d1dd77491099367"
+  },
+  {
+    "record": 255498,
+    "title": "Explaining JavaScript classList",
+    "language": "Vietnamese",
+    "model": "gpt-3.5-turbo-0613",
+    "message_index": 4,
+    "user": "classList lí thuyết đầy đủ",
+    "assistant": "classList là một thuộc tính của DOM element trong JavaScript, nó cung cấp các phương thức để làm việc với các lớp CSS của một phần tử HTML. Bạn có thể sử dụng thuộc tính classList để thêm, xóa hoặc kiểm tra sự có mặt của các lớp CSS trên một phần tử HTML cụ thể. Dưới đây là mô tả chi tiết về các phương thức và thuộc tính trong classList:\n\n1. `add(class1, class2, ...)`: Phương thức này thêm một hoặc nhiều lớp vào phần tử. Ví dụ: `element.classList.add(\"active\")`.\n\n2. `remove(class1, class2, ...)`: Phương thức này xóa một hoặc nhiều lớp khỏi phần tử. Ví dụ: `element.classList.remove(\"active\")`.\n\n3. `toggle(class, force)`: Phương thức này thêm lớp vào phần tử nếu nó không có, hoặc xóa lớp khỏi phần tử nếu nó đã có. Nếu bạn truyền một giá trị boolean là `true` cho đối số `force`, lớp sẽ được thêm vào, và nếu `false`, nó sẽ được xóa khỏi phần tử. Ví dụ: `element.classList.toggle(\"active\")`.\n\n4. `contains(class)`: Phương thức này kiểm tra xem lớp đã tồn tại trên phần tử hay chưa. Nó trả về giá trị boolean là `true` nếu lớp đã tồn tại và `false` nếu không. Ví dụ: `element.classList.contains(\"active\")`.\n\n5. `item(index)`: Phương thức này trả về tên lớp CSS theo chỉ mục cung cấp. Ví dụ: `element.classList.item(0)` trả về tên lớp đầu tiên trong danh sách lớp.\n\n6. `length`: Đây là một thuộc tính chỉ đọc trả về số lượng lớp CSS trên phần tử. Ví dụ: `element.classList.length` trả về số lượng lớp trên phần tử HTML.\n\nPhương thức và thuộc tính này cho phép bạn dễ dàng làm việc với các lớp CSS của phần tử HTML trong JavaScript và cung cấp các chức năng linh hoạt để thêm hoặc xóa lớp dựa trên các điều kiện hoặc sự kiện trong ứng dụng web của bạn.",
+    "source_status": "Original source text, unchanged.",
+    "redactions": [],
+    "url": "atlas.html#cases?record=255498&focus=exchange",
+    "stored_messages": 6,
+    "source": "https://huggingface.co/datasets/allenai/WildChat-4.8M/tree/c827c6df8fcf008219ffaffa4d1dd77491099367"
+  },
+  {
+    "record": 286012,
+    "title": "Revising a work message",
+    "language": "English",
+    "model": "gpt-3.5-turbo-0613",
+    "message_index": 2,
+    "user": "make it in a form of a verbal conversation et professional to my stockholder Nina: make it shorter and professional : including Ultra local administrative responsibilities more related to HR assitance management, even the search needs to be local, mostly short term contract 7 to 12 months, night shift, search of talent only in the local area to avoid relocation in switzerland …\n\nWant to clarify to avoid misconstruction what are the alignment with agreement with AMS? with the local HR team at huningue? what we agreed I was delivering what we agreed on? what KPI do you expect?scope of services? compare to the local expectation of Huningue compare your expectation with IRIS, Hi Nina, I hope you’re doing well. I wanted to discuss the needs and objectives in Huningue in both the short and medium to long term. After spending time on the mission, I’ve noticed that there is a heavy focus on administrative onboarding tasks related to recruitment.",
+    "assistant": "Nina: Hi Nina, I hope you're doing well. I'd like to discuss the needs and goals for Huningue, both in the short and long term. During my time on the mission, I've noticed a strong emphasis on administrative onboarding tasks for recruitment. This includes ultra-local administrative responsibilities, specifically related to HR assistance management. The goal is to conduct a localized search for talent, mainly for short-term contracts ranging from 7 to 12 months, with night shift availability. The intention is to find talent within the local area to avoid the need for relocation to Switzerland.\n\nTo avoid any misunderstandings, I would like to clarify the alignment between our agreement with AMS and the local HR team at Huningue. Can you confirm if I have been delivering what we agreed upon? Additionally, could you please specify the Key Performance Indicators (KPIs) you expect and provide clarity on the scope of services? It would be helpful to compare the local expectations in Huningue with your expectations and benchmarks with IRIS.\n\nI hope we can further discuss these matters and find ways to enhance our efficiency in Huningue's recruitment process. Please feel free to provide any suggestions or adjustments you may have. I look forward to working with you and achieving our recruitment goals.\n\nThank you for your attention.\n\nBest regards,\n\n[Your Name]",
+    "source_status": "Original source text, unchanged.",
+    "redactions": [],
+    "url": "atlas.html#cases?record=286012&focus=exchange",
+    "stored_messages": 14,
+    "source": "https://huggingface.co/datasets/allenai/WildChat-4.8M/tree/c827c6df8fcf008219ffaffa4d1dd77491099367"
+  }
+]

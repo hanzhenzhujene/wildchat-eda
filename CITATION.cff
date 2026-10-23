@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use this analysis, cite this repository and the original WildChat dataset."
+title: "WildChat EDA"
+authors:
+  - family-names: Zhu
+    given-names: Jenny
+version: "2026.10.23"
+date-released: 2026-10-23
+url: "https://github.com/hanzhenzhujene/wildchat-eda"
+repository-code: "https://github.com/hanzhenzhujene/wildchat-eda"
+abstract: "Exploratory analysis of a pinned WildChat release: corpus structure, topic/task distributions, sampling checks, request content and aggregate metadata association."

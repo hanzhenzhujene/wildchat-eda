@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "scope": "Joint length distribution in 10,636 source-English-labeled records from the 20,000-record block sample.",
+  "provenance": {
+    "source_revision": "c827c6df8fcf008219ffaffa4d1dd77491099367",
+    "sample_sha256": "dad3169fca01c3a6e4f649e1f87635c46971cd55b018cd1a9bf9361a3e681041",
+    "features_sha256": "79ced657958ef8a0fce46570be2c50078f62ffec17f630f7fe0d8635f299fb2c",
+    "code_sha256": "a08623507e7ef4c6dafcfa066f97d1d024f0b560142e4136afa1ba621c05e479",
+    "raw_text_written": false
+  },
+  "definitions": {
+    "length": "Whitespace-delimited word count across all stored messages of each role in one record; not model tokens.",
+    "template": "Both the pre-existing named_bot_persona and group_environment literal patterns match user text. This does not establish authentic group interaction.",
+    "panels": "Disjoint partition: 704 known group-template records and 9,932 other English-labeled records.",
+    "axes": "log10(1 + word count), with tick labels in original word counts; zero lengths remain included.",
+    "color": "Number of records per hexagon, shared logarithmic color scale. Panels have unequal sample sizes; intensity is not a normalized share.",
+    "interpretation": "Descriptive shapes only. Model, time, and task mix differ across panels. No causal or population claim."
+  },
+  "profiles": {
+    "other_english": {
+      "records": 9932,
+      "median_input_words": 158.0,
+      "median_output_words": 207.0,
+      "input_above_1000_output_below_100_records": 96,
+      "input_above_1000_output_below_100_pct": 0.967,
+      "input_longer_than_output_records": 5643,
+      "zero_input_records": 0,
+      "zero_output_records": 0
+    },
+    "known_group_template": {
+      "records": 704,
+      "median_input_words": 2005.5,
+      "median_output_words": 20.0,
+      "input_above_1000_output_below_100_records": 672,
+      "input_above_1000_output_below_100_pct": 95.455,
+      "input_longer_than_output_records": 704,
+      "zero_input_records": 0,
+      "zero_output_records": 0
+    }
+  },
+  "figure": {
+    "name": "12_joint_lengths",
+    "gridsize": [
+      36,
+      24
+    ],
+    "max_bin_records": 481.0
+  }
+}

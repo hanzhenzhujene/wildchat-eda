@@ -1,0 +1,136 @@
+{
+  "dataset": "allenai/WildChat-4.8M",
+  "revision": "c827c6df8fcf008219ffaffa4d1dd77491099367",
+  "split": "train",
+  "scope": "All 86 pinned source shards",
+  "group_key": "Exact tuple (hashed_ip, header.accept-language, header.user-agent); all components nonblank",
+  "unit": "Technical-key groups, NOT people",
+  "span_definition": "Difference between latest and earliest row timestamps (UTC last-turn timestamps)",
+  "totals": {
+    "rows": 3199860,
+    "complete_key_rows": 2832257,
+    "complete_keys": 1921755,
+    "ip_keys": 1833730,
+    "header_keys": 66709,
+    "missing_ip_rows": 0,
+    "missing_language_header_rows": 367225,
+    "missing_user_agent_rows": 76366,
+    "missing_timestamp_rows": 0,
+    "mixed_turn_ip_rows": 35803,
+    "top_ip_not_single_turn_ip_rows": 35803,
+    "turn_header_not_equal_top_rows": 0,
+    "incomplete_turn_id_rows": 0,
+    "min_timestamp": "2023-04-09 00:03:20+00:00",
+    "max_timestamp": "2025-07-31 23:56:04+00:00"
+  },
+  "repeated_key_groups": {
+    "groups": 156930,
+    "rows": 1067432,
+    "min_rows": 2,
+    "median_rows": 3.0,
+    "p90_rows": 11.0,
+    "p99_rows": 57.0,
+    "max_rows": 4726,
+    "median_span_days": 0.18066550925925928,
+    "p90_span_days": 14.281825231481482,
+    "p99_span_days": 95.88844756944435,
+    "max_span_days": 742.0551967592593,
+    "median_active_dates": 1.0,
+    "span_ge_1day": 57722,
+    "span_ge_7days": 26888,
+    "span_ge_30days": 5844,
+    "span_ge_90days": 1687,
+    "dates3_span30": 4602
+  },
+  "at_least_two_distinct_contents": {
+    "groups": 156704,
+    "rows": 1066943,
+    "min_rows": 2,
+    "median_rows": 3.0,
+    "p90_rows": 11.0,
+    "p99_rows": 58.0,
+    "max_rows": 4726,
+    "median_span_days": 0.18191550925925926,
+    "p90_span_days": 14.30549189814815,
+    "p99_span_days": 95.94351550925931,
+    "max_span_days": 742.0551967592593,
+    "median_active_dates": 1.0,
+    "span_ge_1day": 57709,
+    "span_ge_7days": 26883,
+    "span_ge_30days": 5844,
+    "span_ge_90days": 1687,
+    "dates3_span30": 4602,
+    "interpretation": "Eligibility sensitivity: at least two content hashes; other metrics retain source rows and their timestamps"
+  },
+  "span_distribution": [
+    {
+      "band": "30\u201389 days",
+      "groups": 4157
+    },
+    {
+      "band": "0 days",
+      "groups": 20
+    },
+    {
+      "band": "365+ days",
+      "groups": 66
+    },
+    {
+      "band": "90\u2013364 days",
+      "groups": 1621
+    },
+    {
+      "band": "7\u201329 days",
+      "groups": 21044
+    },
+    {
+      "band": "<1 day",
+      "groups": 99188
+    },
+    {
+      "band": "1\u20136 days",
+      "groups": 30834
+    }
+  ],
+  "records_per_key_distribution": [
+    {
+      "band": "6\u201320",
+      "groups": 31107,
+      "rows": 302407
+    },
+    {
+      "band": "2\u20135",
+      "groups": 118680,
+      "rows": 327805
+    },
+    {
+      "band": "101+",
+      "groups": 696,
+      "rows": 196339
+    },
+    {
+      "band": "1",
+      "groups": 1764825,
+      "rows": 1764825
+    },
+    {
+      "band": "21\u2013100",
+      "groups": 6447,
+      "rows": 240881
+    }
+  ],
+  "concentration": {
+    "top10_rows": 22689,
+    "top100_rows": 88004
+  },
+  "raw_text_read": false,
+  "linkage_keys_published": false,
+  "source_url": "https://huggingface.co/datasets/allenai/WildChat-4.8M/tree/c827c6df8fcf008219ffaffa4d1dd77491099367",
+  "documentation_url": "https://huggingface.co/datasets/allenai/WildChat-4.8M/blob/c827c6df8fcf008219ffaffa4d1dd77491099367/README.md#data-fields",
+  "limits": [
+    "Exact metadata matches do not confirm the same person.",
+    "Shared networks and browser settings can merge people; changes can split one person.",
+    "Time span is not continuous activity or evidence of a single continuing issue."
+  ],
+  "generated_at": "2026-10-23"
+}

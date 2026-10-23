@@ -1,0 +1,21 @@
+{
+  "purpose": "Post-hoc example discovery; not included in random audit counts",
+  "retrieved_rows": 11,
+  "row_indices": [
+    433490,
+    753427,
+    789879,
+    805312,
+    2031077,
+    2031097,
+    2050472,
+    2050474,
+    2086161,
+    2086162,
+    3090272
+  ],
+  "independently_AI_reviewed_ids": [
+    753427,
+    2031077
+  ]
+}

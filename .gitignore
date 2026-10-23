@@ -1,0 +1,17 @@
+.venv/
+__pycache__/
+*.py[cod]
+.DS_Store
+.env
+.env.*
+!.env.example
+analysis/data/
+analysis/reviews/
+analysis/outputs/linkage/shards/
+analysis/outputs/relational_v2/primary/
+analysis/outputs/relational_v2/secondary/
+*.duckdb*
+*.parquet
+*.jsonl
+tmp/
+.cache/
