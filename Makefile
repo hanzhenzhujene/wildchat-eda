@@ -7,6 +7,9 @@ serve:
 check:
 	$(PYTHON) scripts/check_release.py
 	node scripts/check_public_hub.mjs
+	node scripts/check_scope_comparison.mjs
+	node scripts/check_chart_detail.mjs
+	node scripts/check_linkage_interactions.mjs
 	node scripts/check_validation.mjs
 	node scripts/check_source_text.mjs
 	node scripts/check_relational_ui.mjs

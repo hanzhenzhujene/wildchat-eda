@@ -1,0 +1,17 @@
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+import {linkageExplorerData,linkageExplorer} from '../website/linkage-interactive.js';
+const data=JSON.parse(fs.readFileSync(new URL('../website/data/public-hub/linkage.json',import.meta.url)));
+const model=linkageExplorerData(data),span=id=>model.span.find(x=>x.id===id).count;
+assert.equal(span('all'),156930);assert.equal(span('day30'),5844);
+assert.equal(span('dates3span30'),4602);assert.equal(span('day365'),66);
+assert.equal(model.volume.reduce((n,r)=>n+r.count,0),1921755);
+assert.equal(model.volume.reduce((n,r)=>n+r.rows,0),2832257);
+assert.equal(model.denominators.span,156930);assert.equal(model.denominators.volume,1921755);
+const html=linkageExplorer(data,{selected:'day365'});
+assert.ok(html.includes('156,930'));assert.ok(html.includes('66'));
+assert.ok(!html.includes('NaN'));assert.ok(html.includes('not establish continuous use or the same person'));
+const bad=structuredClone(data);bad.repeated_key_groups.span_ge_30days++;
+assert.throws(()=>linkageExplorerData(bad));
+assert.throws(()=>linkageExplorerData({}));
+console.log('Linkage interaction: thresholds, independent scopes and saved-count consistency pass.');

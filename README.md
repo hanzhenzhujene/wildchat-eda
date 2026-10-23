@@ -34,8 +34,8 @@ These findings describe this released corpus. They do not estimate all AI use or
 | --- | --- |
 | What one record contains | [Methods and units](docs/METHODS.md#units) · [Original question/response examples ↗](https://wildchat-research-atlas-jenny.landenini.chatgpt.site/atlas.html#cases) |
 | Languages, models, dates, lengths and turns | [Interactive distributions ↗](https://wildchat-research-atlas-jenny.landenini.chatgpt.site/#distributions) · [Figure catalog](docs/FIGURES.md) |
-| Topic versus task | [Microsoft labels and provenance](docs/METHODS.md#topic-and-task) |
-| Sampling differences and AI-label limits | [Data scopes](docs/METHODS.md#analysis-scopes) |
+| Topic versus task | [Select a label and read its original exchange ↗](https://wildchat-research-atlas-jenny.landenini.chatgpt.site/#distributions?chart=domain) · [Label provenance](docs/METHODS.md#topic-and-task) |
+| Sampling differences and AI-label limits | [Overlay a sample with the full release ↗](https://wildchat-research-atlas-jenny.landenini.chatgpt.site/#distributions?chart=language&scope=original&compare=1) · [Data scopes](docs/METHODS.md#analysis-scopes) |
 | What can be linked across conversations | [Linkage analysis](docs/METHODS.md#cross-conversation-association) · [Interactive charts ↗](https://wildchat-research-atlas-jenny.landenini.chatgpt.site/#linkage) |
 | Similar public conversation datasets | [WildChat, LMSYS, OpenAssistant, PRISM and UltraChat](docs/DATASETS.md) |
 | How to run the website or rebuild charts | [Reproduction instructions](docs/REPRODUCE.md) |
