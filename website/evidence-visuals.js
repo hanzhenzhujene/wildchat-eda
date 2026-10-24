@@ -27,7 +27,7 @@ export function samplingMap(meta = {}) {
     <div class="ev-origin">${node('source', number(sourceRows), 'public source rows')}${arrow('Block sample', 'right')}${node('sample', number(sampleRows), 'profiled records', 'blue', true)}</div>
     <div class="ev-fork" aria-label="The 20,000-row sample branches into two separate analyses"><i class="ev-fork-trunk"></i><i class="ev-fork-bridge"></i><i class="ev-fork-left"></i><i class="ev-fork-right"></i><span>Separate analyses</span></div>
     <div class="ev-branches">
-      <div class="ev-branch ev-random"><span class="ev-route-label">Earlier content pilot</span>${arrow('Random selection')}${node('random', '120', 'records AI-labeled', 'amber')}<span class="ev-branch-note">No keyword or language filter</span></div>
+      <div class="ev-branch ev-random"><span class="ev-route-label">Earlier content analysis</span>${arrow('Random selection')}${node('random', '120', 'records AI-labeled', 'amber')}<span class="ev-branch-note">No keyword or language filter</span></div>
       <div class="ev-branch ev-search"><span class="ev-route-label">Retrieval check</span>${arrow('English source label')}${node('english', '10,636', 'English-labeled records')}
         <div class="ev-retrieval-split"><div>${arrow('Keyword rule')}${node('hits', '1,747', 'hits')}${arrow('Sample for review')}${node('reviewedHits', '80', 'AI-labeled hits', 'amber')}</div><div>${arrow('No match')}${node('nonhits', '8,889', 'non-hits')}${arrow('Sample for review')}${node('reviewedNonhits', '40', 'AI-labeled non-hits', 'amber')}</div></div>
       </div>

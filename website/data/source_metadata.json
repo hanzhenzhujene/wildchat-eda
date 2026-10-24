@@ -66,7 +66,8 @@
     "data/records.json": "554056bde7d05ea60da29875449ef2ed375be479cf3d6506e280204f6a06d214",
     "data/aggregates.json": "5a76d020b0241be183a38e7a320ba48557d567d171e3c0420f7b6a800607bdfc",
     "data/audit.json": "a6a89a375cf43eec3315dcb8964030b2940c4736cc0de2ed9a6bb49f0a6642a0",
-    "data/scope_verification.json": "9ac8c4c9af0eb2453a586afab0cf1fe471afc991b1e77d7483347a934d24de88"
+    "data/scope_verification.json": "9ac8c4c9af0eb2453a586afab0cf1fe471afc991b1e77d7483347a934d24de88",
+    "assets/WildChat_Relational_EDA.pdf": "c6071a5c07f4e01288fdd52c5d65846f8e9a073557085207c466f3a0c68f2543"
   },
   "assets": [
     {
@@ -131,10 +132,10 @@
     },
     {
       "path": "assets/WildChat_Relational_EDA.pdf",
-      "source_path": "outputs/WildChat_Relational_EDA.pdf",
-      "sha256": "2da122930aa72363b20b9988c097e7713164d4d430e00ad8ed66d64744cc2f23",
-      "bytes": 2527056,
-      "description": "Public visual catalog, regenerated 2026-10-23; includes current census and scoped historical figures."
+      "source_path": "scripts/build_public_figures.py",
+      "sha256": "c6071a5c07f4e01288fdd52c5d65846f8e9a073557085207c466f3a0c68f2543",
+      "bytes": 2527095,
+      "description": "Public visual catalog; current census charts and historical figures retain separate scopes."
     }
   ],
   "sampling_validation": {
@@ -175,9 +176,9 @@
     "request_labels_unchanged": true
   },
   "public_catalog": {
-    "generated": "2026-10-23",
+    "generated": "2026-10-24",
     "path": "assets/WildChat_Relational_EDA.pdf",
-    "sha256": "2da122930aa72363b20b9988c097e7713164d4d430e00ad8ed66d64744cc2f23",
-    "notes": "Public visual catalog. Source metadata and historical PNG figures retain their original scopes."
+    "sha256": "c6071a5c07f4e01288fdd52c5d65846f8e9a073557085207c466f3a0c68f2543",
+    "notes": "Current figures retain distinct census, AI-label and historical sample scopes."
   }
 }

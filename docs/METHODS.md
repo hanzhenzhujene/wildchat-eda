@@ -20,7 +20,7 @@ The full census counts **10,334,364 messages** (5,167,182 user messages and 5,16
 | Original 20,000 rows | 200 near-equal row-index sections; one seeded contiguous 100-row block per section (seed 20261017). | Metadata distributions and historical figures. | All 20,000 row positions checked against immutable source files. Not an independent row-random sample. |
 | Row-random 20,000 | Uniform draw without replacement from all 3,199,860 rows (seed 20261020). No prefilter. | Comparison with the census and original block sample. | 113 rows overlap the original sample. Intervals refer only to this sampling design. |
 | Content 2,000 | Uniform draw without replacement (seed 2026102002). No language or keyword prefilter. | Final-request purpose, input form and interpersonal content, using stored history. | 1,998 AI labels; two complete inputs exceeded the annotation limit. A selected second AI pass produced 314 completed labels. **No human validation.** |
-| Historical 120 | Random draw from the original 20,000 rows (seed 20261019). | Earlier final-request labels. | AI checks only; annotation model/version and inference settings were not recorded for this pilot. |
+| Historical 120 | Random draw from the original 20,000 rows (seed 20261019). | Earlier final-request labels. | AI checks only; annotation model/version and inference settings were not recorded for this analysis. |
 | Retrieval audit | Separate 80 keyword hits and 40 non-hits. | Keyword-screen behaviour. | Not a prevalence sample. |
 | Examples | Deliberately selected records from different source sets. | Original questions/replies, stored context and label boundaries. | Selected examples cannot estimate frequency. Marked redactions and AI paraphrases remain identified. |
 

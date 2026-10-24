@@ -23,7 +23,7 @@ The census describes all 3,199,860 records in the pinned release. Microsoft topi
 
 ## Historical figures
 
-These original charts remain available for provenance. Figures 1-8 use the original 20,000-record block sample or a stated subset; figures 9-11 use a separate 120-input AI-label pilot. Figure 12 uses the English-labeled subset of the block sample. These scopes are not pooled, and selected examples do not establish population prevalence.
+These original charts remain available for provenance. Figures 1-8 use the original 20,000-record block sample or a stated subset; figures 9-11 use a separate 120-record AI-label analysis. Figure 12 uses the English-labeled subset of the block sample. These scopes are not pooled, and selected examples do not establish population prevalence.
 
 | Figure | Original scope | Denominator | File |
 | --- | --- | ---: | --- |
@@ -35,9 +35,9 @@ These original charts remain available for provenance. Figures 1-8 use the origi
 | Template text lengths | English-labeled subset of original block sample; see chart subgroups | 10,636 | [PNG](../website/assets/figures/06_template_length.png) |
 | Repeated content and source flags | 20,000-record original block sample | 20,000 | [PNG](../website/assets/figures/07_repetition_quality.png) |
 | Month coverage | 20,000-record original block sample | 20,000 | [PNG](../website/assets/figures/08_month_coverage.png) |
-| Request purpose | 120-input AI-label pilot; not a population sample | 120 | [PNG](../website/assets/figures/09_request_purpose.png) |
-| Purpose and supplied material | 120-input AI-label pilot; not a population sample | 120 | [PNG](../website/assets/figures/10_purpose_packaging.png) |
-| Interpersonal content modes | 120-input AI-label pilot; not a population sample | 120 | [PNG](../website/assets/figures/11_relational_modes.png) |
+| Request purpose | 120-record AI-label analysis; not a population sample | 120 | [PNG](../website/assets/figures/09_request_purpose.png) |
+| Purpose and supplied material | 120-record AI-label analysis; not a population sample | 120 | [PNG](../website/assets/figures/10_purpose_packaging.png) |
+| Interpersonal content modes | 120-record AI-label analysis; not a population sample | 120 | [PNG](../website/assets/figures/11_relational_modes.png) |
 | Input and response lengths | English-labeled subset of original block sample | 10,636 | [PNG](../website/assets/figures/12_joint_lengths.png) |
 
 ## PDF and rebuilding

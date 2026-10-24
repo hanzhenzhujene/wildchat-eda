@@ -2,14 +2,14 @@ import {readHubReturn,hubReturnHref,hubReturnLabel} from './hub-navigation.js';
 import {topicView,topicOverview,topicMethods,datasetTakeaways} from './topics.js?v=takeawaySourcesOct21';
 import {setSourceTexts,getSourceRecord,sourcePair,sourcePreview,sourceConversation} from './source-text.js?v=topicsOct21b';
 import {PERSONAL_DECISIONS,PERSONAL_TYPES,personalRows,personalReviewView} from './personal-review.js?v=topicsOct21b';
-import {BENCHMARK_ROUTES,REVIEW_STATES,SOURCE_CHECK_STATES,CONTEXTS,FRAMES,aiDifferences,reviewState,auditMatches,auditStats,expandedAuditTakeaway,auditRowDetail,expandedReviewStatus,expandedResearchFit,randomExampleCards} from './relational-v2.js?v=topicsOct21b';
+import {BENCHMARK_ROUTES,REVIEW_STATES,SOURCE_CHECK_STATES,CONTEXTS,FRAMES,aiDifferences,reviewState,auditMatches,auditStats,expandedAuditTakeaway,auditRowDetail,expandedReviewStatus,expandedResearchFit,randomExampleCards} from './relational-v2.js?v=copyOct24';
 import {validationOverview,validationPanel,validationMethods} from './validation.js?v=topicsOct21b';
 import {exampleTitle} from './example-names.js?v=topicsOct21b';
-import {scopeMetrics,sourceNotes,scopeKeys,exampleMembership} from './scope-notes.js?v=buttonsOct21';
+import {scopeMetrics,sourceNotes,scopeKeys,exampleMembership} from './scope-notes.js?v=copyOct24';
 import {researchFitFlow,fitFocusFor} from './fit-flow.js?v=publicHubOct23';
 import {turnHistogram,monthCoverage,ecdfExplorer,densityExplorer,templateBoxplot,mountStatsInteractions} from './stats-visuals.js?v=topicsOct21b';
 import {languageTreemap,purposeFlow,mountCategoryInteractions} from './category-visuals.js?v=topicsOct21b';
-import {samplingMap,evidenceMatrix,mountEvidenceInteractions} from './evidence-visuals.js?v=topicsOct21b';
+import {samplingMap,evidenceMatrix,mountEvidenceInteractions} from './evidence-visuals.js?v=copyOct24';
 import {initMotion,beforeRender,afterRender,animateInspector} from './motion.js?v=topicsOct21b';
 import {initJump} from './jump.js?v=topicsOct21b';
 import {escape as e,fmt,pct,counts,quantile,bars,vertical,ecdf,density,modelHeatmap,colors} from './charts.js?v=topicsOct21b';
@@ -339,7 +339,7 @@ function analysisCoverage(){const c=D.coverage;return `<section class="analysis-
 <a href="#audit?snapshot=1&view=charts"><span>Request labels</span><strong>${fmt(auditStats(D.audit).primaryLabeled)} / ${fmt(D.audit.metadata.n)}</strong><span>final inputs →</span></a>
 <a href="#fit"><span>Retrieval review</span><strong>${c.retrieval_audit.hits.reviewed} + ${c.retrieval_audit.nonhits.reviewed}</strong><span>hits + non-hits →</span></a>
 <a href="#cases"><span>Earlier examples checked by AI</span><strong>6 / 6</strong><span>records →</span></a></div><p class="coverage-note">AI review is not human validation. <a href="#methods?source=audit">Review status ↗</a></p>
-<details class="coverage-checks"><summary>Checks & limits</summary><div class="coverage-check-body"><p><strong>Original sample:</strong> 17 exported fields; no missing values or duplicate source IDs.</p><p><strong>Label checks:</strong> ${fmt(auditStats(D.audit).checked)} second AI passes; ${fmt(auditStats(D.audit).human)} human-validated labels.</p><p><strong>Scope:</strong> The new ${fmt(D.audit.rows.length)}-record draw, earlier 120-record pilot and retrieval audit remain separate. Relational labels cover the random sample only. Microsoft’s separate topic/task labels are summarized under Distributions.</p></div></details></section>`}
+<details class="coverage-checks"><summary>Checks & limits</summary><div class="coverage-check-body"><p><strong>Original sample:</strong> 17 exported fields; no missing values or duplicate source IDs.</p><p><strong>Label checks:</strong> ${fmt(auditStats(D.audit).checked)} second AI passes; ${fmt(auditStats(D.audit).human)} human-validated labels.</p><p><strong>Scope:</strong> The new ${fmt(D.audit.rows.length)}-record draw, earlier 120-record analysis and retrieval audit remain separate. Relational labels cover the random sample only. Microsoft’s separate topic/task labels are summarized under Distributions.</p></div></details></section>`}
 function methods(){const m=D.meta;return smallHead('Methods & sources','Sources, sampling and label checks')+`
  <div class="scope-strip"><span>${e(m.source.dataset)}</span><span>Original sample: ${e(m.source.retrieval_date)}</span><a href="${e(m.links.pinned_dataset)}" target="_blank" rel="noopener">Pinned release ↗</a></div>
  ${new URLSearchParams(location.hash.split('?')[1]||'').get('source')==='topics'?topicMethods(D.topics):sourceNotes(D,new URLSearchParams(location.hash.split('?')[1]||'').get('source'))}

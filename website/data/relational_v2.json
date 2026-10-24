@@ -19,7 +19,7 @@
     "reason_text": "AI-written summaries, not quotations or verified life events. Selected example paraphrases remove names.",
     "display_translations": "36 summary fields translated into English or edited to remove a name. Semantic labels unchanged; original AI outputs retained in the private research repository.",
     "language_policy": "Models read source languages directly; no separate human translation validation.",
-    "historical_scopes": "Old 120-label pilot, 80-hit/40-non-hit retrieval audit and six handpicked examples remain separate.",
+    "historical_scopes": "Earlier 120-record AI-label analysis, 80-hit/40-non-hit retrieval audit and six handpicked examples remain separate.",
     "personal_review": {
       "n": 31,
       "parent_sample_n": 2000,

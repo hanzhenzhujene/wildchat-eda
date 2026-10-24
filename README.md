@@ -50,7 +50,7 @@ These findings describe this released corpus. They do not estimate all AI use or
 | Original metadata sample | **20,000 records** | 200 seeded blocks of 100 consecutive rows. |
 | Row-random reference | **20,000 records** | Separate uniform draw without replacement. |
 | Final-request content | **2,000 records** | Uniform draw without replacement; AI labels using stored context. |
-| Historical content pilot | **120 final requests** | Earlier AI-label analysis, retained as an archive. |
+| Earlier content analysis | **120 records** | Earlier AI-label analysis, retained as an archive. |
 | Displayed examples | **Selected records** | Illustrations, not a random sample. |
 
 Source: [`allenai/WildChat-4.8M`](https://huggingface.co/datasets/allenai/WildChat-4.8M/tree/c827c6df8fcf008219ffaffa4d1dd77491099367), revision `c827c6df8fcf008219ffaffa4d1dd77491099367`, `default/train`, record dates **9 April 2023–31 July 2025**. The release name “4.8M” is not the denominator of this filtered export.

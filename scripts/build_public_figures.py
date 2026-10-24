@@ -84,9 +84,9 @@ legacy={
  '06_template_length':('Template text lengths','English-labeled subset of original block sample; see chart subgroups',10636),
  '07_repetition_quality':('Repeated content and source flags','20,000-record original block sample',20000),
  '08_month_coverage':('Month coverage','20,000-record original block sample',20000),
- '09_request_purpose':('Request purpose','120-input AI-label pilot; not a population sample',120),
- '10_purpose_packaging':('Purpose and supplied material','120-input AI-label pilot; not a population sample',120),
- '11_relational_modes':('Interpersonal content modes','120-input AI-label pilot; not a population sample',120),
+ '09_request_purpose':('Request purpose','120-record AI-label analysis; not a population sample',120),
+ '10_purpose_packaging':('Purpose and supplied material','120-record AI-label analysis; not a population sample',120),
+ '11_relational_modes':('Interpersonal content modes','120-record AI-label analysis; not a population sample',120),
  '12_joint_lengths':('Input and response lengths','English-labeled subset of original block sample',10636)}
 for id,(title,scope,n) in legacy.items():
  figs.append({'id':'archive_'+id,'title':title,'file':f'/assets/figures/{id}.png','svg':None,'category':'Archive','scope':scope,'denominator':n,'takeaway':'Historical figure. Use current census and larger-sample charts for current summaries.','source':SRC,'analysis_date':'2026-10-20 (original EDA)','status':'historical'})
@@ -136,7 +136,7 @@ for p in range(3):
  start(f'Original figures {p*4+1}-{p*4+4}','Historical appendix | narrower scopes')
  for j,(id,(title,scope,n)) in enumerate(entries[p*4:p*4+4]):
   x=28+(j%2)*440;y=320 if j<2 else 72;image_fit(DIST/f'assets/figures/{id}.png',x,y,420,213);txt(title,x+8,y+1,10,INK,True);wrap(f'{scope} | denominator {n:,}',x+8,y-14,width=70,size=8,leading=10)
- txt('Original block sample: 20,000 records. Pilot: 120 AI-labeled inputs. These scopes are not pooled.',36,42,9,GOLD);end()
+ txt('Original block sample: 20,000 records. Earlier analysis: 120 AI-labeled records. These scopes are not pooled.',36,42,9,GOLD);end()
 c.save()
 # Keep the exported PDF and its published checksum in sync.
 metadata_path=SITE/'data/source_metadata.json'
